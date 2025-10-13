@@ -3,6 +3,8 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
+// Use Vite env variable for API base URL (prefix VITE_)
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8080'
 const isRegister = ref(false)
 const email = ref('')
 const password = ref('')
@@ -12,6 +14,7 @@ const loading = ref(false)
 const error = ref('')
 const success = ref('')
 const showPassword = ref(false)
+const showConfirmPassword = ref(false)
 
 function goHome() {
   router.push('/')
@@ -22,7 +25,7 @@ async function login() {
   success.value = ''
   loading.value = true
   try {
-    const res = await fetch('http://localhost:8080/api/auth/login', {
+    const res = await fetch(`${API}/api/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email.value, password: password.value })
@@ -49,12 +52,31 @@ async function register() {
   }
   loading.value = true
   try {
-    // Mock register - langsung login setelah register
+    const res = await fetch(`${API}/api/auth/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value, password: password.value, name: name.value })
+    })
+    const data = await res.json().catch(() => null)
+    if (!res.ok) {
+      error.value = (data && data.error) ? data.error : 'Registrasi gagal'
+      return
+    }
+
+    // success: save token and redirect
+    if (data && data.token) {
+      localStorage.setItem('token', data.token)
+      localStorage.setItem('role', data.role || 'user')
+      localStorage.setItem('email', email.value)
+      router.push(data.role === 'admin' ? '/admin' : '/dashboard')
+      return
+    }
+
     success.value = 'Registrasi berhasil! Silakan login.'
     setTimeout(() => {
       isRegister.value = false
       success.value = ''
-    }, 2000)
+    }, 1500)
   } catch (e) {
     error.value = e.message || 'Registrasi gagal'
   } finally {
@@ -190,6 +212,10 @@ function toggleMode() {
 
         <!-- Register Form -->
         <form v-else @submit.prevent="register" class="space-y-3 sm:space-y-4">
+          <!-- Alerts (show above inputs) -->
+          <div v-if="error" class="p-2.5 sm:p-3 bg-red-50 border-l-4 border-red-500 text-xs sm:text-sm text-red-700 rounded-r">{{ error }}</div>
+          <div v-if="success" class="p-2.5 sm:p-3 bg-green-50 border-l-4 border-green-500 text-xs sm:text-sm text-green-700 rounded-r">{{ success }}</div>
+
           <div class="relative">
             <div class="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-slate-400">
               <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,15 +279,24 @@ function toggleMode() {
             </div>
             <input 
               v-model="confirmPassword" 
-              type="password" 
+              :type="showConfirmPassword ? 'text' : 'password'" 
               placeholder="Confirm Password" 
-              class="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 bg-emerald-50 border-0 rounded-lg focus:ring-2 focus:ring-emerald-300 outline-none transition-all text-sm placeholder:text-slate-400"
+              class="w-full pl-10 sm:pl-12 pr-10 py-3 sm:py-3.5 bg-emerald-50 border-0 rounded-lg focus:ring-2 focus:ring-emerald-300 outline-none transition-all text-sm placeholder:text-slate-400"
               required 
             />
+
+            <button type="button" @click="showConfirmPassword = !showConfirmPassword" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-700" :aria-label="showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'">
+              <svg v-if="!showConfirmPassword" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a9.97 9.97 0 012.223-3.74M6.1 6.1L4 4m16 16l-2.1-2.1M9.88 9.88A3 3 0 0114.12 14.12" />
+              </svg>
+            </button>
           </div>
 
-          <div v-if="error" class="p-2.5 sm:p-3 bg-red-50 border-l-4 border-red-500 text-xs sm:text-sm text-red-700 rounded-r">{{ error }}</div>
-          <div v-if="success" class="p-2.5 sm:p-3 bg-green-50 border-l-4 border-green-500 text-xs sm:text-sm text-green-700 rounded-r">{{ success }}</div>
+          
 
           <button 
             type="submit"
