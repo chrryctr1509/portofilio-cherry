@@ -88,7 +88,7 @@ function toggleMode() {
         <span class="font-semibold text-sm sm:text-base">Back to Home</span>
       </button>
 
-      <div class="w-full max-w-md pt-12 sm:pt-0">
+      <div class="w-full max-w-md" :class="isRegister ? 'pt-16 sm:pt-20' : 'pt-12 sm:pt-0'">
         <!-- Header -->
         <div class="mb-6 sm:mb-8">
           <h1 class="text-3xl sm:text-4xl font-black text-slate-900 mb-2 uppercase tracking-tight">{{ isRegister ? 'SIGN UP' : 'LOGIN' }}</h1>
