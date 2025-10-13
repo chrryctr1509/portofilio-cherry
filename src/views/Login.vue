@@ -120,11 +120,22 @@ function toggleMode() {
             </div>
             <input 
               v-model="password" 
-              type="password" 
+              :type="showPassword ? 'text' : 'password'" 
               placeholder="Password" 
-              class="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 bg-emerald-50 border-0 rounded-lg focus:ring-2 focus:ring-emerald-300 outline-none transition-all text-sm placeholder:text-slate-400"
+              class="w-full pl-10 sm:pl-12 pr-10 py-3 sm:py-3.5 bg-emerald-50 border-0 rounded-lg focus:ring-2 focus:ring-emerald-300 outline-none transition-all text-sm placeholder:text-slate-400"
               required 
             />
+
+            <!-- Toggle show/hide password -->
+            <button type="button" @click="showPassword = !showPassword" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-700" :aria-label="showPassword ? 'Hide password' : 'Show password'">
+              <svg v-if="!showPassword" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a9.97 9.97 0 012.223-3.74M6.1 6.1L4 4m16 16l-2.1-2.1M9.88 9.88A3 3 0 0114.12 14.12" />
+              </svg>
+            </button>
           </div>
 
           <div v-if="error" class="p-2.5 sm:p-3 bg-red-50 border-l-4 border-red-500 text-xs sm:text-sm text-red-700 rounded-r">{{ error }}</div>
@@ -217,11 +228,21 @@ function toggleMode() {
             </div>
             <input 
               v-model="password" 
-              type="password" 
+              :type="showPassword ? 'text' : 'password'" 
               placeholder="Password" 
-              class="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-3.5 bg-emerald-50 border-0 rounded-lg focus:ring-2 focus:ring-emerald-300 outline-none transition-all text-sm placeholder:text-slate-400"
+              class="w-full pl-10 sm:pl-12 pr-10 py-3 sm:py-3.5 bg-emerald-50 border-0 rounded-lg focus:ring-2 focus:ring-emerald-300 outline-none transition-all text-sm placeholder:text-slate-400"
               required 
             />
+
+            <button type="button" @click="showPassword = !showPassword" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-700" :aria-label="showPassword ? 'Hide password' : 'Show password'">
+              <svg v-if="!showPassword" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a9.97 9.97 0 012.223-3.74M6.1 6.1L4 4m16 16l-2.1-2.1M9.88 9.88A3 3 0 0114.12 14.12" />
+              </svg>
+            </button>
           </div>
 
           <div class="relative">
