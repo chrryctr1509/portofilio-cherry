@@ -119,6 +119,9 @@ function toggleMode() {
 
         <!-- Login Form -->
         <form v-if="!isRegister" @submit.prevent="login" class="space-y-3 sm:space-y-4">
+          <!-- Alerts (show above inputs) -->
+          <div v-if="error" class="p-2.5 sm:p-3 bg-red-50 border-l-4 border-red-500 text-xs sm:text-sm text-red-700 rounded-r">{{ error }}</div>
+          <div v-if="success" class="p-2.5 sm:p-3 bg-green-50 border-l-4 border-green-500 text-xs sm:text-sm text-green-700 rounded-r">{{ success }}</div>
           <div class="relative">
             <div class="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-slate-400">
               <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -160,8 +163,7 @@ function toggleMode() {
             </button>
           </div>
 
-          <div v-if="error" class="p-2.5 sm:p-3 bg-red-50 border-l-4 border-red-500 text-xs sm:text-sm text-red-700 rounded-r">{{ error }}</div>
-          <div v-if="success" class="p-2.5 sm:p-3 bg-green-50 border-l-4 border-green-500 text-xs sm:text-sm text-green-700 rounded-r">{{ success }}</div>
+          
 
           <button 
             type="submit"
