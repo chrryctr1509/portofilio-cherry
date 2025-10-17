@@ -52,20 +52,20 @@ const getIcon = (type) => {
 </script>
 
 <template>
-  <section class="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50" id="skills">
+  <section class="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-900" id="skills">
     <div class="mx-auto container px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <header class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-2 text-sm font-semibold text-brand-700 mb-4">
+        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 dark:bg-brand-900/30 px-4 py-2 text-sm font-semibold text-brand-700 dark:text-brand-300 mb-4">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
           Skills & Expertise
         </div>
-        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4">
           What I Do Best
         </h2>
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-slate-600 dark:text-slate-300">
           A selection of core skills I use to design, build, and ship products
         </p>
       </header>
@@ -75,7 +75,7 @@ const getIcon = (type) => {
         <article 
           v-for="(f, idx) in features" 
           :key="f.title" 
-          class="group relative rounded-2xl border-2 border-slate-200 bg-white p-8 hover:border-brand-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          class="group relative rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:border-brand-300 dark:hover:border-emerald-500 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
         >
           <!-- Gradient Background on Hover -->
           <div class="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity" :class="f.color"></div>
@@ -93,10 +93,10 @@ const getIcon = (type) => {
           </div>
 
           <!-- Content -->
-          <h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-600 transition-colors">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-emerald-400 transition-colors">
             {{ f.title }}
           </h3>
-          <p class="text-slate-600 leading-relaxed mb-4">
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
             {{ f.desc }}
           </p>
 
@@ -116,11 +116,11 @@ const getIcon = (type) => {
       </div>
 
       <!-- CTA Bottom -->
-      <div class="text-center mt-16">
-        <p class="text-slate-600 mb-6">Can't find what you're looking for?</p>
+          <div class="text-center mt-16">
+        <p class="text-slate-600 dark:text-slate-300 mb-6">Can't find what you're looking for?</p>
         <a 
           href="#contact" 
-          class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 hover:scale-105 transition-all shadow-lg"
+          class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-slate-900 dark:bg-emerald-600 text-white font-bold hover:bg-slate-800 dark:hover:bg-emerald-500 hover:scale-105 transition-all shadow-lg"
         >
           Discuss Your Project
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

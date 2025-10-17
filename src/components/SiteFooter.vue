@@ -56,7 +56,7 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="bg-slate-950 text-white relative overflow-hidden" id="contact">
+  <footer class="bg-slate-950 dark:bg-slate-900 text-white relative overflow-hidden" id="contact">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>

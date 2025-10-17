@@ -1,13 +1,17 @@
 <script setup>
 import { RouterView, useRoute, useRouter } from 'vue-router'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import SiteHeader from './components/SiteHeader.vue'
 import SiteFooter from './components/SiteFooter.vue'
+import { useTheme } from './composables/useTheme'
 
 const route = useRoute()
 const router = useRouter()
 const showLayout = computed(() => route.path !== '/login')
 const isLoading = ref(false)
+
+// Initialize theme
+const { theme } = useTheme()
 
 // Track route loading state properly
 router.beforeEach((to, from, next) => {
@@ -26,10 +30,10 @@ router.afterEach(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white text-gray-800">
+  <div class="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
     <!-- Page Loader -->
     <Transition name="fade">
-      <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white/95 backdrop-blur-sm">
+      <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm">
         <!-- Loader Container -->
         <div class="flex flex-col items-center gap-4">
           <!-- Spinner -->
@@ -43,7 +47,7 @@ router.afterEach(() => {
           
           <!-- Loading Text -->
           <div class="flex flex-col items-center gap-2">
-            <p class="text-slate-700 font-semibold text-lg">Loading...</p>
+            <p class="text-slate-700 dark:text-slate-300 font-semibold text-lg">Loading...</p>
             <div class="flex gap-1">
               <span class="w-2 h-2 bg-emerald-500 rounded-full animate-bounce-dot" style="animation-delay: 0ms"></span>
               <span class="w-2 h-2 bg-emerald-500 rounded-full animate-bounce-dot" style="animation-delay: 150ms"></span>

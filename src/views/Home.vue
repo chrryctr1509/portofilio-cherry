@@ -2,15 +2,19 @@
 import HeroSection from '../components/HeroSection.vue'
 import FeaturesSection from '../components/FeaturesSection.vue'
 import PortfolioSection from '../components/PortfolioSection.vue'
-import TestimonialsCarousel from '../components/TestimonialsCarousel.vue'
+import StatsBar from '../components/StatsBar.vue'
+import SubscribeSection from '../components/SubscribeSection.vue'
+import EducationSection from '../components/EducationSection.vue'
 </script>
 
 <template>
   <div>
     <HeroSection />
     <FeaturesSection />
+    <StatsBar />
+    <EducationSection />
     <PortfolioSection />
-    <TestimonialsCarousel />
+    <SubscribeSection />
   </div>
 </template>
 

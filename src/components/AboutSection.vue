@@ -31,20 +31,20 @@ const values = [
 </script>
 
 <template>
-  <section class="py-20 lg:py-28 bg-white" id="about">
+  <section class="py-20 lg:py-28 bg-white dark:bg-slate-900" id="about">
     <div class="mx-auto container px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-2 text-sm font-semibold text-brand-700 mb-4">
+        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 dark:bg-brand-900/30 px-4 py-2 text-sm font-semibold text-brand-700 dark:text-brand-300 mb-4">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           About Me
         </div>
-        <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">
           Building Products That Make An Impact
         </h2>
-        <p class="text-lg text-slate-600 leading-relaxed">
+        <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
           I'm a software engineer focused on crafting scalable systems and intuitive interfaces. Over the years I've worked across the stack, leading projects from idea to production.
         </p>
       </div>
@@ -53,10 +53,10 @@ const values = [
       <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
         <!-- Left - Image/Visual -->
         <div class="relative">
-          <div class="aspect-[4/3] rounded-3xl bg-gradient-to-br from-brand-100 to-emerald-100 p-8 relative overflow-hidden">
+          <div class="aspect-[4/3] rounded-3xl bg-gradient-to-br from-brand-100 to-emerald-100 dark:from-brand-900/30 dark:to-emerald-900/30 p-8 relative overflow-hidden">
             <!-- Decorative elements -->
-            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-200 rounded-full blur-3xl opacity-50"></div>
-            <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-200 rounded-full blur-3xl opacity-50"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-200 dark:bg-brand-800/50 rounded-full blur-3xl opacity-50"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-200 dark:bg-emerald-800/50 rounded-full blur-3xl opacity-50"></div>
             
             <!-- Content -->
             <div class="relative h-full flex items-center justify-center">
@@ -66,8 +66,8 @@ const values = [
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <div class="text-6xl font-black text-slate-900">10+</div>
-                <div class="text-xl font-bold text-slate-700">Years of Excellence</div>
+                <div class="text-6xl font-black text-slate-900 dark:text-white">10+</div>
+                <div class="text-xl font-bold text-slate-700 dark:text-slate-300">Years of Excellence</div>
               </div>
             </div>
           </div>
@@ -75,21 +75,21 @@ const values = [
 
         <!-- Right - Content -->
         <div class="space-y-6">
-          <h3 class="text-3xl font-bold text-slate-900">
+          <h3 class="text-3xl font-bold text-slate-900 dark:text-white">
             A Bit About My Background
           </h3>
-          <p class="text-slate-600 leading-relaxed">
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
             I value clean code, clear communication, and pragmatic solutions. My work blends product thinking, design sense, and engineering rigor.
           </p>
-          <p class="text-slate-600 leading-relaxed">
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
             I've collaborated with startups and enterprises to deliver products that are reliable, maintainable, and user‑centric.
           </p>
           
           <!-- Quick Stats -->
           <div class="grid grid-cols-2 gap-4 pt-4">
-            <div v-for="stat in stats" :key="stat.label" class="bg-slate-50 rounded-xl p-6 border-2 border-slate-200">
-              <div class="text-3xl font-black text-brand-600 mb-1">{{ stat.value }}</div>
-              <div class="text-sm text-slate-600 font-medium">{{ stat.label }}</div>
+            <div v-for="stat in stats" :key="stat.label" class="bg-slate-50 dark:bg-slate-800 rounded-xl p-6 border-2 border-slate-200 dark:border-slate-700">
+              <div class="text-3xl font-black text-brand-600 dark:text-brand-400 mb-1">{{ stat.value }}</div>
+              <div class="text-sm text-slate-600 dark:text-slate-300 font-medium">{{ stat.label }}</div>
             </div>
           </div>
         </div>
@@ -97,14 +97,14 @@ const values = [
 
       <!-- Values Grid -->
       <div class="mb-16">
-        <h3 class="text-3xl font-bold text-slate-900 text-center mb-12">
+        <h3 class="text-3xl font-bold text-slate-900 dark:text-white text-center mb-12">
           Principles I Work By
         </h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div 
             v-for="(value, idx) in values" 
             :key="value.title"
-            class="group relative bg-gradient-to-br from-white to-slate-50 rounded-2xl p-8 border-2 border-slate-200 hover:border-brand-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            class="group relative bg-gradient-to-br from-white to-slate-50 dark:from-slate-800 dark:to-slate-900 rounded-2xl p-8 border-2 border-slate-200 dark:border-slate-700 hover:border-brand-300 dark:hover:border-brand-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <!-- Icon -->
             <div class="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-emerald-500 text-white shadow-lg mb-6 group-hover:scale-110 transition-transform">
@@ -113,11 +113,11 @@ const values = [
               </svg>
             </div>
             
-            <h4 class="text-xl font-bold text-slate-900 mb-3">{{ value.title }}</h4>
-            <p class="text-slate-600">{{ value.desc }}</p>
+            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">{{ value.title }}</h4>
+            <p class="text-slate-600 dark:text-slate-300">{{ value.desc }}</p>
 
             <!-- Number Badge -->
-            <div class="absolute top-6 right-6 text-5xl font-black text-slate-100 group-hover:text-brand-100 transition-colors">
+            <div class="absolute top-6 right-6 text-5xl font-black text-slate-100 dark:text-slate-700 group-hover:text-brand-100 dark:group-hover:text-brand-200 transition-colors">
               0{{ idx + 1 }}
             </div>
           </div>

@@ -24,9 +24,9 @@ async function subscribe() {
 </script>
 
 <template>
-  <section class="py-20 lg:py-28 relative overflow-hidden">
+  <section id="contact" class="py-20 lg:py-28 relative overflow-hidden">
     <!-- Background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-600 via-emerald-600 to-teal-600"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-600 via-emerald-600 to-teal-600 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800"></div>
     <div class="absolute inset-0 opacity-10">
       <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 2px, transparent 0); background-size: 50px 50px;"></div>
     </div>

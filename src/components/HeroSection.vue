@@ -129,7 +129,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-brand-50/30 pt-24 pb-20 lg:pt-32 lg:pb-28">
+  <section id="about" class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-brand-50/30 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 pt-24 pb-20 lg:pt-32 lg:pb-28">
     <!-- Animated Background Elements -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
       <div class="absolute top-20 left-10 w-72 h-72 bg-brand-200/30 rounded-full blur-3xl animate-pulse"></div>
@@ -145,7 +145,7 @@ onUnmounted(() => {
           :class="animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
         >
           <!-- Badge -->
-          <div class="inline-flex items-center gap-2.5 rounded-full border-2 border-brand-200/50 bg-white/80 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-brand-700 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="inline-flex items-center gap-2.5 rounded-full border-2 border-brand-200/50 dark:border-brand-700/50 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-brand-700 dark:text-emerald-300 shadow-lg hover:shadow-xl transition-shadow">
             <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
@@ -155,7 +155,7 @@ onUnmounted(() => {
 
           <!-- Heading -->
           <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
-            <span class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white bg-clip-text text-transparent">
               Hi, I'm Cherry Citra
             </span>
             <template v-if="typedText">
@@ -166,7 +166,7 @@ onUnmounted(() => {
           </h1>
 
           <!-- Description -->
-          <p class="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
+          <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
             I build performant web and mobile applications, design robust backends, and deliver delightful user experiences. Passionate about solving problems and shipping high‑quality products.
           </p>
 
@@ -183,7 +183,7 @@ onUnmounted(() => {
             </a>
             <a 
               href="#projects" 
-              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-slate-300 text-slate-700 font-bold hover:bg-slate-50 hover:border-slate-400 transition-all"
+              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-400 dark:hover:border-slate-600 transition-all"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -205,9 +205,9 @@ onUnmounted(() => {
 
             <!-- gradient border wrapper -->
             <div class="relative p-[2px] rounded-[28px] bg-gradient-to-br from-brand-300/70 via-emerald-300/70 to-teal-300/70 shadow-2xl w-[360px] sm:w-[420px] lg:w-[480px]">
-              <div class="relative bg-white rounded-[28px] overflow-visible animate-float-soft">
+              <div class="relative bg-white dark:bg-slate-800 rounded-[28px] overflow-visible animate-float-soft">
                 <!-- status badge -->
-                <div class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm border border-slate-200 shadow-lg rounded-xl px-3 py-1 text-xs font-semibold text-emerald-700 items-center gap-1 hidden lg:flex">
+                <div class="absolute top-3 right-3 z-10 bg-white/90 dark:bg-slate-900/80 backdrop-blur-sm border border-slate-200 dark:border-slate-700 shadow-lg rounded-xl px-3 py-1 text-xs font-semibold text-emerald-700 dark:text-emerald-400 items-center gap-1 hidden lg:flex">
                   <span class="relative flex h-2.5 w-2.5 mr-1">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
@@ -216,7 +216,7 @@ onUnmounted(() => {
                 </div>
 
                 <!-- header visual area -->
-                <div class="relative h-64 md:h-72 flex items-center justify-center bg-white rounded-[100px] overflow-visible">
+                <div class="relative h-64 md:h-72 flex items-center justify-center bg-white dark:bg-slate-900 rounded-[100px] overflow-visible">
                   <!-- soft background lights -->
                   <div class="absolute -top-10 -left-10 w-48 h-48 bg-brand-200/40 rounded-full blur-3xl"></div>
                   <div class="absolute -bottom-10 -right-10 w-56 h-56 bg-emerald-200/40 rounded-full blur-3xl"></div>
@@ -249,7 +249,7 @@ onUnmounted(() => {
                       Available for Work
                     </div>
                   </div>
-                  <div class="mt-1 text-emerald-600 font-semibold">{{ cardRole }}</div>
+                  <div class="mt-1 text-emerald-600 dark:text-emerald-400 font-semibold">{{ cardRole }}</div>
 
                   <!-- socials: Facebook, Instagram, GitHub -->
                   <div class="mt-4 flex items-center justify-center gap-4 text-slate-600">
@@ -298,6 +298,10 @@ onUnmounted(() => {
   background-color: #0f172a; /* slate-900 */
   animation: blink 1s steps(1) infinite;
   vertical-align: -0.1em;
+}
+
+.dark .typing-caret {
+  background-color: #e2e8f0; /* slate-200 */
 }
 
 @keyframes blink {
