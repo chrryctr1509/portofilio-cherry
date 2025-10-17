@@ -158,9 +158,11 @@ onUnmounted(() => {
             <span class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
               Hi, I'm Cherry Citra
             </span>
-            <br />
-            <span class="bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">{{ typedText }}</span>
-            <span class="typing-caret"></span>
+            <template v-if="typedText">
+              <br />
+              <span class="bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">{{ typedText }}</span>
+              <span class="typing-caret"></span>
+            </template>
           </h1>
 
           <!-- Description -->
