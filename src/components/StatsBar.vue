@@ -88,10 +88,10 @@ onUnmounted(() => {
       <!-- Section Header -->
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">
-          Our Impact in Numbers
+          Career Snapshot
         </h2>
         <p class="text-slate-300 text-lg">
-          Real results that speak for themselves
+          A quick look at experience and outcomes
         </p>
       </div>
 

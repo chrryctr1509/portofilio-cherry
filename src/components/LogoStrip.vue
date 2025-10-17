@@ -9,7 +9,7 @@ const brands = [
   <section class="py-16 bg-white border-y border-slate-100">
     <div class="mx-auto container px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-10">
-        <p class="text-sm font-bold text-slate-500 uppercase tracking-wider">Trusted by Industry Leaders</p>
+        <p class="text-sm font-bold text-slate-500 uppercase tracking-wider">Tools & Platforms I Use</p>
       </div>
       
       <!-- Marquee Effect -->

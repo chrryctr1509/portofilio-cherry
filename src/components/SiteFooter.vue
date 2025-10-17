@@ -74,19 +74,19 @@ const socialLinks = [
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <span class="text-2xl font-bold">CreativeHub</span>
+              <span class="text-2xl font-bold">Cherry Citra</span>
             </div>
             <p class="text-white/70 mb-6 leading-relaxed">
-              We're a digital agency focused on building exceptional web experiences that drive growth and engage audiences. Let's create something amazing together.
+              I'm a software engineer focused on building reliable, scalable, and user‑friendly products. Open to new opportunities and collaborations.
             </p>
             
             <!-- Contact Info -->
             <div class="space-y-3 mb-6">
-              <a href="mailto:hello@creativehub.com" class="flex items-center gap-3 text-white/80 hover:text-brand-400 transition-colors group">
+              <a href="mailto:hello@example.com" class="flex items-center gap-3 text-white/80 hover:text-brand-400 transition-colors group">
                 <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>hello@creativehub.com</span>
+                <span>hello@example.com</span>
               </a>
               <a href="tel:+1234567890" class="flex items-center gap-3 text-white/80 hover:text-brand-400 transition-colors group">
                 <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,7 +99,7 @@ const socialLinks = [
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>123 Business Ave, Suite 100<br/>San Francisco, CA 94107</span>
+                <span>Remote • Open to Relocation</span>
               </div>
             </div>
 
@@ -119,12 +119,12 @@ const socialLinks = [
             </div>
           </div>
 
-          <!-- Services Column -->
+          <!-- Skills Column -->
           <div class="lg:col-span-2">
-            <h4 class="text-lg font-bold mb-6">Services</h4>
+            <h4 class="text-lg font-bold mb-6">Skills</h4>
             <ul class="space-y-3">
               <li v-for="service in services" :key="service">
-                <a href="#services" class="text-white/70 hover:text-brand-400 transition-colors flex items-center gap-2 group">
+                <a href="#skills" class="text-white/70 hover:text-brand-400 transition-colors flex items-center gap-2 group">
                   <svg class="w-4 h-4 text-brand-400 opacity-0 group-hover:opacity-100 -ml-0 group-hover:ml-0 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
@@ -134,9 +134,9 @@ const socialLinks = [
             </ul>
           </div>
 
-          <!-- Company Column -->
+          <!-- Resume Column -->
           <div class="lg:col-span-3">
-            <h4 class="text-lg font-bold mb-6">Company</h4>
+            <h4 class="text-lg font-bold mb-6">Resume</h4>
             <ul class="space-y-3">
               <li v-for="link in company" :key="link.name">
                 <a :href="link.href" class="text-white/70 hover:text-brand-400 transition-colors flex items-center gap-2 group">
@@ -149,9 +149,9 @@ const socialLinks = [
             </ul>
           </div>
 
-          <!-- Resources Column -->
+          <!-- Links Column -->
           <div class="lg:col-span-3">
-            <h4 class="text-lg font-bold mb-6">Resources</h4>
+            <h4 class="text-lg font-bold mb-6">Links</h4>
             <ul class="space-y-3">
               <li v-for="link in resources" :key="link.name">
                 <a :href="link.href" class="text-white/70 hover:text-brand-400 transition-colors flex items-center gap-2 group">
@@ -171,7 +171,7 @@ const socialLinks = [
         <div class="mx-auto container px-4 sm:px-6 lg:px-8 py-6">
           <div class="flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-sm text-white/60">
-              © {{ currentYear }} CreativeHub. All rights reserved.
+              © {{ currentYear }} Cherry Citra.
             </p>
             <div class="flex items-center gap-6 text-sm">
               <a href="#privacy" class="text-white/60 hover:text-brand-400 transition-colors">Privacy</a>

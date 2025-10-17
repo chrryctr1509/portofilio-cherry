@@ -1,39 +1,39 @@
 <script setup>
 const features = [
   { 
-    title: 'Web Development', 
-    desc: 'Build responsive, fast, and scalable web applications with modern technologies and best practices.',
+    title: 'Frontend Development', 
+    desc: 'React, Vue, Next.js, Tailwind CSS. Accessible, responsive, and component‑driven UIs.',
     icon: 'code',
     color: 'from-blue-500 to-indigo-500'
   },
   { 
-    title: 'UI/UX Design', 
-    desc: 'Create stunning, user-friendly interfaces that engage users and drive conversions.',
+    title: 'Backend Development', 
+    desc: 'Node.js, Go, RESTful APIs, authentication, caching, and database design.',
     icon: 'design',
     color: 'from-purple-500 to-pink-500'
   },
   { 
-    title: 'Digital Marketing', 
-    desc: 'Grow your online presence with data-driven marketing strategies and SEO optimization.',
+    title: 'Architecture & Design', 
+    desc: 'Clean architecture, modular patterns, and pragmatic design for maintainable systems.',
     icon: 'marketing',
     color: 'from-orange-500 to-red-500'
   },
   { 
     title: 'Mobile Apps', 
-    desc: 'Develop native and cross-platform mobile applications for iOS and Android.',
+    desc: 'React Native and Flutter for cross‑platform experiences with native performance.',
     icon: 'mobile',
     color: 'from-green-500 to-emerald-500'
   },
   { 
-    title: 'Brand Strategy', 
-    desc: 'Build a strong brand identity that resonates with your target audience and stands out.',
-    icon: 'brand',
+    title: 'DevOps & Cloud', 
+    desc: 'Docker, CI/CD, monitoring, and cloud deployments for reliable delivery.',
+    icon: 'cloud',
     color: 'from-teal-500 to-cyan-500'
   },
   { 
-    title: 'Cloud Solutions', 
-    desc: 'Deploy and scale your applications with cloud infrastructure and DevOps excellence.',
-    icon: 'cloud',
+    title: 'Testing & Quality', 
+    desc: 'Unit, integration, and e2e testing. Performance profiling and optimization.',
+    icon: 'brand',
     color: 'from-violet-500 to-purple-500'
   },
 ]
@@ -52,7 +52,7 @@ const getIcon = (type) => {
 </script>
 
 <template>
-  <section class="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50" id="services">
+  <section class="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50" id="skills">
     <div class="mx-auto container px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <header class="text-center max-w-3xl mx-auto mb-16">
@@ -60,13 +60,13 @@ const getIcon = (type) => {
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          Our Services
+          Skills & Expertise
         </div>
         <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4">
-          Complete Digital Solutions
+          What I Do Best
         </h2>
         <p class="text-lg text-slate-600">
-          We provide end-to-end services to transform your digital presence and accelerate business growth
+          A selection of core skills I use to design, build, and ship products
         </p>
       </header>
 

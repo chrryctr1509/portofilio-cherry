@@ -1,12 +1,130 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 const animated = ref(false)
+const fxReady = ref(false)
+const fxContainer = ref(null)
+let fxCanvas = null
+let fxLib = null
+let fxTexture = null
+let fxAnimId = null
+let fxStartTime = 0
+const cardRole = 'Backend Developer'
+
+// Typing effect for role titles
+const roles = [
+  'Full‑Stack Developer',
+  'Backend Developer',
+  'Frontend Engineer',
+  'Software Engineer',
+  'DevOps Enthusiast'
+]
+const typedText = ref('')
+const loopIndex = ref(0)
+const isDeleting = ref(false)
+let typingTimer = null
+
+function tick() {
+  const full = roles[loopIndex.value % roles.length]
+  if (!isDeleting.value) {
+    typedText.value = full.substring(0, typedText.value.length + 1)
+    const atWord = typedText.value === full
+    typingTimer = setTimeout(tick, atWord ? 1200 : 120)
+    if (atWord) isDeleting.value = true
+  } else {
+    typedText.value = full.substring(0, typedText.value.length - 1)
+    const cleared = typedText.value === ''
+    typingTimer = setTimeout(tick, cleared ? 300 : 60)
+    if (cleared) {
+      isDeleting.value = false
+      loopIndex.value++
+    }
+  }
+}
 
 onMounted(() => {
   setTimeout(() => {
     animated.value = true
   }, 100)
+  setTimeout(() => tick(), 400)
+})
+
+onMounted(async () => {
+  try {
+    // Dynamic import glfx; works with Vite
+    const mod = await import('glfx')
+    fxLib = (mod && (mod.default?.fx || mod.fx)) || (typeof window !== 'undefined' ? window.fx : null)
+  } catch (e) {
+    fxLib = null
+  }
+
+  await nextTick()
+
+  // Setup canvas and apply effects if supported
+  if (!fxLib || !fxLib.canvas) {
+    fxReady.value = false
+    return
+  }
+
+  let canvas
+  try {
+    canvas = fxLib.canvas()
+  } catch (e) {
+    fxReady.value = false
+    return
+  }
+
+  const img = new Image()
+  img.crossOrigin = 'anonymous'
+  img.src = '/images/cherry.png'
+  img.onload = () => {
+    fxTexture = canvas.texture(img)
+    // Set internal resolution to image natural size
+    canvas.width = img.width
+    canvas.height = img.height
+
+    // Mount canvas into container and mirror previous sizing styles
+    if (fxContainer.value) {
+      fxContainer.value.innerHTML = ''
+      canvas.className = 'mx-auto h-64 md:h-80 w-auto object-contain drop-shadow-xl -translate-y-10 md:-translate-y-16 scale-[1.30] md:scale-[1.40] photo-mask transition-transform duration-500 ease-out will-change-transform'
+      fxContainer.value.appendChild(canvas)
+      fxCanvas = canvas
+      fxReady.value = true
+    }
+
+    // Cartoon-like effect with subtle animated parameters
+    fxStartTime = performance.now()
+    const render = () => {
+      const t = (performance.now() - fxStartTime) / 1000
+      // smoother, slower oscillation
+      const sat = 0.16 + 0.03 * Math.sin(t * 0.25)
+      const vignetteSize = 0.34 + 0.015 * Math.sin(t * 0.25)
+      const contrast = 0.18 + 0.015 * Math.sin(t * 0.2)
+
+      canvas
+        .draw(fxTexture)
+        .unsharpMask(2.0, 1.0)
+        .ink(0.20)
+        .hueSaturation(0, sat)
+        .brightnessContrast(0.02, contrast)
+        .vignette(vignetteSize, 0.6)
+        .update()
+
+      fxAnimId = requestAnimationFrame(render)
+    }
+    render()
+  }
+})
+
+onUnmounted(() => {
+  if (typingTimer) clearTimeout(typingTimer)
+  if (fxCanvas && fxCanvas.parentNode) {
+    fxCanvas.parentNode.removeChild(fxCanvas)
+  }
+  if (fxAnimId) cancelAnimationFrame(fxAnimId)
+  if (fxTexture && typeof fxTexture.destroy === 'function') {
+    try { fxTexture.destroy() } catch (_) {}
+  }
 })
 </script>
 
@@ -32,23 +150,22 @@ onMounted(() => {
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
             </span>
-            #1 Trusted Digital Agency 2024
+            Professional Resume
           </div>
 
           <!-- Heading -->
           <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
             <span class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
-              Transform Your
+              Hi, I'm Cherry Citra
             </span>
             <br />
-            <span class="bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
-              Digital Presence
-            </span>
+            <span class="bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">{{ typedText }}</span>
+            <span class="typing-caret"></span>
           </h1>
 
           <!-- Description -->
           <p class="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed">
-            We craft exceptional digital experiences that drive growth, engage audiences, and elevate your brand to new heights. Let's build something extraordinary together.
+            I build performant web and mobile applications, design robust backends, and deliver delightful user experiences. Passionate about solving problems and shipping high‑quality products.
           </p>
 
           <!-- CTA Buttons -->
@@ -57,20 +174,19 @@ onMounted(() => {
               href="#contact" 
               class="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600 text-white font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
             >
-              Start Your Project
+              Contact Me
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </a>
             <a 
-              href="#portfolio" 
+              href="#projects" 
               class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-slate-300 text-slate-700 font-bold hover:bg-slate-50 hover:border-slate-400 transition-all"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              View Our Work
+              View Projects
             </a>
           </div>
         </div>
@@ -80,49 +196,74 @@ onMounted(() => {
           class="relative transition-all duration-1000 delay-300"
           :class="animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
         >
-          <!-- Main Card -->
-          <div class="relative rounded-3xl bg-gradient-to-br from-slate-100 to-slate-50 p-8 shadow-2xl border border-white">
-            <!-- Decorative Grid -->
-            <div class="aspect-[4/3] rounded-2xl bg-white shadow-inner border border-slate-200 grid place-items-center relative overflow-hidden">
-              <div class="absolute inset-0 grid grid-cols-6 grid-rows-6">
-                <div v-for="i in 36" :key="i" class="border border-slate-100"></div>
-              </div>
-              <div class="relative z-10 text-center space-y-4">
-                <div class="flex justify-center">
-                  <svg class="w-24 h-24 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          <!-- Redesigned Photo Card -->
+          <div class="relative min-h-[460px] flex items-center justify-center">
+            <!-- outer glow -->
+            <div class="absolute -inset-10 rounded-[32px] bg-gradient-to-br from-brand-200/30 via-emerald-200/30 to-teal-200/30 blur-2xl"></div>
+
+            <!-- gradient border wrapper -->
+            <div class="relative p-[2px] rounded-[28px] bg-gradient-to-br from-brand-300/70 via-emerald-300/70 to-teal-300/70 shadow-2xl w-[360px] sm:w-[420px] lg:w-[480px]">
+              <div class="relative bg-white rounded-[28px] overflow-visible animate-float-soft">
+                <!-- status badge -->
+                <div class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm border border-slate-200 shadow-lg rounded-xl px-3 py-1 text-xs font-semibold text-emerald-700 flex items-center gap-1">
+                  <span class="relative flex h-2.5 w-2.5 mr-1">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
+                  </span>
+                  Available for Work
+                </div>
+
+                <!-- header visual area -->
+                <div class="relative h-64 md:h-72 flex items-center justify-center bg-white rounded-[100px] overflow-visible">
+                  <!-- soft background lights -->
+                  <div class="absolute -top-10 -left-10 w-48 h-48 bg-brand-200/40 rounded-full blur-3xl"></div>
+                  <div class="absolute -bottom-10 -right-10 w-56 h-56 bg-emerald-200/40 rounded-full blur-3xl"></div>
+
+                  <!-- canvas host -->
+                  <div ref="fxContainer" v-show="fxReady" class="pointer-events-none"></div>
+                  <!-- fallback image -->
+                  <img 
+                    v-show="!fxReady"
+                    src="/images/cherry.png" 
+                    alt="Cherry Citra" 
+                    class="mx-auto h-64 md:h-80 w-auto object-contain drop-shadow-xl -translate-y-10 md:-translate-y-16 scale-[1.30] md:scale-[1.40] photo-mask transition-transform duration-500 ease-out will-change-transform"
+                  />
+
+                  <!-- wave separator -->
+                  <svg class="absolute -bottom-1 left-0 w-full text-white z-20" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0,0 C150,40 450,0 600,40 L600,40 L0,40 Z" fill="currentColor"></path>
                   </svg>
                 </div>
-                <div class="text-slate-400 font-semibold">Professional Web Design</div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Floating Cards -->
-          <div class="absolute -top-6 -left-6 bg-white rounded-2xl shadow-xl p-4 border border-slate-100 animate-bounce" style="animation-duration: 3s;">
-            <div class="flex items-center gap-3">
-              <div class="h-12 w-12 rounded-full bg-gradient-to-br from-brand-400 to-emerald-400 flex items-center justify-center text-white font-bold">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <div class="text-xs text-slate-500">Success Rate</div>
-                <div class="text-lg font-bold text-slate-900">98%</div>
-              </div>
-            </div>
-          </div>
+                <!-- info area -->
+                <div class="px-6 pt-6 text-center">
+                  <div class="mt-1 text-emerald-600 font-semibold">{{ cardRole }}</div>
 
-          <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 border border-slate-100 animate-bounce" style="animation-duration: 3s; animation-delay: 1s;">
-            <div class="flex items-center gap-3">
-              <div class="h-12 w-12 rounded-full bg-gradient-to-br from-emerald-400 to-teal-400 flex items-center justify-center text-white font-bold">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <div>
-                <div class="text-xs text-slate-500">Fast Delivery</div>
-                <div class="text-lg font-bold text-slate-900">2 Weeks</div>
+                  <!-- socials: Facebook, Instagram, GitHub -->
+                  <div class="mt-4 flex items-center justify-center gap-4 text-slate-600">
+                    <a href="#" aria-label="Facebook" class="icon-soft">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M22 12.06A10 10 0 1010.75 22v-6.99H8.2v-2.95h2.55V9.92c0-2.52 1.5-3.92 3.8-3.92 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.77-1.64 1.56v1.87h2.79l-.45 2.95h-2.34V22A10 10 0 0022 12.06z"/>
+                      </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="icon-soft">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A5.5 5.5 0 1112 19a5.5 5.5 0 010-11.5zm0 2A3.5 3.5 0 1015.5 13 3.5 3.5 0 0012 9.5zM18 6.5a1.25 1.25 0 11-1.25 1.25A1.25 1.25 0 0118 6.5z"/>
+                      </svg>
+                    </a>
+                    <a href="#" aria-label="GitHub" class="icon-soft">
+                      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48v-1.68c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.1-1.5-1.1-1.5-.9-.64.07-.63.07-.63 1 .07 1.52 1.05 1.52 1.05.9 1.57 2.36 1.12 2.94.85.1-.67.36-1.12.65-1.38-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.38-2.03 1.02-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05a9.2 9.2 0 015 0c1.9-1.32 2.74-1.05 2.74-1.05.56 1.4.21 2.44.1 2.7.64.72 1.02 1.63 1.02 2.75 0 3.96-2.35 4.83-4.58 5.08.37.33.7.97.7 1.96v2.9c0 .27.18.58.69.48A10.02 10.02 0 0022 12.26C22 6.58 17.52 2 12 2z" clip-rule="evenodd"/>
+                      </svg>
+                    </a>
+                  </div>
+
+                  <!-- actions bar -->
+                  <div class="mt-6 border-t border-slate-200 flex divide-x divide-slate-200 text-[13px] font-bold uppercase tracking-wide text-slate-700">
+                    <a href="#cv" class="btn-soft flex-1 py-4 text-center">Download CV</a>
+                    <a href="#contact" class="btn-soft flex-1 py-4 text-center">Contact Me</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -137,5 +278,67 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.typing-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 4px;
+  background-color: #0f172a; /* slate-900 */
+  animation: blink 1s steps(1) infinite;
+  vertical-align: -0.1em;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+.photo-mask {
+  /* Fade out bottom part of the photo so body looks rapi ketika melewati wave */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 78%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 78%, rgba(0,0,0,0) 100%);
+}
+
+.btn-soft {
+  transition: background-color 300ms ease, box-shadow 300ms ease, transform 200ms ease;
+}
+.btn-soft:hover {
+  background-color: rgba(15, 23, 42, 0.04); /* slate-900 @ 4% */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.btn-soft:active {
+  transform: translateY(1px);
+}
+.btn-soft:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, 0.5); /* emerald-500 */
+  outline-offset: -2px;
+}
+
+.icon-soft {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  transition: background-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+.icon-soft:hover {
+  background-color: rgba(15, 23, 42, 0.06);
+  color: #0f172a; /* slate-900 */
+  transform: translateY(-1px);
+}
+.icon-soft:active {
+  transform: translateY(0);
+}
 </style>
 

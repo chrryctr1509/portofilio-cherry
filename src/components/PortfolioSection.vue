@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 
-const categories = ['All', 'Web Design', 'Mobile App', 'Branding', 'E-commerce']
+const categories = ['All', 'Web', 'Mobile', 'Design', 'Open Source']
 const selectedCategory = ref('All')
 
 const projects = [
@@ -62,7 +62,7 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-  <section class="py-20 lg:py-28 bg-white" id="portfolio">
+  <section class="py-20 lg:py-28 bg-white" id="projects">
     <div class="mx-auto container px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <header class="text-center max-w-3xl mx-auto mb-12">
@@ -70,13 +70,13 @@ const filteredProjects = computed(() => {
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
           </svg>
-          Our Portfolio
+          Projects
         </div>
         <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4">
-          Featured Projects
+          Selected Projects
         </h2>
         <p class="text-lg text-slate-600">
-          Explore our recent work and see how we've helped businesses transform their digital presence
+          A snapshot of work highlighting problem‑solving, performance, and user experience
         </p>
       </header>
 
@@ -165,7 +165,7 @@ const filteredProjects = computed(() => {
           href="#contact" 
           class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-slate-300 text-slate-900 font-bold hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all"
         >
-          View All Projects
+          View More
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>

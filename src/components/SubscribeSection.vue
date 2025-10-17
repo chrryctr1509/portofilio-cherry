@@ -42,10 +42,10 @@ async function subscribe() {
 
         <!-- Heading -->
         <h2 class="text-4xl md:text-5xl font-black text-white mb-4">
-          Stay in the Loop
+          Get In Touch
         </h2>
         <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Subscribe to our newsletter for the latest insights, project updates, and exclusive digital marketing tips delivered straight to your inbox.
+          Have a project in mind or want to collaborate? Send me a message and I’ll get back to you soon.
         </p>
 
         <!-- Form -->
@@ -58,7 +58,7 @@ async function subscribe() {
               v-model="email" 
               type="email" 
               required 
-              placeholder="Enter your email address" 
+              placeholder="Your email address" 
               class="flex-1 rounded-xl border-2 border-white/20 bg-white/10 backdrop-blur-sm px-6 py-4 text-white placeholder-white/60 outline-none focus:ring-4 focus:ring-white/30 focus:border-white/40 transition-all"
             />
             <button 
@@ -66,19 +66,19 @@ async function subscribe() {
               :disabled="isSubmitting || isSuccess"
               class="px-8 py-4 rounded-xl bg-white text-brand-600 font-bold hover:bg-slate-50 disabled:opacity-75 transition-all hover:scale-105 shadow-xl flex items-center justify-center gap-2"
             >
-              <span v-if="!isSubmitting && !isSuccess">Subscribe Now</span>
+              <span v-if="!isSubmitting && !isSuccess">Send Message</span>
               <span v-if="isSubmitting" class="flex items-center gap-2">
                 <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                Subscribing...
+                Sending...
               </span>
               <span v-if="isSuccess" class="flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                Subscribed!
+                Sent!
               </span>
             </button>
           </div>

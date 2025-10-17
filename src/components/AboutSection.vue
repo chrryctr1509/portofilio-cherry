@@ -39,13 +39,13 @@ const values = [
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          About Us
+          About Me
         </div>
         <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">
-          We Build Digital Experiences That Matter
+          Building Products That Make An Impact
         </h2>
         <p class="text-lg text-slate-600 leading-relaxed">
-          CreativeHub is a team of passionate designers, developers, and strategists dedicated to helping businesses thrive in the digital age. Since 2014, we've been transforming ideas into powerful digital solutions.
+          I'm a software engineer focused on crafting scalable systems and intuitive interfaces. Over the years I've worked across the stack, leading projects from idea to production.
         </p>
       </div>
 
@@ -76,13 +76,13 @@ const values = [
         <!-- Right - Content -->
         <div class="space-y-6">
           <h3 class="text-3xl font-bold text-slate-900">
-            Your Trusted Digital Partner
+            A Bit About My Background
           </h3>
           <p class="text-slate-600 leading-relaxed">
-            We believe in the power of digital innovation to transform businesses. Our mission is to create exceptional digital experiences that not only look beautiful but also drive real business results.
+            I value clean code, clear communication, and pragmatic solutions. My work blends product thinking, design sense, and engineering rigor.
           </p>
           <p class="text-slate-600 leading-relaxed">
-            From startups to established enterprises, we've helped hundreds of businesses achieve their digital goals through strategic thinking, creative design, and technical excellence.
+            I've collaborated with startups and enterprises to deliver products that are reliable, maintainable, and user‑centric.
           </p>
           
           <!-- Quick Stats -->
@@ -98,7 +98,7 @@ const values = [
       <!-- Values Grid -->
       <div class="mb-16">
         <h3 class="text-3xl font-bold text-slate-900 text-center mb-12">
-          Our Core Values
+          Principles I Work By
         </h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div 
