@@ -141,7 +141,7 @@ onUnmounted(() => {
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Left Content -->
         <div 
-          class="space-y-8 transition-all duration-1000"
+          class="space-y-8 transition-all duration-1000 order-2 lg:order-1"
           :class="animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
         >
           <!-- Badge -->
@@ -193,7 +193,7 @@ onUnmounted(() => {
 
         <!-- Right Visual -->
         <div 
-          class="relative transition-all duration-1000 delay-300"
+          class="relative transition-all duration-1000 delay-300 order-1 lg:order-2"
           :class="animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
         >
           <!-- Redesigned Photo Card -->
@@ -205,7 +205,7 @@ onUnmounted(() => {
             <div class="relative p-[2px] rounded-[28px] bg-gradient-to-br from-brand-300/70 via-emerald-300/70 to-teal-300/70 shadow-2xl w-[360px] sm:w-[420px] lg:w-[480px]">
               <div class="relative bg-white rounded-[28px] overflow-visible animate-float-soft">
                 <!-- status badge -->
-                <div class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm border border-slate-200 shadow-lg rounded-xl px-3 py-1 text-xs font-semibold text-emerald-700 flex items-center gap-1">
+                <div class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-sm border border-slate-200 shadow-lg rounded-xl px-3 py-1 text-xs font-semibold text-emerald-700 items-center gap-1 hidden lg:flex">
                   <span class="relative flex h-2.5 w-2.5 mr-1">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
@@ -237,6 +237,16 @@ onUnmounted(() => {
 
                 <!-- info area -->
                 <div class="px-6 pt-6 text-center">
+                  <!-- mobile inline status badge -->
+                  <div class="lg:hidden flex justify-center">
+                    <div class="inline-flex items-center gap-1 bg-white border border-slate-200 shadow-sm rounded-xl px-3 py-1 text-xs font-semibold text-emerald-700">
+                      <span class="relative flex h-2.5 w-2.5 mr-1">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
+                      </span>
+                      Available for Work
+                    </div>
+                  </div>
                   <div class="mt-1 text-emerald-600 font-semibold">{{ cardRole }}</div>
 
                   <!-- socials: Facebook, Instagram, GitHub -->
