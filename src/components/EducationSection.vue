@@ -25,39 +25,59 @@ onMounted(() => {
       </header>
 
       <div class="grid md:grid-cols-2 gap-8">
+        <!-- Left: Education List -->
         <div 
-          class="rounded-2xl p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          class="rounded-2xl p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300"
           :class="animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
         >
-          <div class="text-xl font-bold text-slate-900 dark:text-white">B.S. in Computer Science</div>
-          <div class="text-sm text-slate-500 dark:text-slate-300">Universitas Contoh — 2015 - 2019</div>
-          <p class="mt-4 text-slate-600 dark:text-slate-300">Focused on software engineering, algorithms, and systems design. Graduated with honors and completed capstone on scalable web architectures.</p>
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 4-9 4-9-4 9-4zm0 6l5 2.222V15l-5 2.778L7 15v-3.778L12 9z"/></svg>
+            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">Education</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="mt-1">
+                <svg class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l7 4v6c0 5-7 10-7 10S5 17 5 12V6l7-4z"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 dark:text-white">SMK Cengkareng 2 — Jakarta</div>
+                <div class="text-sm text-slate-500 dark:text-slate-300">Teknik Komputer dan Jaringan • 2016–2019</div>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="mt-1">
+                <svg class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l7 4v6c0 5-7 10-7 10S5 17 5 12V6l7-4z"/></svg>
+              </div>
+              <div>
+                <div class="font-bold text-slate-900 dark:text-white">Universitas Bina Sarana Informatika — Jakarta</div>
+                <div class="text-sm text-slate-500 dark:text-slate-300">Teknik Informasi • 2021–2025</div>
+              </div>
+            </li>
+          </ul>
         </div>
 
+        <!-- Right: Certifications -->
         <div 
-          class="rounded-2xl p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+          class="rounded-2xl p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all duration-300"
           :class="animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
           style="transition-delay: 100ms"
         >
-          <div class="text-xl font-bold text-slate-900 dark:text-white">Certifications</div>
-          <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              Certified Laravel Developer
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="currentColor"><path d="M17 3H7a2 2 0 00-2 2v14l7-3 7 3V5a2 2 0 00-2-2z"/></svg>
+            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">Certifications</h3>
+          </div>
+          <ul class="space-y-3 text-slate-700 dark:text-slate-300">
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 2 2-6 6-4-4 2-2z"/></svg>
+              <span>Certified Laravel Developer</span>
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              Node.js API Design — Professional
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 2 2-6 6-4-4 2-2z"/></svg>
+              <span>Node.js API Design — Professional</span>
             </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              DevOps Fundamentals (Docker & CI/CD)
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12l2 2 4-4 2 2-6 6-4-4 2-2z"/></svg>
+              <span>DevOps Fundamentals (Docker & CI/CD)</span>
             </li>
           </ul>
         </div>

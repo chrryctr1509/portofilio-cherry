@@ -64,12 +64,7 @@ async function subscribe() {
           </svg>
         </div>
 
-        <!-- Heading -->
-        <h2
-          class="text-4xl md:text-5xl font-black text-white dark:text-slate-100 mb-4"
-        >
-          Get In Touch
-        </h2>
+        <!-- Heading removed as requested -->
         <p
           class="text-lg md:text-xl text-white/90 dark:text-slate-200 mb-8 max-w-2xl mx-auto"
         >

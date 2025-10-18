@@ -30,7 +30,7 @@ router.afterEach(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+  <div class="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
     <!-- Page Loader -->
     <Transition name="fade">
       <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm">

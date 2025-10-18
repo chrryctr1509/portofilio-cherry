@@ -9,7 +9,6 @@ let fxLib = null
 let fxTexture = null
 let fxAnimId = null
 let fxStartTime = 0
-const cardRole = 'Backend Developer'
 
 // Typing effect for role titles
 const roles = [
@@ -19,6 +18,7 @@ const roles = [
   'Software Engineer',
   'DevOps Enthusiast'
 ]
+// no skills here; moved to separate section
 const typedText = ref('')
 const loopIndex = ref(0)
 const isDeleting = ref(false)
@@ -171,10 +171,10 @@ onUnmounted(() => {
           </p>
 
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
+          <div class="flex flex-row-reverse sm:flex-row items-stretch gap-3 pt-2">
             <a 
               href="#contact" 
-              class="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600 text-white font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
+              class="group inline-flex flex-1 items-center justify-center gap-2 px-5 sm:px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600 text-white font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all text-center"
             >
               Contact Me
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,7 +183,7 @@ onUnmounted(() => {
             </a>
             <a 
               href="#projects" 
-              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-slate-400 dark:hover:border-slate-600 transition-all"
+              class="inline-flex flex-1 items-center justify-center gap-2 px-5 sm:px-8 py-4 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 font-bold shadow-xl hover:shadow-2xl border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-center"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
@@ -241,7 +241,7 @@ onUnmounted(() => {
                 <div class="px-6 pt-6 text-center">
                   <!-- mobile inline status badge -->
                   <div class="lg:hidden flex justify-center">
-                    <div class="inline-flex items-center gap-1 bg-white border border-slate-200 shadow-sm rounded-xl px-3 py-1 text-xs font-semibold text-emerald-700">
+                    <div class="inline-flex items-center gap-1 bg-white border border-slate-200 shadow-sm rounded-xl px-3 py-1 text-xs font-semibold text-emerald-700 dark:bg-slate-900 dark:border-slate-700 dark:text-emerald-400">
                       <span class="relative flex h-2.5 w-2.5 mr-1">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
@@ -249,10 +249,8 @@ onUnmounted(() => {
                       Available for Work
                     </div>
                   </div>
-                  <div class="mt-1 text-emerald-600 dark:text-emerald-400 font-semibold">{{ cardRole }}</div>
-
                   <!-- socials: Facebook, Instagram, GitHub -->
-                  <div class="mt-4 flex items-center justify-center gap-4 text-slate-600">
+                  <div class="mt-4 flex items-center justify-center gap-4 text-slate-600 dark:text-slate-200">
                     <a href="#" aria-label="Facebook" class="icon-soft">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M22 12.06A10 10 0 1010.75 22v-6.99H8.2v-2.95h2.55V9.92c0-2.52 1.5-3.92 3.8-3.92 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.77-1.64 1.56v1.87h2.79l-.45 2.95h-2.34V22A10 10 0 0022 12.06z"/>
@@ -271,7 +269,7 @@ onUnmounted(() => {
                   </div>
 
                   <!-- actions bar -->
-                  <div class="mt-6 border-t border-slate-200 flex divide-x divide-slate-200 text-[13px] font-bold uppercase tracking-wide text-slate-700">
+                  <div class="mt-6 border-t border-slate-200 dark:border-slate-700 flex divide-x divide-slate-200 dark:divide-slate-700 text-[13px] font-bold uppercase tracking-wide text-slate-700 dark:text-white">
                     <a href="#cv" class="btn-soft flex-1 py-4 text-center">Download CV</a>
                     <a href="#contact" class="btn-soft flex-1 py-4 text-center">Contact Me</a>
                   </div>
