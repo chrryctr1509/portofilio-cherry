@@ -22,7 +22,7 @@
 
 @layer base {
   :root {
-    --container: 72rem; /* max-w-7xl (~1152px) */
+    --container: 64rem; /* max-w-5xl (~1024px) */
   }
 
   html {

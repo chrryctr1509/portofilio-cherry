@@ -11,7 +11,7 @@ const skills = [
 
 <template>
   <section id="skills" class="py-20 lg:py-28 bg-white dark:bg-slate-900">
-    <div class="mx-auto container px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto container px-4 sm:px-6 lg:px-8  max-w-7xl">
       <header class="text-center max-w-3xl mx-auto mb-12">
         <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 dark:bg-brand-900/30 px-4 py-2 text-sm font-semibold text-brand-700 dark:text-brand-300 mb-4">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -137,7 +137,7 @@ onUnmounted(() => {
       <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-teal-200/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s"></div>
     </div>
 
-    <div class="relative mx-auto container px-4 sm:px-6 lg:px-8">
+    <div class="relative mx-auto container px-4 sm:px-6 lg:px-8 max-w-7xl">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Left Content -->
         <div 

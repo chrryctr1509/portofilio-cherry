@@ -7,7 +7,7 @@ const brands = [
 
 <template>
   <section class="py-16 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
-    <div class="mx-auto container px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto container px-4 sm:px-6 lg:px-8  max-w-7xl" >
       <div class="text-center mb-10">
         <p class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Tools & Platforms I Use</p>
       </div>
