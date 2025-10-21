@@ -11,6 +11,7 @@ const projects = [
     category: 'CodeIgniter',
     desc: 'Aplikasi pemesanan Nasi Goreng dengan manajemen menu, pesanan, dan kasir.',
     color: 'from-amber-500 to-orange-600',
+    image: '/images/nasigoreng.png',
     tags: ['CodeIgniter 3', 'MySQL']
   },
   {
@@ -19,15 +20,17 @@ const projects = [
     category: 'Node.js',
     desc: 'Layanan REST API berbasis Express untuk integrasi WhatsApp (send/receive).',
     color: 'from-emerald-500 to-teal-600',
+    image: '/images/whastapp.png',
     tags: ['Node.js', 'Express', 'SQL']
   },
   {
     id: 3,
     title: 'Absensi Perusahaan',
-    category: 'CodeIgniter',
+    category: 'Laravel',
     desc: 'Sistem absensi karyawan: clock-in/out, rekap harian, dan laporan HR.',
     color: 'from-sky-500 to-cyan-600',
-    tags: ['CodeIgniter 3', 'MySQL']
+    image: '/images/absen.png',
+    tags: ['Laravel', 'MySQL']
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const projects = [
     category: 'Laravel',
     desc: 'Platform toko online dengan katalog, cart, checkout, dan manajemen pesanan.',
     color: 'from-fuchsia-500 to-rose-600',
+    image: '/images/maxicustom.png',
     tags: ['Laravel 8', 'MySQL']
   }
 ]
@@ -92,10 +96,17 @@ const filteredProjects = computed(() => {
             <div class="absolute inset-0 opacity-20">
               <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 30px 30px;"></div>
             </div>
-            
-            <!-- Mockup -->
-            <div class="absolute inset-0 flex items-center justify-center p-8">
-              <div class="w-full h-full bg-white/90 rounded-lg shadow-2xl border-4 border-white/50 flex items-center justify-center backdrop-blur-sm">
+
+            <!-- Project Image or Fallback Mockup -->
+            <div class="absolute inset-0 flex items-center justify-center p-4">
+              <img
+                v-if="project.image"
+                :src="project.image"
+                :alt="project.title"
+                class="w-full h-full object-cover rounded-lg shadow-2xl border-4 border-white/60"
+                loading="lazy"
+              />
+              <div v-else class="w-full h-full bg-white/90 rounded-lg shadow-2xl border-4 border-white/50 flex items-center justify-center backdrop-blur-sm">
                 <svg class="w-20 h-20 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
