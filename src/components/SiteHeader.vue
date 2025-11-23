@@ -55,7 +55,7 @@ onUnmounted(() => {
         <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center gap-1">
           <a 
-            v-for="item in ['About', 'Skills', 'Projects', 'Education']" 
+            v-for="item in ['About', 'Skills', 'Projects']" 
             :key="item"
             :href="`#${item.toLowerCase()}`"
             @click="(e) => smoothScroll(e, `#${item.toLowerCase()}`)"
@@ -105,7 +105,7 @@ onUnmounted(() => {
         <div v-if="mobileMenuOpen" class="lg:hidden pb-6 pt-2">
           <nav class="flex flex-col gap-2">
             <a 
-              v-for="item in ['About', 'Skills', 'Projects', 'Education']"
+              v-for="item in ['About', 'Skills', 'Projects']"
               :key="item"
               :href="`#${item.toLowerCase()}`"
               @click="(e) => smoothScroll(e, `#${item.toLowerCase()}`)"

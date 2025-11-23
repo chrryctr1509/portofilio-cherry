@@ -154,7 +154,7 @@ onUnmounted(() => {
           </div>
 
           <!-- Heading -->
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
             <span class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white bg-clip-text text-transparent">
               Hi, I'm Cherry Citra
             </span>
