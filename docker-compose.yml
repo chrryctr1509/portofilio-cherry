@@ -12,7 +12,7 @@ services:
 
   # Development service (optional)
   dev:
-    image: node:18-alpine
+    image: node:22-alpine
     container_name: cherry-portfolio-dev
     working_dir: /app
     ports:
