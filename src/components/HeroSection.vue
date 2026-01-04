@@ -150,13 +150,13 @@ onUnmounted(() => {
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-500"></span>
             </span>
-            Professional Resume
+            Resume Profesional
           </div>
 
           <!-- Heading -->
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-[1.1] tracking-tight">
             <span class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white bg-clip-text text-transparent">
-              Hi, I'm Cherry Citra
+              Halo, Saya Cherry Citra
             </span>
             <template v-if="typedText">
               <br />
@@ -167,7 +167,7 @@ onUnmounted(() => {
 
           <!-- Description -->
           <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-            I build performant web and mobile applications, design robust backends, and deliver delightful user experiences. Passionate about solving problems and shipping high‑quality products.
+            Saya membangun aplikasi web dan mobile yang performan, merancang backend yang kuat, dan memberikan pengalaman pengguna yang menyenangkan. Semangat dalam memecahkan masalah dan mengirimkan produk berkualitas tinggi.
           </p>
 
           <!-- CTA Buttons -->
@@ -176,19 +176,19 @@ onUnmounted(() => {
               href="#contact" 
               class="group inline-flex flex-1 items-center justify-center gap-2 px-5 sm:px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 via-emerald-600 to-teal-600 text-white font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all text-center"
             >
-              Contact Me
+              Hubungi Saya
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </a>
             <a 
-              href="#projects" 
+              href="#portfolio" 
               class="inline-flex flex-1 items-center justify-center gap-2 px-5 sm:px-8 py-4 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 font-bold shadow-xl hover:shadow-2xl border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all text-center"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
               </svg>
-              View Projects
+              Lihat Portofolio
             </a>
           </div>
         </div>
@@ -212,7 +212,7 @@ onUnmounted(() => {
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
                   </span>
-                  Available for Work
+                  Siap Bekerja
                 </div>
 
                 <!-- header visual area -->
@@ -246,22 +246,22 @@ onUnmounted(() => {
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
                       </span>
-                      Available for Work
+                      Siap Bekerja
                     </div>
                   </div>
                   <!-- socials: Facebook, Instagram, GitHub -->
                   <div class="mt-4 flex items-center justify-center gap-4 text-slate-600 dark:text-slate-200">
-                    <a href="#" aria-label="Facebook" class="icon-soft">
+                    <a href="https://www.facebook.com/cherryctr" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="icon-soft">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M22 12.06A10 10 0 1010.75 22v-6.99H8.2v-2.95h2.55V9.92c0-2.52 1.5-3.92 3.8-3.92 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.77-1.64 1.56v1.87h2.79l-.45 2.95h-2.34V22A10 10 0 0022 12.06z"/>
                       </svg>
                     </a>
-                    <a href="#" aria-label="Instagram" class="icon-soft">
+                    <a href="https://www.instagram.com/mascherr30" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="icon-soft">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A5.5 5.5 0 1112 19a5.5 5.5 0 010-11.5zm0 2A3.5 3.5 0 1015.5 13 3.5 3.5 0 0012 9.5zM18 6.5a1.25 1.25 0 11-1.25 1.25A1.25 1.25 0 0118 6.5z"/>
                       </svg>
                     </a>
-                    <a href="#" aria-label="GitHub" class="icon-soft">
+                    <a href="https://github.com/chrryctr1509" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-soft">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48v-1.68c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.1-1.5-1.1-1.5-.9-.64.07-.63.07-.63 1 .07 1.52 1.05 1.52 1.05.9 1.57 2.36 1.12 2.94.85.1-.67.36-1.12.65-1.38-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.38-2.03 1.02-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05a9.2 9.2 0 015 0c1.9-1.32 2.74-1.05 2.74-1.05.56 1.4.21 2.44.1 2.7.64.72 1.02 1.63 1.02 2.75 0 3.96-2.35 4.83-4.58 5.08.37.33.7.97.7 1.96v2.9c0 .27.18.58.69.48A10.02 10.02 0 0022 12.26C22 6.58 17.52 2 12 2z" clip-rule="evenodd"/>
                       </svg>
@@ -270,8 +270,8 @@ onUnmounted(() => {
 
                   <!-- actions bar -->
                   <div class="mt-6 border-t border-slate-200 dark:border-slate-700 flex divide-x divide-slate-200 dark:divide-slate-700 text-[13px] font-bold uppercase tracking-wide text-slate-700 dark:text-white">
-                    <a href="#cv" class="btn-soft flex-1 py-4 text-center">Download CV</a>
-                    <a href="#contact" class="btn-soft flex-1 py-4 text-center">Contact Me</a>
+                    <a href="#cv" class="btn-soft flex-1 py-4 text-center">Unduh CV</a>
+                    <a href="#contact" class="btn-soft flex-1 py-4 text-center">Hubungi Saya</a>
                   </div>
                 </div>
               </div>

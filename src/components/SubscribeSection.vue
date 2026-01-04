@@ -64,12 +64,11 @@ async function subscribe() {
           </svg>
         </div>
 
-        <!-- Heading removed as requested -->
         <p
           class="text-lg md:text-xl text-white/90 dark:text-slate-200 mb-8 max-w-2xl mx-auto"
         >
-          Have a project in mind or want to collaborate? Send me a message and
-          I'll get back to you soon.
+          Tertarik dengan keahlian saya atau ingin berdiskusi tentang teknologi? Kirim pesan dan
+          saya akan segera merespons.
         </p>
 
         <!-- Form -->

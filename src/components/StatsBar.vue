@@ -3,30 +3,30 @@ import { ref, onMounted, onUnmounted } from "vue";
 
 const stats = [
   {
-    label: "Projects Completed",
-    value: 500,
+    label: "Project Selesai",
+    value: 50,
     suffix: "+",
     icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
     color: "from-blue-500 to-indigo-500",
   },
   {
-    label: "Client Satisfaction",
+    label: "Kepuasan Klien",
     value: 98,
     suffix: "%",
     icon: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
     color: "from-emerald-500 to-teal-500",
   },
   {
-    label: "Revenue Generated",
-    value: 50,
-    prefix: "$",
-    suffix: "M+",
+    label: "Nilai Project",
+    value: 500,
+    prefix: "Rp ",
+    suffix: "Jt+",
     icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
     color: "from-purple-500 to-pink-500",
   },
   {
-    label: "Years Experience",
-    value: 10,
+    label: "Tahun Pengalaman",
+    value: 5,
     suffix: "+",
     icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
     color: "from-orange-500 to-red-500",
@@ -103,10 +103,10 @@ onUnmounted(() => {
         <h2
           class="mb-3 text-3xl font-bold text-slate-900 md:text-4xl dark:text-slate-100"
         >
-          Career Snapshot
+          Ringkasan Karir
         </h2>
         <p class="text-lg text-slate-600 dark:text-slate-400">
-          A quick look at experience and outcomes
+          Sekilas tentang pengalaman dan pencapaian
         </p>
       </div>
 

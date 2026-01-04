@@ -60,13 +60,13 @@ const getIcon = (type) => {
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          Skills & Expertise
+          Keahlian & Expertise
         </div>
         <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4">
-          What I Do Best
+          Yang Saya Kuasai
         </h2>
         <p class="text-lg text-slate-600 dark:text-slate-300">
-          A selection of core skills I use to design, build, and ship products
+          Keterampilan inti yang saya gunakan untuk merancang, membangun, dan mengirimkan produk
         </p>
       </header>
 
@@ -102,7 +102,7 @@ const getIcon = (type) => {
 
           <!-- Arrow Link -->
           <div class="flex items-center gap-2 text-brand-600 font-semibold group-hover:gap-4 transition-all">
-            <span>Learn More</span>
+            <span>Selengkapnya</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
@@ -116,18 +116,7 @@ const getIcon = (type) => {
       </div>
 
       <!-- CTA Bottom -->
-          <div class="text-center mt-16">
-        <p class="text-slate-600 dark:text-slate-300 mb-6">Can't find what you're looking for?</p>
-        <a 
-          href="#contact" 
-          class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-slate-900 dark:bg-emerald-600 text-white font-bold hover:bg-slate-800 dark:hover:bg-emerald-500 hover:scale-105 transition-all shadow-lg"
-        >
-          Discuss Your Project
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-        </a>
-      </div>
+     
     </div>
   </section>
 </template>

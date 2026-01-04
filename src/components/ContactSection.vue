@@ -1,8 +1,34 @@
 <script setup>
+// Icon Components
+const WhatsAppIcon = {
+  viewBox: '0 0 24 24',
+  path: `M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z`
+}
+
+const PhoneIcon = {
+  viewBox: '0 0 24 24',
+  path: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z'
+}
+
+const EmailIcon = {
+  viewBox: '0 0 24 24',
+  path: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
+}
+
+const LocationIcon = {
+  viewBox: '0 0 24 24',
+  path: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z'
+}
+
+const ArrowRightIcon = {
+  viewBox: '0 0 24 24',
+  path: 'M13 7l5 5m0 0l-5 5m5-5H6'
+}
+
 const quickContacts = [
-  { label: 'Call', value: '0852 4614 5547', icon: 'M3 5h2l.4 2M7 13h10l4-8H5.4m1.6 8L5 5m2 13a2 2 0 11-4 0 2 2 0 014 0zm12 0a2 2 0 11-4 0 2 2 0 014 0' },
-  { label: 'Email', value: 'ariacherry.dev@gmail.com', icon: 'M3 8l9 6 9-6m-16 8h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z' },
-  { label: 'Location', value: 'Jakarta, Indonesia', icon: 'M12 11c1.38 0 2.5-1.12 2.5-2.5S13.38 6 12 6s-2.5 1.12-2.5 2.5S10.62 11 12 11zm0 9.5s6-4.35 6-10A6 6 0 006 10.5c0 5.65 6 10 6 10z' }
+  { label: 'Call', value: '0877 6188 2915', icon: PhoneIcon },
+  { label: 'Email', value: 'chrryctr1509@gmail.com', icon: EmailIcon },
+  { label: 'Location', value: 'Jakarta Barat, Indonesia', icon: LocationIcon }
 ]
 </script>
 
@@ -14,45 +40,66 @@ const quickContacts = [
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6" />
           </svg>
-          Contact Us
+          Mari Terhubung
         </div>
-        <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">Bicarakan project Anda</h2>
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">Hubungi Saya</h2>
         <p class="text-lg text-slate-600 dark:text-slate-300 mt-4">
-          Hubungi saya kapan saja melalui formulir berikut. Saya akan merespons maksimal 1–2 hari kerja.
+          Saya terbuka untuk kesempatan profesional, kolaborasi, atau sekadar diskusi seputar teknologi. Jangan ragu untuk menghubungi.
         </p>
       </header>
 
       <div class="rounded-[32px] border border-slate-200/70 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-[0_35px_120px_-60px_rgba(15,23,42,0.8)] p-6 sm:p-10">
-        <div class="grid gap-8 lg:grid-cols-[1.1fr,0.9fr] items-stretch">
-          <div class="map-shell">
-            <div class="map-grid"></div>
-            <div class="map-gradient"></div>
-            <div class="map-pin map-pin--main" style="top: 38%; left: 42%">
-              <span class="map-pulse"></span>
-              <span class="map-dot"></span>
-              <span class="map-label">Aria HQ St.</span>
+          <div class="flex flex-col items-center justify-center space-y-6 py-8">
+            <div class="text-center space-y-3">
+              <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 shadow-lg mb-4">
+                <svg class="w-10 h-10 text-white" fill="currentColor" :viewBox="WhatsAppIcon.viewBox">
+                  <path :d="WhatsAppIcon.path" />
+                </svg>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+                Chat via WhatsApp
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400 max-w-sm mx-auto">
+                Klik tombol di bawah untuk langsung chat dengan saya melalui WhatsApp. Respon cepat dan mudah!
+              </p>
             </div>
-            <div class="map-pin" style="top: 18%; left: 70%"></div>
-            <div class="map-pin" style="top: 60%; left: 22%"></div>
-            <div class="map-pin" style="top: 68%; left: 75%"></div>
-          </div>
+            
+            <a 
+              href="https://wa.me/6287761882915?text=Halo%20Cherry%2C%20saya%20tertarik%20untuk%20terhubung%20dengan%20Anda" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="whatsapp-btn group"
+            >
+              <svg class="w-6 h-6 mr-2 transition-transform group-hover:scale-110" fill="currentColor" :viewBox="WhatsAppIcon.viewBox">
+                <path :d="WhatsAppIcon.path" />
+              </svg>
+              <span class="font-bold">Chat WhatsApp Sekarang</span>
+              <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" :viewBox="ArrowRightIcon.viewBox">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="ArrowRightIcon.path" />
+              </svg>
+            </a>
 
-          <form class="space-y-5">
-            <label class="form-field">
-              <span>Nama</span>
-              <input type="text" placeholder="Masukkan nama Anda" class="input-field" />
-            </label>
-            <label class="form-field">
-              <span>Email address</span>
-              <input type="email" placeholder="nama@email.com" class="input-field" />
-            </label>
-            <label class="form-field">
-              <span>Message</span>
-              <textarea rows="4" placeholder="Ceritakan project Anda" class="input-field"></textarea>
-            </label>
-            <button type="submit" class="submit-btn">Send now</button>
-          </form>
-        </div>
+            <div class="flex flex-wrap gap-3 justify-center mt-4">
+              <a 
+                href="tel:+6287761882915" 
+                class="contact-link"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" :viewBox="PhoneIcon.viewBox">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="PhoneIcon.path" />
+                </svg>
+                Call
+              </a>
+              <a 
+                href="mailto:chrryctr1509@gmail.com" 
+                class="contact-link"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" :viewBox="EmailIcon.viewBox">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="EmailIcon.path" />
+                </svg>
+                Email
+              </a>
+            </div>
+          </div>
 
         <div class="grid gap-6 sm:grid-cols-3 mt-10">
           <div
@@ -60,9 +107,9 @@ const quickContacts = [
             :key="info.label"
             class="flex items-center gap-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/50 px-4 py-3"
           >
-            <div class="h-12 w-12 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center shadow-inner">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path :d="info.icon" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <div class="h-12 w-12 rounded-2xl bg-brand-100 text-brand-700 dark:bg-brand-900/30 dark:text-brand-300 flex items-center justify-center shadow-inner">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" :viewBox="info.icon.viewBox">
+                <path :d="info.icon.path" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div>
@@ -77,124 +124,64 @@ const quickContacts = [
 </template>
 
 <style scoped>
-.map-shell {
-  position: relative;
-  min-height: 320px;
-  border-radius: 28px;
-  border: 1.5px solid rgba(148, 163, 184, 0.5);
-  background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), transparent 45%),
-    radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.15), transparent 50%),
-    #f8fafc;
-  overflow: hidden;
-}
-.map-grid::before,
-.map-grid::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(90deg, rgba(148, 163, 184, 0.18) 1px, transparent 1px),
-    linear-gradient(rgba(148, 163, 184, 0.18) 1px, transparent 1px);
-  background-size: 70px 70px;
-}
-.map-grid::after {
-  opacity: 0.4;
-  transform: rotate(2deg) scale(1.05);
-}
-.map-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(16, 185, 129, 0.05));
-}
-.map-pin {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 999px;
-  background: #22c55e;
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.45);
-}
-.map-pin--main {
-  width: 30px;
-  height: 30px;
-}
-.map-dot {
-  position: absolute;
-  inset: 4px;
-  border-radius: inherit;
-  background: white;
-}
-.map-pulse {
-  position: absolute;
-  inset: -12px;
-  border: 2px solid rgba(34, 197, 94, 0.35);
-  border-radius: 999px;
-  animation: pulse 2.2s infinite;
-}
-.map-label {
-  position: absolute;
-  top: -28px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  color: #0f172a;
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  color: white;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 40px -20px rgba(37, 211, 102, 0.6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
 }
 
-.form-field span {
-  display: block;
-  font-size: 0.8rem;
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 50px -15px rgba(37, 211, 102, 0.8);
+  background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+}
+
+.whatsapp-btn:active {
+  transform: translateY(-1px);
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #64748b;
-  margin-bottom: 0.35rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.input-field {
-  width: 100%;
-  border: 1.5px solid rgba(148, 163, 184, 0.5);
-  border-radius: 1rem;
-  padding: 0.9rem 1rem;
-  font-size: 0.95rem;
-  background: #fff;
-  color: #0f172a;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.input-field:focus {
-  outline: none;
-  border-color: #22c55e;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
-}
-.dark .input-field {
-  background: rgba(15, 23, 42, 0.6);
-  color: white;
-  border-color: rgba(148, 163, 184, 0.4);
+  background: rgba(148, 163, 184, 0.1);
+  border: 1.5px solid rgba(148, 163, 184, 0.3);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
-.submit-btn {
-  width: 100%;
-  border: none;
-  border-radius: 1.2rem;
-  padding: 1rem;
-  font-weight: 700;
-  font-size: 1rem;
-  color: white;
-  background: linear-gradient(120deg, #22c55e, #10b981);
-  box-shadow: 0 18px 30px -20px rgba(16, 185, 129, 0.8);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.submit-btn:hover {
+.contact-link:hover {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 25px 40px -25px rgba(16, 185, 129, 0.9);
 }
-.submit-btn:focus-visible {
-  outline: 3px solid rgba(34, 197, 94, 0.35);
-  outline-offset: 3px;
+
+.dark .contact-link {
+  color: #94a3b8;
+  background: rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.2);
 }
+
+.dark .contact-link:hover {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
 
 @keyframes pulse {
   0% {

@@ -1,39 +1,39 @@
 <script setup>
 const currentYear = new Date().getFullYear();
 
-const services = [
+const expertise = [
   "Web Development",
   "Mobile App Development",
-  "Custom Software",
-  "Portfolio",
+  "Backend & API",
+  "Portofolio",
 ];
 
 const contact = {
   address: [
-    "Jln Mutiara 6 Blok A9 No 13",
-    "Perumahan Kutabumi 2",
-    "Pasar Kemis, Kabupaten Tangerang",
-    "Banten 15560",
+    "Jl. Pedongkelan Belakang Rt 07/016. 102",
+    "Kecamatan Cengkareng",
+    "Kota Jakarta Barat",
+    "DKI Jakarta 11720",
   ],
-  phone: "+62 822-9999-5502",
-  email: "masroma75@gmail.com",
+  phone: "+62 877-6188-2915",
+  email: "chrryctr1509@gmail.com",
 };
 
 const socialLinks = [
   {
     name: "Facebook",
-    icon: "M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z",
-    href: "#",
+    icon: "M22 12.06A10 10 0 1010.75 22v-6.99H8.2v-2.95h2.55V9.92c0-2.52 1.5-3.92 3.8-3.92 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.77-1.64 1.56v1.87h2.79l-.45 2.95h-2.34V22A10 10 0 0022 12.06z",
+    href: "https://www.facebook.com/cherryctr",
   },
   {
     name: "Instagram",
-    icon: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM18 6.5a1.25 1.25 0 11-1.25 1.25A1.25 1.25 0 0118 6.5zM12 8.5A5.5 5.5 0 1017.5 14 5.5 5.5 0 0012 8.5z",
-    href: "#",
+    icon: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 5a7 7 0 100 14 7 7 0 000-14zm0 3.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM18.5 4.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z",
+    href: "https://www.instagram.com/mascherr30",
   },
   {
-    name: "TikTok",
-    icon: "M16 2h2a5 5 0 005 5v2a7 7 0 01-5-2v8a6 6 0 11-6-6h2a4 4 0 104 4V2z",
-    href: "#",
+    name: "GitHub",
+    icon: "M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.7.5.1.68-.22.68-.48v-1.68c-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.1-1.5-1.1-1.5-.9-.64.07-.63.07-.63 1 .07 1.52 1.05 1.52 1.05.9 1.57 2.36 1.12 2.94.85.1-.67.36-1.12.65-1.38-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.38-2.03 1.02-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05a9.2 9.2 0 015 0c1.9-1.32 2.74-1.05 2.74-1.05.56 1.4.21 2.44.1 2.7.64.72 1.02 1.63 1.02 2.75 0 3.96-2.35 4.83-4.58 5.08.37.33.7.97.7 1.96v2.9c0 .27.18.58.69.48A10.02 10.02 0 0022 12.26C22 6.58 17.52 2 12 2z",
+    href: "https://github.com/chrryctr1509",
   },
 ];
 </script>
@@ -84,11 +84,11 @@ const socialLinks = [
               </div>
               <span
                 class="text-2xl font-bold text-slate-900 dark:text-slate-100"
-                >Masroma</span
+                >Tentang Saya</span
               >
             </div>
             <p class="mb-6 leading-relaxed text-slate-600 dark:text-slate-300">
-              Kami adalah tim developer yang berdedikasi untuk menciptakan solusi digital inovatif. Dari website hingga aplikasi mobile, kami membantu bisnis Anda berkembang di era digital.
+              Seorang developer yang berdedikasi dalam menciptakan solusi digital inovatif. Berpengalaman dalam pengembangan web dan mobile dengan fokus pada kualitas dan pengalaman pengguna.
             </p>
 
             <!-- Social Links -->
@@ -116,10 +116,10 @@ const socialLinks = [
             <h4
               class="mb-6 text-lg font-bold text-slate-900 dark:text-slate-100"
             >
-              Layanan
+              Keahlian
             </h4>
             <ul class="space-y-3">
-              <li v-for="service in services" :key="service">
+              <li v-for="skill in expertise" :key="skill">
                 <a
                   href="#"
                   class="flex items-center gap-2 transition-colors text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-brand-300 group"
@@ -137,7 +137,7 @@ const socialLinks = [
                       d="M9 5l7 7-7 7"
                     />
                   </svg>
-                  <span>{{ service }}</span>
+                  <span>{{ skill }}</span>
                 </a>
               </li>
             </ul>
@@ -183,7 +183,7 @@ const socialLinks = [
             class="flex flex-col items-center justify-between gap-4 md:flex-row"
           >
             <p class="text-sm text-slate-500 dark:text-slate-400">
-              © {{ currentYear }} Masroma. All rights reserved.
+              © {{ currentYear }} Cherry Citra. All rights reserved.
             </p>
             <div class="flex items-center gap-6 text-sm">
               <a
