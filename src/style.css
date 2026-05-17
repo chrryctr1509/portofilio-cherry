@@ -2,9 +2,10 @@
 
 /* Tailwind v4 theme tokens via CSS variables */
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
   --color-brand-50: #f0fdf4;
   --color-brand-100: #dcfce7;
   --color-brand-200: #bbf7d0;
@@ -65,5 +66,143 @@
 
   .dark ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, #22c55e, #10b981);
+  }
+}
+
+/* GitHub Dark Theme */
+:root {
+  --gh-bg: #0d1117;
+  --gh-surface: #161b22;
+  --gh-card: #21262d;
+  --gh-border: #30363d;
+  --gh-text: #e6edf3;
+  --gh-muted: #8b949e;
+  --gh-subtle: #484f58;
+  --accent-purple: #7c3aed;
+  --accent-purple2: #a78bfa;
+  --accent-green: #059669;
+  --accent-blue: #1f6feb;
+  --accent-amber: #f59e0b;
+}
+
+/* 2-panel layout */
+.gh-layout {
+  display: grid;
+  grid-template-columns: 296px 1fr;
+  gap: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  align-items: start;
+  min-height: calc(100vh - 62px);
+}
+
+.gh-main {
+  padding-left: 24px;
+}
+
+.gh-divider {
+  height: 1px;
+  background: #21262d;
+  margin: 1.5rem 0;
+}
+
+/* Collapsible pattern */
+.gh-collapsible {
+  background: transparent;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.gh-collapsible-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: #e6edf3;
+  user-select: none;
+  transition: background 150ms;
+}
+.gh-collapsible-header:hover {
+  background: #161b22;
+}
+.gh-expand-hint {
+  color: #a78bfa;
+  font-weight: 400;
+  font-size: 0.8125rem;
+}
+.gh-chevron {
+  margin-left: auto;
+  color: #8b949e;
+  font-size: 0.75rem;
+  transition: transform 250ms ease;
+  display: inline-block;
+}
+.gh-chevron.open {
+  transform: rotate(90deg);
+}
+.gh-collapsible-body {
+  padding: 16px;
+  border-top: 1px solid #30363d;
+}
+
+/* Expand Vue transition */
+.expand-enter-active,
+.expand-leave-active {
+  transition:
+    opacity 0.25s ease,
+    max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 2000px;
+}
+.expand-enter-from,
+.expand-leave-to {
+  opacity: 0;
+  max-height: 0;
+}
+
+/* Buttons */
+.gh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 20px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 150ms;
+  cursor: pointer;
+}
+.gh-btn-primary {
+  background: #7c3aed;
+  color: #fff;
+  border: 1px solid #6d28d9;
+}
+.gh-btn-primary:hover {
+  background: #6d28d9;
+}
+.gh-btn-ghost {
+  background: transparent;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+}
+.gh-btn-ghost:hover {
+  background: #21262d;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .gh-layout {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  .gh-main {
+    padding-left: 0;
+    padding-top: 24px;
   }
 }

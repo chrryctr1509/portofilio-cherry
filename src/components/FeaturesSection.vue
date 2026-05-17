@@ -1,126 +1,126 @@
 <script setup>
-const features = [
-  { 
-    title: 'Frontend Development', 
-    desc: 'React, Vue, Next.js, Tailwind CSS. Accessible, responsive, and component‑driven UIs.',
-    icon: 'code',
-    color: 'from-blue-500 to-indigo-500'
-  },
-  { 
-    title: 'Backend Development', 
-    desc: 'Node.js, Go, RESTful APIs, authentication, caching, and database design.',
-    icon: 'design',
-    color: 'from-purple-500 to-pink-500'
-  },
-  { 
-    title: 'Architecture & Design', 
-    desc: 'Clean architecture, modular patterns, and pragmatic design for maintainable systems.',
-    icon: 'marketing',
-    color: 'from-orange-500 to-red-500'
-  },
-  { 
-    title: 'Mobile Apps', 
-    desc: 'React Native and Flutter for cross‑platform experiences with native performance.',
-    icon: 'mobile',
-    color: 'from-green-500 to-emerald-500'
-  },
-  { 
-    title: 'DevOps & Cloud', 
-    desc: 'Docker, CI/CD, monitoring, and cloud deployments for reliable delivery.',
-    icon: 'cloud',
-    color: 'from-teal-500 to-cyan-500'
-  },
-  { 
-    title: 'Testing & Quality', 
-    desc: 'Unit, integration, and e2e testing. Performance profiling and optimization.',
-    icon: 'brand',
-    color: 'from-violet-500 to-purple-500'
-  },
-]
+import { ref, onMounted } from 'vue'
 
-const getIcon = (type) => {
-  const icons = {
-    code: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
-    design: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01',
-    marketing: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
-    mobile: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
-    brand: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01',
-    cloud: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z'
-  }
-  return icons[type] || icons.code
-}
+const isVisible = ref(false)
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isVisible.value = true
+          observer.disconnect()
+        }
+      })
+    },
+    { threshold: 0.1 }
+  )
+
+  const el = document.querySelector('.gh-about-wrap')
+  if (el) observer.observe(el)
+})
 </script>
 
 <template>
-  <section class="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-900" id="skills">
-    <div class="mx-auto container px-4 sm:px-6 lg:px-8 max-w-7xl">
-      <!-- Header -->
-      <header class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 dark:bg-brand-900/30 px-4 py-2 text-sm font-semibold text-brand-700 dark:text-brand-300 mb-4">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-          Keahlian & Expertise
-        </div>
-        <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4">
-          Yang Saya Kuasai
-        </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-300">
-          Keterampilan inti yang saya gunakan untuk merancang, membangun, dan mengirimkan produk
+  <section>
+    <div class="gh-about-wrap" :class="{ 'gh-animate-in': isVisible }">
+      <div class="gh-about-left">
+        <h2 class="gh-section-heading">👋 About Me</h2>
+        <p class="gh-about-text">
+          I'm a <strong>Fullstack Developer</strong> and <strong>AI Engineer</strong>
+          based in Indonesia, passionate about building scalable systems and intelligent
+          applications. I specialize in end-to-end product development — from architecting
+          backends to deploying production AI pipelines.
         </p>
-      </header>
-
-      <!-- Features Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <article 
-          v-for="(f, idx) in features" 
-          :key="f.title" 
-          class="group relative rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:border-brand-300 dark:hover:border-emerald-500 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-        >
-          <!-- Gradient Background on Hover -->
-          <div class="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity" :class="f.color"></div>
-          
-          <!-- Icon -->
-          <div class="relative mb-6">
-            <div 
-              class="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br text-white shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all" 
-              :class="f.color"
-            >
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="getIcon(f.icon)" />
-              </svg>
-            </div>
-          </div>
-
-          <!-- Content -->
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-emerald-400 transition-colors">
-            {{ f.title }}
-          </h3>
-          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-            {{ f.desc }}
-          </p>
-
-          <!-- Arrow Link -->
-          <div class="flex items-center gap-2 text-brand-600 font-semibold group-hover:gap-4 transition-all">
-            <span>Selengkapnya</span>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
-          </div>
-
-          <!-- Number Badge -->
-          <div class="absolute top-6 right-6 text-6xl font-black text-slate-100 group-hover:text-brand-100 transition-colors">
-            0{{ idx + 1 }}
-          </div>
-        </article>
+        <blockquote class="gh-quote">
+          "I don't just write code — I engineer solutions that scale."
+        </blockquote>
+        <table class="gh-expertise-table">
+          <tbody>
+            <tr><td>🌐 <strong>Web</strong></td><td>Fullstack Development</td></tr>
+            <tr><td>🤖 <strong>AI/ML</strong></td><td>LLM Integration, AI Agents, Prompt Engineering</td></tr>
+            <tr><td>☁️ <strong>Cloud</strong></td><td>Docker, Linux, Nginx, CI/CD Pipelines</td></tr>
+            <tr><td>🔒 <strong>Security</strong></td><td>Auth systems, API security, best practices</td></tr>
+            <tr><td>🗄️ <strong>Databases</strong></td><td>MySQL, PostgreSQL, MongoDB, Redis</td></tr>
+          </tbody>
+        </table>
       </div>
-
-      <!-- CTA Bottom -->
-     
+      <div class="gh-about-right">
+        <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"
+             alt="Developer animation" class="gh-dev-gif" />
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-</style>
+.gh-about-wrap {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: #161B22;
+  border: 1px solid #30363D;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.gh-about-left { flex: 1; min-width: 0; }
+.gh-about-right { flex-shrink: 0; width: 220px; }
+.gh-dev-gif { width: 100%; border-radius: 8px; }
+.gh-section-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #E6EDF3;
+  margin: 0 0 12px;
+}
+.gh-about-text {
+  font-size: 0.875rem;
+  color: #E6EDF3;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.gh-about-text strong { color: #E6EDF3; font-weight: 600; }
+.gh-quote {
+  border-left: 3px solid #7C3AED;
+  margin: 0 0 16px;
+  padding: 8px 12px;
+  background: rgba(124,58,237,0.05);
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #8B949E;
+}
+.gh-expertise-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+.gh-expertise-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #21262D;
+  color: #E6EDF3;
+  vertical-align: top;
+}
+.gh-expertise-table td:first-child {
+  white-space: nowrap;
+  padding-right: 12px;
+  color: #A78BFA;
+  font-weight: 600;
+}
+.gh-expertise-table tr:last-child td { border-bottom: none; }
+@media (max-width: 600px) {
+  .gh-about-wrap { flex-direction: column; }
+  .gh-about-right { width: 100%; }
+}
 
+/* Animation */
+.gh-about-wrap {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.gh-about-wrap.gh-animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>

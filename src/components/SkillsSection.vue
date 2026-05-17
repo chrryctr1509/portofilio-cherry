@@ -1,258 +1,310 @@
 <script setup>
-const skills = [
+import { ref, onMounted } from 'vue'
+
+const visibleCategories = ref([])
+
+const categories = [
   {
-    name: 'JavaScript & TypeScript',
-    meta: 'App Logic & Interaction',
-    category: 'Frontend',
-    color: '#3178c6',
-    percent: 95,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+    emoji: '🖥️',
+    label: 'Languages',
+    items: [
+      { name: 'JavaScript', icon: 'js' },
+      { name: 'TypeScript', icon: 'ts' },
+      { name: 'Python', icon: 'python' },
+      { name: 'PHP', icon: 'php' },
+      { name: 'Go', icon: 'go' },
+      { name: 'HTML5', icon: 'html' },
+      { name: 'CSS3', icon: 'css' },
+    ]
   },
   {
-    name: 'Vue.js',
-    meta: 'SPA Framework',
-    category: 'Frontend',
-    color: '#41b883',
-    percent: 92,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg'
+    emoji: '🎨',
+    label: 'Frontend',
+    items: [
+      { name: 'React', icon: 'react' },
+      { name: 'Next.js', icon: 'nextjs' },
+      { name: 'Vue.js', icon: 'vue' },
+      { name: 'Tailwind CSS', icon: 'tailwind' },
+      { name: 'Bootstrap', icon: 'bootstrap' },
+    ]
   },
   {
-    name: 'React.js',
-    meta: 'Component UI',
-    category: 'Frontend',
-    color: '#61dafb',
-    percent: 90,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+    emoji: '⚙️',
+    label: 'Backend',
+    items: [
+      { name: 'Node.js', icon: 'nodejs' },
+      { name: 'Express.js', icon: 'express' },
+      { name: 'Laravel', icon: 'laravel' },
+      { name: 'Fastify', icon: 'fastify', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastify/fastify-original.svg' },
+      { name: 'Go Fiber', icon: 'go' },
+    ]
   },
   {
-    name: 'Tailwind CSS',
-    meta: 'Utility‑first Styling',
-    category: 'Styling',
-    color: '#38bdf8',
-    percent: 88,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg'
+    emoji: '🗄️',
+    label: 'Databases',
+    items: [
+      { name: 'MySQL', icon: 'mysql' },
+      { name: 'PostgreSQL', icon: 'postgresql' },
+      { name: 'MongoDB', icon: 'mongodb' },
+      { name: 'Redis', icon: 'redis' },
+    ]
   },
   {
-    name: 'Node.js',
-    meta: 'Runtime & APIs',
-    category: 'Backend',
-    color: '#3c873a',
-    percent: 90,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
+    emoji: '🛠️',
+    label: 'DevOps & Tools',
+    items: [
+      { name: 'Docker', icon: 'docker' },
+      { name: 'Linux', icon: 'linux' },
+      { name: 'Nginx', icon: 'nginx' },
+      { name: 'Git', icon: 'git' },
+      { name: 'GitHub', icon: 'github' },
+      { name: 'Postman', icon: 'postman' },
+      { name: 'VS Code', icon: 'vscode' },
+    ]
   },
-  {
-    name: 'Express.js',
-    meta: 'REST Services',
-    category: 'Backend',
-    color: '#111827',
-    percent: 87,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
-  },
-  {
-    name: 'Laravel',
-    meta: 'Backend Framework',
-    category: 'Backend',
-    color: '#f55247',
-    percent: 84,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg'
-  },
-  {
-    name: 'CodeIgniter 3',
-    meta: 'Lightweight MVC Backend',
-    category: 'Backend',
-    color: '#f4511e',
-    percent: 80,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg'
-  },
-  {
-    name: 'PostgreSQL',
-    meta: 'Relational Database',
-    category: 'Database',
-    color: '#336791',
-    percent: 82,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg'
-  },
-  {
-    name: 'MySQL',
-    meta: 'Relational Database',
-    category: 'Database',
-    color: '#00618a',
-    percent: 85,
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg'
-  }
 ]
+
+const aiItems = [
+  'OpenAI API',
+  'Llama Models',
+  'Prompt Engineering',
+  'AI Agents',
+  'Workflow Automation',
+]
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const label = entry.target.dataset.category
+          if (!visibleCategories.value.includes(label)) {
+            visibleCategories.value.push(label)
+          }
+        }
+      })
+    },
+    { threshold: 0.1 }
+  )
+
+  document.querySelectorAll('.gh-animate-section').forEach((el) => {
+    observer.observe(el)
+  })
+})
 </script>
 
 <template>
-  <section id="skills" class="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900">
-    <div class="mx-auto container px-4 sm:px-6 lg:px-8 max-w-7xl">
-      <header class="text-center max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100/70 dark:bg-emerald-900/30 px-4 py-2 text-sm font-semibold text-brand-700 dark:text-emerald-300 mb-4">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-          Web Dev Stack
-        </div>
-        <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-tight">
-          Keahlian sebagai Web Developer Front-End & Backend
-        </h2>
-        <p class="text-lg text-slate-600 dark:text-slate-300 mt-5">
-          Fondasi teknis yang saya gunakan untuk membangun UI modern, API yang scalable, dan sistem database yang andal.
-        </p>
-      </header>
+  <section id="tech-stack">
+    <div class="gh-section-header">
+      <h2 class="gh-section-title">🛠️ Tech Stack</h2>
+      <p class="gh-section-sub">Technologies I work with daily</p>
+    </div>
 
-      <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        <article
-          v-for="skill in skills"
-          :key="skill.name"
-          class="skill-card"
-          :style="{ '--accent': skill.color, '--progress': skill.percent + '%' }"
-        >
-          <div class="flex items-center justify-between gap-4 mb-5">
-            <div class="flex items-center gap-3">
-              <div class="skill-chip">
-                <span class="skill-chip-ring"></span>
-                <span class="skill-chip-avatar">
-                  <img :src="skill.icon" :alt="skill.name" loading="lazy" />
-                </span>
-              </div>
-              <div>
-                <p class="skill-category">{{ skill.category }}</p>
-                <h3 class="skill-name">{{ skill.name }}</h3>
-              </div>
-            </div>
-            <div class="text-right">
-              <p class="skill-percent-value">{{ skill.percent }}%</p>
-              <p class="skill-percent-label">Proficiency</p>
-            </div>
+    <div class="gh-stack-grid">
+      <div
+        v-for="(cat, index) in categories"
+        :key="cat.label"
+        class="gh-stack-category gh-animate-section"
+        :data-category="cat.label"
+        :class="{ 'gh-animate-in': visibleCategories.includes(cat.label) }"
+        :style="{ animationDelay: `${index * 100}ms` }"
+      >
+        <h3 class="gh-cat-header">
+          <span>{{ cat.emoji }}</span>
+          <span>{{ cat.label }}</span>
+        </h3>
+
+        <div class="gh-icon-grid">
+          <div
+            v-for="(item, idx) in cat.items"
+            :key="item.name"
+            class="gh-icon-wrapper"
+            :title="item.name"
+            :style="{ animationDelay: `${idx * 50}ms` }"
+          >
+            <img
+              v-if="item.logoUrl"
+              :src="item.logoUrl"
+              :alt="item.name"
+              class="gh-badge-img"
+              loading="lazy"
+            />
+            <img
+              v-else
+              :src="`https://skillicons.dev/icons?i=${item.icon}&theme=dark`"
+              :alt="item.name"
+              class="gh-badge-img"
+              loading="lazy"
+            />
+            <span class="gh-tooltip">{{ item.name }}</span>
           </div>
-          <p class="skill-meta">{{ skill.meta }}</p>
-          <div class="skill-progress">
-            <span class="skill-progress-fill"></span>
-          </div>
-        </article>
+        </div>
+      </div>
+
+      <!-- AI / ML Stack -->
+      <div
+        class="gh-stack-category gh-animate-section"
+        data-category="AI-ML"
+        :class="{ 'gh-animate-in': visibleCategories.includes('AI-ML') }"
+        :style="{ animationDelay: `${categories.length * 100}ms` }"
+      >
+        <h3 class="gh-cat-header">
+          <span>🤖</span>
+          <span>AI / ML Stack</span>
+        </h3>
+        <div class="gh-ai-pills">
+          <span
+            v-for="(item, idx) in aiItems"
+            :key="item"
+            class="gh-ai-pill"
+            :style="{ animationDelay: `${idx * 80}ms` }"
+          >
+            {{ item }}
+          </span>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.skill-card {
-  border-radius: 28px;
-  padding: 1.75rem;
-  border: 1.5px solid rgba(15, 23, 42, 0.08);
-  background: white;
-  box-shadow: 0 25px 60px -40px rgba(15, 23, 42, 0.45);
-  transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+.gh-section-header {
+  margin-bottom: 24px;
 }
-.dark .skill-card {
-  background: rgba(15, 23, 42, 0.9);
-  border-color: rgba(148, 163, 184, 0.15);
-  box-shadow: 0 30px 50px -45px rgba(0, 0, 0, 0.9);
+.gh-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #E6EDF3;
+  margin: 0 0 4px;
 }
-.skill-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(34, 197, 94, 0.6);
-  box-shadow: 0 30px 80px -40px rgba(34, 197, 94, 0.4);
+.gh-section-sub {
+  font-size: 0.875rem;
+  color: #8B949E;
+  margin: 0;
 }
-
-.skill-chip {
-  position: relative;
-  width: 56px;
-  height: 56px;
+.gh-stack-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
 }
-.skill-chip-ring {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background:
-    conic-gradient(
-      var(--accent, #22c55e) 0 var(--progress, 75%),
-      rgba(226, 232, 240, 0.7) var(--progress, 75%) 100%
-    );
+.gh-stack-category {
+  background: #161B22;
+  border: 1px solid #30363D;
+  border-radius: 8px;
+  padding: 16px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.dark .skill-chip-ring {
-  background:
-    conic-gradient(
-      var(--accent, #22c55e) 0 var(--progress, 75%),
-      rgba(51, 65, 85, 0.9) var(--progress, 75%) 100%
-    );
+.gh-stack-category.gh-animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
-.skill-chip-avatar {
-  position: absolute;
-  inset: 6px;
-  border-radius: 50%;
-  background: white;
+.gh-cat-header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #A78BFA;
+  margin: 0 0 12px;
+  font-family: 'JetBrains Mono', monospace;
 }
-.skill-chip-avatar img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
+.gh-icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.dark .skill-chip-avatar {
-  background: #0f172a;
-}
-
-.skill-category {
-  font-size: 0.65rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: rgba(100, 116, 139, 0.9);
-}
-.dark .skill-category {
-  color: rgba(148, 163, 184, 0.8);
-}
-.skill-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #0f172a;
-}
-.dark .skill-name {
-  color: #f8fafc;
-}
-
-.skill-percent-value {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #0f172a;
-}
-.dark .skill-percent-value {
-  color: white;
-}
-.skill-percent-label {
-  font-size: 0.6rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: rgba(100, 116, 139, 0.85);
-}
-.dark .skill-percent-label {
-  color: rgba(148, 163, 184, 0.7);
-}
-
-.skill-meta {
-  font-size: 0.95rem;
-  color: rgba(71, 85, 105, 0.95);
-  margin-bottom: 1rem;
-}
-.dark .skill-meta {
-  color: rgba(226, 232, 240, 0.85);
-}
-
-.skill-progress {
+.gh-icon-wrapper {
   position: relative;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(148, 163, 184, 0.35);
-  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #21262D;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
-.skill-progress-fill {
+.gh-icon-wrapper:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(167, 139, 250, 0.3);
+  background: #30363D;
+}
+.gh-badge-img {
+  width: 40px;
+  height: 40px;
+}
+.gh-tooltip {
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(90deg, var(--accent, #22c55e), #10b981);
-  width: var(--progress, 75%);
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #21262D;
+  color: #E6EDF3;
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #30363D;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+.gh-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #30363D;
+}
+.gh-icon-wrapper:hover .gh-tooltip {
+  opacity: 1;
+}
+.gh-ai-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.gh-ai-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 20px;
+  font-size: 0.8125rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #A78BFA;
+  transition: all 0.2s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: gh-fadeInUp 0.4s ease forwards;
+}
+.gh-animate-in .gh-ai-pill {
+  animation: gh-fadeInUp 0.4s ease forwards;
+}
+.gh-ai-pill:hover {
+  background: rgba(167, 139, 250, 0.2);
+  border-color: rgba(167, 139, 250, 0.5);
+  transform: translateY(-1px);
+}
+@media (max-width: 640px) {
+  .gh-badge-img {
+    width: 32px;
+    height: 32px;
+  }
+  .gh-icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  .gh-stack-category {
+    padding: 12px;
+  }
 }
 </style>
