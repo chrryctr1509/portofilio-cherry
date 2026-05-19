@@ -35,7 +35,7 @@ const categories = [
       { name: 'Node.js', icon: 'nodejs' },
       { name: 'Express.js', icon: 'express' },
       { name: 'Laravel', icon: 'laravel' },
-      { name: 'Fastify', icon: 'fastify', logoUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastify/fastify-original.svg' },
+      { name: 'Fastify', icon: 'fastify', logoUrl: 'https://fastify.dev/img/logos/fastify-white.svg' },
       { name: 'Go Fiber', icon: 'go' },
     ]
   },
@@ -140,29 +140,6 @@ onMounted(() => {
           </div>
         </div>
       </div>
-
-      <!-- AI / ML Stack -->
-      <div
-        class="gh-stack-category gh-animate-section"
-        data-category="AI-ML"
-        :class="{ 'gh-animate-in': visibleCategories.includes('AI-ML') }"
-        :style="{ animationDelay: `${categories.length * 100}ms` }"
-      >
-        <h3 class="gh-cat-header">
-          <span>🤖</span>
-          <span>AI / ML Stack</span>
-        </h3>
-        <div class="gh-ai-pills">
-          <span
-            v-for="(item, idx) in aiItems"
-            :key="item"
-            class="gh-ai-pill"
-            :style="{ animationDelay: `${idx * 80}ms` }"
-          >
-            {{ item }}
-          </span>
-        </div>
-      </div>
     </div>
   </section>
 </template>
@@ -174,12 +151,12 @@ onMounted(() => {
 .gh-section-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #E6EDF3;
+  color: #ffffff;
   margin: 0 0 4px;
 }
 .gh-section-sub {
   font-size: 0.875rem;
-  color: #8B949E;
+  color: #E6EDF3;
   margin: 0;
 }
 .gh-stack-grid {
@@ -207,7 +184,7 @@ onMounted(() => {
   gap: 8px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #A78BFA;
+  color: #ffffff;
   margin: 0 0 12px;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -223,15 +200,16 @@ onMounted(() => {
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: #21262D;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 .gh-icon-wrapper:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(167, 139, 250, 0.3);
-  background: #30363D;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
 }
 .gh-badge-img {
   width: 40px;
@@ -243,7 +221,7 @@ onMounted(() => {
   left: 50%;
   transform: translateX(-50%);
   background: #21262D;
-  color: #E6EDF3;
+  color: #ffffff;
   font-size: 0.75rem;
   font-family: 'JetBrains Mono', monospace;
   padding: 4px 8px;
@@ -275,12 +253,12 @@ onMounted(() => {
 .gh-ai-pill {
   display: inline-block;
   padding: 6px 14px;
-  background: rgba(167, 139, 250, 0.1);
-  border: 1px solid rgba(167, 139, 250, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   font-size: 0.8125rem;
   font-family: 'JetBrains Mono', monospace;
-  color: #A78BFA;
+  color: #ffffff;
   transition: all 0.2s ease;
   opacity: 0;
   transform: translateY(10px);
@@ -290,8 +268,7 @@ onMounted(() => {
   animation: gh-fadeInUp 0.4s ease forwards;
 }
 .gh-ai-pill:hover {
-  background: rgba(167, 139, 250, 0.2);
-  border-color: rgba(167, 139, 250, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
 }
 @media (max-width: 640px) {
