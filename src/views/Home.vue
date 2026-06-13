@@ -58,16 +58,6 @@ const profile = {
               <a :href="profile.githubUrl" target="_blank" rel="noopener">github.com/{{ profile.username }}</a>
             </li>
           </ul>
-
-          <div class="gh-achievements">
-            <h2 class="gh-sidebar-heading">Achievements</h2>
-            <div class="gh-achievement-row">
-              <span class="gh-badge-circle" title="Pull Shark">🦈</span>
-              <span class="gh-badge-circle" title="YOLO">🎯</span>
-              <span class="gh-badge-circle" title="Quickdraw">⚡</span>
-              <span class="gh-badge-circle" title="Starstruck">⭐</span>
-            </div>
-          </div>
         </aside>
 
         <!-- ===================== RIGHT CONTENT ===================== -->
@@ -183,41 +173,23 @@ const profile = {
 
               <hr class="gh-divider" />
 
-              <!-- ===== GITHUB STATISTICS ===== -->
-              <details class="md-details">
-                <summary><b>📊&nbsp; GitHub Statistics — click to expand</b></summary>
-                <div class="md-details-body md-center">
-                  <img class="md-img" src="https://streak-stats.demolab.com?user=chrryctr1509&theme=midnight-purple&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub streak" />
-                  <img class="md-img" src="https://github-readme-activity-graph.vercel.app/graph?username=chrryctr1509&theme=tokyo-night&hide_border=true&area=true&color=A78BFA&line=7C3AED&point=ffffff" alt="Activity graph" />
-                </div>
-              </details>
-
-              <hr class="gh-divider" />
-
-              <!-- ===== ACHIEVEMENTS ===== -->
-              <details class="md-details">
-                <summary><b>🏆&nbsp; GitHub Achievements — click to expand</b></summary>
-                <div class="md-details-body md-center">
-                  <img class="md-img" src="https://github-profile-trophy.vercel.app/?username=chrryctr1509&theme=algolia&no-frame=true&no-bg=true&margin-w=12&row=1&column=7" alt="Trophies" />
-                </div>
-              </details>
-
-              <hr class="gh-divider" />
-
               <!-- ===== PROFESSIONAL VALUES ===== -->
               <details class="md-details">
                 <summary><b>🎯&nbsp; Professional Values — click to expand</b></summary>
                 <div class="md-details-body">
-                  <pre class="md-code">┌─────────────────────────────────────────────────────────────────────┐
-│                        HOW I BUILD SOFTWARE                         │
-├────────────────────────────┬────────────────────────────────────────┤
-│  🧹 Clean Code             │  Readable, documented, maintainable    │
-│  🏗️ Scalable Architecture  │  Systems that grow without breaking    │
-│  ⚡ Performance First      │  Fast, efficient, resource-conscious   │
-│  🔒 Security by Design     │  Defense-in-depth from day one         │
-│  📚 Continuous Learning    │  Always current with best practices    │
-│  🤝 Team Collaboration     │  Clear communication, shared ownership │
-└────────────────────────────┴────────────────────────────────────────┘</pre>
+                  <table class="md-table md-values-table">
+                    <thead>
+                      <tr><th colspan="2">HOW I BUILD SOFTWARE</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>🧹 <strong>Clean Code</strong></td><td>Readable, documented, maintainable</td></tr>
+                      <tr><td>🏗️ <strong>Scalable Architecture</strong></td><td>Systems that grow without breaking</td></tr>
+                      <tr><td>⚡ <strong>Performance First</strong></td><td>Fast, efficient, resource-conscious</td></tr>
+                      <tr><td>🔒 <strong>Security by Design</strong></td><td>Defense-in-depth from day one</td></tr>
+                      <tr><td>📚 <strong>Continuous Learning</strong></td><td>Always current with best practices</td></tr>
+                      <tr><td>🤝 <strong>Team Collaboration</strong></td><td>Clear communication, shared ownership</td></tr>
+                    </tbody>
+                  </table>
                 </div>
               </details>
 
@@ -335,7 +307,7 @@ const profile = {
   pointer-events: none;
 }
 .gh-avatar-wrap:hover .gh-avatar { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(88,166,255,0.25), 0 12px 32px rgba(1,4,9,0.7); }
-.gh-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 50%; }
+.gh-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center center; border-radius: 50%; }
 .gh-status-emoji {
   position: absolute;
   right: 18px;
@@ -368,25 +340,6 @@ const profile = {
 .gh-meta svg { color: #8b949e; flex-shrink: 0; }
 .gh-meta a { color: #e6edf3; text-decoration: none; }
 .gh-meta a:hover { color: #58a6ff; }
-
-.gh-achievements { margin-top: 24px; padding-top: 24px; border-top: 1px solid #21262d; }
-.gh-sidebar-heading { font-size: 14px; font-weight: 600; color: #e6edf3; margin-bottom: 10px; }
-.gh-achievement-row { display: flex; gap: 6px; }
-.gh-badge-circle {
-  width: 44px; height: 44px;
-  display: grid; place-items: center;
-  background: radial-gradient(circle at 50% 30%, #21262d, #161b22);
-  border: 1px solid #30363d;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: default;
-  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
-}
-.gh-badge-circle:hover {
-  transform: translateY(-3px) scale(1.05);
-  border-color: #bc8cff;
-  box-shadow: 0 6px 16px rgba(188,140,255,0.25);
-}
 
 /* ============ MAIN ============ */
 .gh-readme {
@@ -461,6 +414,17 @@ const profile = {
   padding: 2px 6px; border-radius: 4px;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
 }
+
+/* Professional values table */
+.md-values-table th {
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 13px;
+  background: linear-gradient(180deg, #1c2230, #161b22);
+  color: #bc8cff;
+}
+.md-values-table td:first-child { width: 42%; white-space: nowrap; }
 
 /* Details / collapsibles */
 .md-details {
