@@ -307,7 +307,7 @@ const profile = {
   pointer-events: none;
 }
 .gh-avatar-wrap:hover .gh-avatar { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(88,166,255,0.25), 0 12px 32px rgba(1,4,9,0.7); }
-.gh-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center center; border-radius: 50%; }
+.gh-avatar img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; border-radius: 50%; }
 .gh-status-emoji {
   position: absolute;
   right: 18px;
