@@ -7,7 +7,7 @@ import { useTheme } from './composables/useTheme'
 
 const route = useRoute()
 const router = useRouter()
-const showLayout = computed(() => route.path !== '/login')
+const showLayout = computed(() => route.path !== '/login' && route.path !== '/')
 const isLoading = ref(false)
 
 // Initialize theme
@@ -30,28 +30,31 @@ router.afterEach(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
+  <div class="min-h-screen text-slate-900 dark:text-white">
+    <!-- Scanline Overlay -->
+    <div class="scanline-overlay"></div>
+
     <!-- Page Loader -->
     <Transition name="fade">
-      <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm">
+      <div v-if="isLoading" class="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm" style="background: rgba(10,15,10,0.95);">
         <!-- Loader Container -->
         <div class="flex flex-col items-center gap-4">
           <!-- Spinner -->
           <div class="relative">
-            <div class="w-16 h-16 border-4 border-emerald-200 border-t-emerald-600 rounded-full animate-spin"></div>
+            <div class="w-16 h-16 border-4 border-emerald-900 border-t-emerald-500 rounded-full animate-spin"></div>
             <!-- Inner pulse -->
             <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-8 h-8 bg-emerald-500 rounded-full animate-pulse opacity-20"></div>
+              <div class="w-8 h-8 rounded-full animate-pulse opacity-20" style="background: var(--accent-green-soft);"></div>
             </div>
           </div>
-          
+
           <!-- Loading Text -->
           <div class="flex flex-col items-center gap-2">
-            <p class="text-slate-700 dark:text-slate-300 font-semibold text-lg">Loading...</p>
+            <p class="font-semibold text-lg" style="color: var(--text-primary);">Loading...</p>
             <div class="flex gap-1">
-              <span class="w-2 h-2 bg-emerald-500 rounded-full animate-bounce-dot" style="animation-delay: 0ms"></span>
-              <span class="w-2 h-2 bg-emerald-500 rounded-full animate-bounce-dot" style="animation-delay: 150ms"></span>
-              <span class="w-2 h-2 bg-emerald-500 rounded-full animate-bounce-dot" style="animation-delay: 300ms"></span>
+              <span class="w-2 h-2 rounded-full animate-bounce-dot" style="background: var(--accent-green-soft); animation-delay: 0ms;"></span>
+              <span class="w-2 h-2 rounded-full animate-bounce-dot" style="background: var(--accent-green-soft); animation-delay: 150ms;"></span>
+              <span class="w-2 h-2 rounded-full animate-bounce-dot" style="background: var(--accent-green-soft); animation-delay: 300ms;"></span>
             </div>
           </div>
         </div>
@@ -74,6 +77,21 @@ router.afterEach(() => {
 </template>
 
 <style scoped>
+/* Scanline Overlay */
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
 /* Fade transition for loader */
 .fade-enter-active,
 .fade-leave-active {

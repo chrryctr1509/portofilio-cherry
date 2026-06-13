@@ -1,0 +1,117 @@
+{
+    "nav": {
+        "about": "Tentang",
+        "skills": "Keahlian",
+        "portfolio": "Portofolio",
+        "contact": "Hubungi Saya"
+    },
+    "hero": {
+        "badge": "Resume Profesional",
+        "title": "Halo, Saya Cherry Citra",
+        "subtitle": "Kreatif & Inovatif Web Developer",
+        "description": "Saya membangun aplikasi web dan mobile yang performan, merancang backend yang kuat, dan memberikan pengalaman pengguna yang menyenangkan. Semangat dalam memecahkan masalah dan mengirimkan produk berkualitas tinggi.",
+        "contact_me": "Hubungi Saya",
+        "view_portfolio": "Lihat Portofolio",
+        "available": "Siap Bekerja",
+        "download_cv": "Unduh CV",
+        "roles": [
+            "Full‑Stack Developer",
+            "Backend Developer",
+            "Frontend Engineer",
+            "Software Engineer",
+            "DevOps Enthusiast"
+        ]
+    },
+    "features": {
+        "badge": "Keahlian & Kepakaran",
+        "title": "Apa Yang Saya Lakukan",
+        "subtitle": "Pilihan keahlian utama yang saya gunakan untuk merancang, membangun, dan mengirimkan produk",
+        "learn_more": "Pelajari Lebih Lanjut",
+        "cta_text": "Tertarik dengan keahlian saya?",
+        "cta_btn": "Hubungi Saya",
+        "items": {
+            "frontend": {
+                "title": "Pengembangan Frontend",
+                "desc": "React, Vue, Next.js, Tailwind CSS. UI yang aksesibel, responsif, dan berbasis komponen."
+            },
+            "backend": {
+                "title": "Pengembangan Backend",
+                "desc": "Node.js, Go, RESTful APIs, autentikasi, caching, dan desain database."
+            },
+            "architecture": {
+                "title": "Arsitektur & Desain",
+                "desc": "Arsitektur bersih, pola modular, dan desain pragmatis untuk sistem yang mudah dipelihara."
+            },
+            "mobile": {
+                "title": "Aplikasi Mobile",
+                "desc": "React Native dan Flutter untuk pengalaman lintas platform dengan performa asli."
+            },
+            "devops": {
+                "title": "DevOps & Cloud",
+                "desc": "Docker, CI/CD, pemantauan, dan penerapan cloud untuk pengiriman yang andal."
+            },
+            "testing": {
+                "title": "Pengujian & Kualitas",
+                "desc": "Pengujian unit, integrasi, dan e2e. Profiling performa dan optimasi."
+            }
+        }
+    },
+    "skills_section": {
+        "badge": "Stack Web Dev",
+        "title": "Keahlian sebagai Web Developer Front-End & Backend",
+        "subtitle": "Fondasi teknis yang saya gunakan untuk membangun UI modern, API yang scalable, dan sistem database yang andal.",
+        "proficiency": "Kemahiran"
+    },
+    "portfolio": {
+        "badge": "Portofolio",
+        "title": "Karya Pilihan",
+        "subtitle": "Gambaran pekerjaan yang menyoroti pemecahan masalah, performa, dan pengalaman pengguna",
+        "view_detail": "Lihat Detail",
+        "view_more": "Lihat Lebih Banyak",
+        "all_categories": "Semua"
+    },
+    "contact_section": {
+        "badge": "Mari Terhubung",
+        "title": "Hubungi Saya",
+        "subtitle": "Saya terbuka untuk kesempatan profesional, kolaborasi, atau sekadar diskusi seputar teknologi. Jangan ragu untuk menghubungi saya.",
+        "whatsapp_title": "Chat via WhatsApp",
+        "whatsapp_desc": "Klik tombol di bawah untuk langsung chat dengan saya melalui WhatsApp. Respon cepat dan mudah!",
+        "whatsapp_btn": "Chat WhatsApp Sekarang",
+        "quick": {
+            "call": "Telepon",
+            "email": "Email",
+            "location": "Lokasi"
+        }
+    },
+    "footer": {
+        "description": "Seorang developer yang berdedikasi dalam menciptakan solusi digital inovatif. Berpengalaman dalam pengembangan web dan mobile dengan fokus pada kualitas dan user experience.",
+        "services_title": "Keahlian",
+        "contact_title": "Kontak",
+        "privacy": "Kebijakan Privasi",
+        "terms": "Ketentuan Layanan",
+        "services": {
+            "web": "Pengembangan Web",
+            "mobile": "Pengembangan Aplikasi Mobile",
+            "custom": "Perangkat Lunak Kustom",
+            "portfolio": "Portofolio"
+        }
+    },
+    "work": {
+        "p1": {
+            "title": "Nasi Goreng Web App",
+            "desc": "Aplikasi pemesanan Nasi Goreng dengan manajemen menu, pesanan, dan kasir."
+        },
+        "p2": {
+            "title": "WhatsApp Service API",
+            "desc": "Layanan REST API berbasis Express untuk integrasi WhatsApp (send/receive)."
+        },
+        "p3": {
+            "title": "Absensi Perusahaan",
+            "desc": "Sistem absensi karyawan: clock-in/out, rekap harian, dan laporan HR."
+        },
+        "p4": {
+            "title": "E-commerce",
+            "desc": "Platform toko online dengan katalog, cart, checkout, dan manajemen pesanan."
+        }
+    }
+}

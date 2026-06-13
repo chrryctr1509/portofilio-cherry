@@ -1,0 +1,153 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - img [ref=e7]
+      - generic [ref=e9]: chrryctr1509
+  - generic [ref=e10]:
+    - complementary [ref=e11]:
+      - img "Cherry Citra Cahyaning" [ref=e13]
+      - generic [ref=e14]:
+        - heading "Cherry Citra Cahyaning" [level=1] [ref=e15]
+        - paragraph [ref=e16]: chrryctr1509 he/him
+      - paragraph [ref=e17]: Fullstack Developer & AI Engineer — Building scalable web apps & intelligent systems. Laravel · React · Node.js · OpenAI · Open for freelance collaboration.
+      - button "Edit profile" [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - img [ref=e21]
+          - generic [ref=e23]: Indonesia
+        - generic [ref=e24]:
+          - img [ref=e25]
+          - link "github.com/chrryctr1509" [ref=e27] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+    - main [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - heading "Cherry Citra Cahyaning" [level=1] [ref=e31]
+          - paragraph [ref=e32]: Fullstack Developer • AI Engineer • Software Architect
+        - generic [ref=e33]: Building Intelligent Systems 🤖
+        - generic [ref=e35]:
+          - img "views" [ref=e36]
+          - img "followers" [ref=e37]
+          - img "status" [ref=e38]
+          - img "location" [ref=e39]
+        - generic [ref=e40]:
+          - link "📧 Gmail" [ref=e41] [cursor=pointer]:
+            - /url: mailto:chrryctr1509@gmail.com
+          - link "⭐ GitHub" [ref=e42] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - heading "👋 About Me" [level=2] [ref=e47]
+          - paragraph [ref=e48]:
+            - text: I'm a
+            - strong [ref=e49]: Fullstack Developer
+            - text: and
+            - strong [ref=e50]: AI Engineer
+            - text: based in Indonesia, passionate about building scalable systems and intelligent applications. I specialize in end-to-end product development — from architecting backends to deploying production AI pipelines.
+          - blockquote [ref=e51]: "\"I don't just write code — I engineer solutions that scale.\""
+          - table [ref=e52]:
+            - rowgroup [ref=e53]:
+              - row "🌐 Web Fullstack Development (React, Next.js, Laravel, Node.js)" [ref=e54]:
+                - cell "🌐 Web" [ref=e55]:
+                  - text: 🌐
+                  - strong [ref=e56]: Web
+                - cell "Fullstack Development (React, Next.js, Laravel, Node.js)" [ref=e57]
+              - row "🤖 AI/ML LLM Integration, AI Agents, Prompt Engineering" [ref=e58]:
+                - cell "🤖 AI/ML" [ref=e59]:
+                  - text: 🤖
+                  - strong [ref=e60]: AI/ML
+                - cell "LLM Integration, AI Agents, Prompt Engineering" [ref=e61]
+              - row "☁️ Cloud Docker, Linux, Nginx, CI/CD Pipelines" [ref=e62]:
+                - cell "☁️ Cloud" [ref=e63]:
+                  - text: ☁️
+                  - strong [ref=e64]: Cloud
+                - cell "Docker, Linux, Nginx, CI/CD Pipelines" [ref=e65]
+              - row "🔒 Security Auth systems, API security, best practices" [ref=e66]:
+                - cell "🔒 Security" [ref=e67]:
+                  - text: 🔒
+                  - strong [ref=e68]: Security
+                - cell "Auth systems, API security, best practices" [ref=e69]
+              - row "🗄️ Databases MySQL, PostgreSQL, MongoDB, Redis" [ref=e70]:
+                - cell "🗄️ Databases" [ref=e71]:
+                  - text: 🗄️
+                  - strong [ref=e72]: Databases
+                - cell "MySQL, PostgreSQL, MongoDB, Redis" [ref=e73]
+        - img "Developer animation" [ref=e75]
+      - generic [ref=e78] [cursor=pointer]:
+        - generic [ref=e79]: 🛠️ Tech Stack
+        - generic [ref=e80]: — click to expand
+        - generic [ref=e81]: ▶
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - heading "🚀 Portfolio" [level=2] [ref=e84]
+          - paragraph [ref=e85]: Selected projects showcasing problem-solving, performance, and user experience.
+        - generic [ref=e87] [cursor=pointer]:
+          - generic [ref=e88]: 🚀 Featured Projects
+          - generic [ref=e89]: — click to expand
+          - generic [ref=e90]: ▶
+        - generic [ref=e91]:
+          - button "All" [ref=e92] [cursor=pointer]
+          - button "CodeIgniter" [ref=e93] [cursor=pointer]
+          - button "Node.js" [ref=e94] [cursor=pointer]
+          - button "Laravel" [ref=e95] [cursor=pointer]
+        - generic [ref=e96]:
+          - generic [ref=e97] [cursor=pointer]:
+            - generic [ref=e98]:
+              - img "Nasi Goreng Web App" [ref=e101]
+              - generic [ref=e103]: Lihat Detail
+              - generic [ref=e104]: CodeIgniter
+            - generic [ref=e105]:
+              - heading "Nasi Goreng Web App" [level=3] [ref=e106]
+              - paragraph [ref=e107]: Aplikasi pemesanan Nasi Goreng dengan manajemen menu, pesanan, dan kasir.
+              - generic [ref=e108]:
+                - generic [ref=e109]: CodeIgniter 3
+                - generic [ref=e110]: MySQL
+          - generic [ref=e111] [cursor=pointer]:
+            - generic [ref=e112]:
+              - img "WhatsApp Service API" [ref=e115]
+              - generic [ref=e117]: Lihat Detail
+              - generic [ref=e118]: Node.js
+            - generic [ref=e119]:
+              - heading "WhatsApp Service API" [level=3] [ref=e120]
+              - paragraph [ref=e121]: Layanan REST API berbasis Express untuk integrasi WhatsApp (send/receive).
+              - generic [ref=e122]:
+                - generic [ref=e123]: Node.js
+                - generic [ref=e124]: Express
+                - generic [ref=e125]: SQL
+          - generic [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]:
+              - img "Absensi Perusahaan" [ref=e130]
+              - generic [ref=e132]: Lihat Detail
+              - generic [ref=e133]: Laravel
+            - generic [ref=e134]:
+              - heading "Absensi Perusahaan" [level=3] [ref=e135]
+              - paragraph [ref=e136]: "Sistem absensi karyawan: clock-in/out, rekap harian, dan laporan HR."
+              - generic [ref=e137]:
+                - generic [ref=e138]: Laravel
+                - generic [ref=e139]: MySQL
+          - generic [ref=e140] [cursor=pointer]:
+            - generic [ref=e141]:
+              - img "E-commerce Maxi Custom" [ref=e144]
+              - generic [ref=e146]: Lihat Detail
+              - generic [ref=e147]: Laravel
+            - generic [ref=e148]:
+              - heading "E-commerce Maxi Custom" [level=3] [ref=e149]
+              - paragraph [ref=e150]: Platform toko online dengan katalog, cart, checkout, dan manajemen pesanan.
+              - generic [ref=e151]:
+                - generic [ref=e152]: Laravel 8
+                - generic [ref=e153]: MySQL
+      - generic [ref=e157]:
+        - heading "🤝 Let's Build Something Together" [level=2] [ref=e158]
+        - paragraph [ref=e159]: Open for freelance collaborations, full-time opportunities, and interesting projects. Reach out and let's create something great.
+        - generic [ref=e160]:
+          - link "💬 Chat WhatsApp" [ref=e161] [cursor=pointer]:
+            - /url: https://wa.me/6287761882915?text=Halo%20Cherry%2C%20saya%20tertarik%20untuk%20terhubung%20dengan%20Anda
+          - link "📧 Email Me" [ref=e162] [cursor=pointer]:
+            - /url: mailto:chrryctr1509@gmail.com
+        - generic [ref=e163]:
+          - link "GitHub" [ref=e164] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+          - link "Facebook" [ref=e165] [cursor=pointer]:
+            - /url: https://www.facebook.com/cherryctr
+          - link "Instagram" [ref=e166] [cursor=pointer]:
+            - /url: https://www.instagram.com/mascherr30

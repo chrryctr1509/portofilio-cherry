@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tambah Value Dinamis</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 24px; background:#f7f8fb; color:#111; }
+    .card { background:white; border-radius:12px; box-shadow:0 6px 18px rgba(20,20,40,0.06); padding:18px; max-width:720px; margin:0 auto; }
+    .row { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+    input[type="text"]{ flex:1; padding:10px 12px; border-radius:8px; border:1px solid #e6e9ef; font-size:14px; }
+    button { padding:8px 12px; border-radius:8px; border:0; cursor:pointer; font-weight:600; }
+    .btn-add { background:#0b76ff; color:white; }
+    .btn-remove { background:#ff6b6b; color:white; }
+    .hint { color:#666; font-size:13px; margin-bottom:12px; }
+    .controls { display:flex; gap:8px; margin-top:12px; }
+    .small { font-size:13px; color:#666; }
+  </style>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Form penambahan values">
+    <h2>Tambah Value Dinamis</h2>
+    <p class="hint">Klik <strong>Tambah Value</strong> untuk menambahkan input baru. Setiap value disubmit sebagai array <code>values[]</code>.</p>
+
+    <form id="formValues">
+      <div id="inputsContainer" aria-live="polite">
+        <!-- baris input awal (bisa dikosongkan jika mau start tanpa input) -->
+        <div class="row" data-index="0">
+          <input type="text" name="values[]" placeholder="Masukkan value..." aria-label="Value 1" />
+          <button type="button" class="btn-remove" aria-label="Hapus value">Hapus</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="addBtn" type="button" class="btn-add" aria-controls="inputsContainer">Tambah Value</button>
+        <button id="submitBtn" type="submit">Submit</button>
+      </div>
+      <p class="small">Jumlah current inputs: <span id="count">1</span></p>
+    </form>
+  </div>
+
+  <script>
+    (function(){
+      const addBtn = document.getElementById('addBtn');
+      const inputsContainer = document.getElementById('inputsContainer');
+      const countEl = document.getElementById('count');
+      const form = document.getElementById('formValues');
+
+      let nextIndex = inputsContainer.children.length; // mulai dari jumlah baris awal
+      const MAX = 50; // batas maksimal input (ubah sesuai kebutuhan)
+
+      function updateCount() {
+        countEl.textContent = inputsContainer.querySelectorAll('.row').length;
+      }
+
+      // buat baris input baru
+      function createRow(value = '') {
+        const row = document.createElement('div');
+        row.className = 'row';
+        row.setAttribute('data-index', nextIndex);
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.name = 'values[]';
+        input.placeholder = 'Masukkan value...';
+        input.value = value;
+        input.setAttribute('aria-label', 'Value ' + (nextIndex + 1));
+
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.className = 'btn-remove';
+        removeBtn.textContent = 'Hapus';
+        removeBtn.setAttribute('aria-label', 'Hapus value');
+
+        removeBtn.addEventListener('click', () => {
+          row.remove();
+          updateCount();
+        });
+
+        row.appendChild(input);
+        row.appendChild(removeBtn);
+
+        nextIndex++;
+        return row;
+      }
+
+      // event: tambah
+      addBtn.addEventListener('click', () => {
+        const current = inputsContainer.querySelectorAll('.row').length;
+        if (current >= MAX) {
+          alert('Maksimal ' + MAX + ' input.');
+          return;
+        }
+        const row = createRow('');
+        inputsContainer.appendChild(row);
+        updateCount();
+        // fokus ke input baru
+        const newlyAdded = row.querySelector('input');
+        if (newlyAdded) newlyAdded.focus();
+      });
+
+      // delegasi: tombol hapus pada baris awal (karena baris awal dibuat statis)
+      inputsContainer.addEventListener('click', (e) => {
+        if (e.target && e.target.matches('.btn-remove')) {
+          const row = e.target.closest('.row');
+          if (row) {
+            row.remove();
+            updateCount();
+          }
+        }
+      });
+
+      // handle submit (contoh: tampilkan data di console)
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const values = formData.getAll('values[]').map(v => v.trim()).filter(v => v !== '');
+        // contoh: jika kosong, beri peringatan
+        if (values.length === 0) {
+          alert('Masukkan minimal satu value.');
+          return;
+        }
+        // Lakukan apa pun dengan values: fetch ke backend, tampil, dsb.
+        console.log('Values submitted:', values);
+        alert('Submitted ' + values.length + ' values. Cek console untuk detail.');
+      });
+
+      // inisialisasi count
+      updateCount();
+    })();
+  </script>
+</body>
+</html>

@@ -29,59 +29,57 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header 
-    class="sticky top-0 z-50 transition-all duration-300"
-    :class="scrolled 
-      ? 'bg-white shadow-lg dark:bg-slate-900 dark:shadow-black/20' 
-      : 'bg-white/90 backdrop-blur-md dark:bg-slate-900/80'"
+  <header
+    class="sticky top-0 z-50 transition-all duration-300 border-b"
+    :class="scrolled
+      ? 'shadow-lg shadow-black/20'
+      : 'backdrop-blur-md'"
+    style="background: rgba(10,15,10,0.95); border-color: rgba(34,197,94,0.2);"
   >
     <div class="mx-auto container px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-3 group">
           <div class="relative">
-            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-emerald-500 text-white font-bold shadow-lg group-hover:shadow-xl transition-shadow">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white font-bold shadow-lg group-hover:shadow-xl transition-shadow" style="background: linear-gradient(135deg, var(--accent-green-soft), var(--accent-green));">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             </span>
-            <span class="absolute -top-1 -right-1 h-3 w-3 bg-emerald-400 rounded-full animate-pulse"></span>
+            <span class="absolute -top-1 -right-1 h-3 w-3 rounded-full animate-pulse" style="background: var(--accent-green);"></span>
           </div>
-          <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-200 bg-clip-text text-transparent">
-            Cherry Citra
+          <span class="text-xl font-bold tracking-tight terminal-cursor" style="font-family: var(--font-mono); color: var(--text-primary);">
+            >_ Cherry Citra
           </span>
         </a>
 
         <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center gap-1">
-          <a 
-            v-for="item in ['About', 'Skills', 'Portfolio']" 
+          <a
+            v-for="item in ['About', 'Skills', 'Portfolio']"
             :key="item"
             :href="`#${item.toLowerCase()}`"
             @click="(e) => smoothScroll(e, `#${item.toLowerCase()}`)"
-            class="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-emerald-400 hover:bg-brand-50 dark:hover:bg-slate-800 rounded-lg transition-all relative group"
+            class="nav-link px-4 py-2 text-sm font-medium rounded-lg transition-all relative group"
+            style="color: var(--text-secondary);"
           >
             {{ item }}
-            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-brand-500 group-hover:w-3/4 transition-all duration-300"></span>
+            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 transition-all duration-300" style="background: var(--accent-green-soft);"></span>
           </a>
         </nav>
 
         <!-- CTA Buttons Desktop -->
         <div class="hidden lg:flex items-center gap-3">
-          <!-- Theme Toggle -->
-          <button @click="toggleTheme" class="h-10 w-10 rounded-full flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" :aria-pressed="theme==='dark'">
-            <svg v-if="theme==='light'" class="w-5 h-5 text-slate-700" viewBox="0 0 24 24" fill="currentColor"><path d="M12 18a6 6 0 100-12 6 6 0 000 12zm0 4a1 1 0 011 1h-2a1 1 0 011-1zm0-22a1 1 0 00-1 1h2a1 1 0 00-1-1zM1 13a1 1 0 010-2h2a1 1 0 010 2H1zm20 0a1 1 0 010-2h2a1 1 0 010 2h-2zM4.22 19.78a1 1 0 010-1.41l1.42-1.42a1 1 0 111.41 1.41L5.64 19.78a1 1 0 01-1.42 0zM16.95 7.05a1 1 0 010-1.41l1.41-1.42a1 1 0 111.42 1.41L18.36 7.05a1 1 0 01-1.41 0zM4.22 4.22a1 1 0 011.41 0L7.05 5.64A1 1 0 115.64 7.05L4.22 5.63a1 1 0 010-1.41zM16.95 16.95a1 1 0 011.41 0l1.42 1.41a1 1 0 01-1.42 1.42l-1.41-1.42a1 1 0 010-1.41z"/></svg>
-            <svg v-else class="w-5 h-5 text-slate-200" viewBox="0 0 24 24" fill="currentColor"><path d="M21.64 13A9 9 0 1111 2.36 7 7 0 0021.64 13z"/></svg>
-          </button>
-          <a href="#contact" @click="(e) => smoothScroll(e, '#contact')" class="px-6 py-2.5 text-sm font-bold text-white rounded-lg bg-gradient-to-r from-brand-500 via-emerald-500 to-teal-500 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
+          <a href="#contact" @click="(e) => smoothScroll(e, '#contact')" class="cta-button px-6 py-2.5 text-sm font-bold rounded-lg border transition-all" style="border-color: var(--accent-green-soft); color: var(--accent-green-soft); background: transparent;">
             Contact Me
           </a>
         </div>
 
         <!-- Mobile Menu Button -->
-        <button 
+        <button
           @click="mobileMenuOpen = !mobileMenuOpen"
-          class="lg:hidden p-2 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+          class="lg:hidden p-2 rounded-lg transition-colors"
+          style="color: var(--text-secondary);"
           aria-label="Toggle menu"
         >
           <svg v-if="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,22 +102,19 @@ onUnmounted(() => {
       >
         <div v-if="mobileMenuOpen" class="lg:hidden pb-6 pt-2">
           <nav class="flex flex-col gap-2">
-            <a 
+            <a
               v-for="item in ['About', 'Skills', 'Portfolio']"
               :key="item"
               :href="`#${item.toLowerCase()}`"
               @click="(e) => smoothScroll(e, `#${item.toLowerCase()}`)"
-              class="px-4 py-3 text-base font-medium text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-emerald-400 hover:bg-brand-50 dark:hover:bg-slate-800 rounded-lg transition-all"
+              class="px-4 py-3 text-base font-medium rounded-lg transition-all"
+              style="color: var(--text-secondary);"
             >
               {{ item }}
             </a>
           </nav>
-          <div class="flex flex-col gap-3 mt-4 pt-4 border-t border-slate-200">
-            <button @click="toggleTheme" class="px-4 py-3 text-sm font-bold rounded-lg border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
-              <span v-if="theme==='light'">Enable Dark Mode</span>
-              <span v-else>Disable Dark Mode</span>
-            </button>
-            <a href="#contact" @click="(e) => smoothScroll(e, '#contact')" class="px-4 py-3 text-sm font-bold text-white rounded-lg bg-gradient-to-r from-brand-500 to-emerald-500 shadow-lg text-center">
+          <div class="flex flex-col gap-3 mt-4 pt-4 border-t" style="border-color: var(--border-default);">
+            <a href="#contact" @click="(e) => smoothScroll(e, '#contact')" class="px-4 py-3 text-sm font-bold rounded-lg shadow-lg text-center border" style="border-color: var(--accent-green-soft); color: var(--accent-green-soft); background: transparent;">
               Contact Me
             </a>
           </div>
@@ -130,5 +125,18 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.nav-link:hover {
+  color: var(--accent-green);
+  text-shadow: var(--glow-sm);
+}
+
+.nav-link:hover span {
+  width: 75%;
+}
+
+.cta-button:hover {
+  background: rgba(34, 197, 94, 0.1);
+  box-shadow: var(--glow-sm);
+}
 </style>
 

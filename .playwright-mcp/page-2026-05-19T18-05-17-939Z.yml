@@ -1,0 +1,176 @@
+- main [ref=e4]:
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - link [ref=e8] [cursor=pointer]:
+        - /url: https://github.com
+        - img [ref=e9]
+      - searchbox "Type / to search" [ref=e12]
+      - navigation [ref=e13]:
+        - link "Pull requests" [ref=e14] [cursor=pointer]:
+          - /url: "#"
+        - link "Issues" [ref=e15] [cursor=pointer]:
+          - /url: "#"
+        - link "Marketplace" [ref=e16] [cursor=pointer]:
+          - /url: "#"
+        - link "Explore" [ref=e17] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e18]:
+        - link "🔔" [ref=e19] [cursor=pointer]:
+          - /url: "#"
+        - link "+" [ref=e20] [cursor=pointer]:
+          - /url: "#"
+        - link "avatar" [ref=e21] [cursor=pointer]:
+          - /url: "#"
+          - img "avatar" [ref=e22]
+    - generic [ref=e23]:
+      - complementary [ref=e24]:
+        - generic [ref=e25]:
+          - link "Cherry Citra Cahyaning" [ref=e26] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+            - img "Cherry Citra Cahyaning" [ref=e27]
+          - heading "Cherry Citra Cahyaning" [level=1] [ref=e28]
+          - paragraph [ref=e29]: chrryctr1509
+          - paragraph [ref=e30]: Fullstack Developer & AI Engineer • Building scalable web apps & intelligent systems • Laravel • React • Node.js • OpenAI • Open for freelance
+          - link "Edit profile" [ref=e31] [cursor=pointer]:
+            - /url: "#"
+          - list [ref=e32]:
+            - listitem [ref=e33]:
+              - img [ref=e34]
+              - generic [ref=e37]: No organization
+            - listitem [ref=e38]:
+              - img [ref=e39]
+              - generic [ref=e41]: Indonesia
+            - listitem [ref=e42]:
+              - img [ref=e43]
+              - link "github.com/chrryctr1509" [ref=e45] [cursor=pointer]:
+                - /url: https://github.com/chrryctr1509
+          - 'link "X (Twitter): none" [ref=e47] [cursor=pointer]':
+            - /url: https://twitter.com/chrryctr1509
+          - generic [ref=e48]:
+            - link "8" [ref=e49] [cursor=pointer]:
+              - /url: https://github.com/chrryctr1509?tab=followers
+            - generic [ref=e50]: followers
+            - generic [ref=e51]: ·
+            - link "8" [ref=e52] [cursor=pointer]:
+              - /url: https://github.com/chrryctr1509?tab=following
+            - generic [ref=e53]: following
+          - generic [ref=e54]:
+            - img "Quickdraw" [ref=e55]
+            - img "Pull Shark" [ref=e56]
+            - img "YOLO" [ref=e57]
+            - img "Arctic Code Vault" [ref=e58]
+            - img "Followers badge" [ref=e59]
+            - img "Profile Views"
+      - main [ref=e60]:
+        - generic [ref=e61]:
+          - navigation [ref=e62]:
+            - link "Overview" [ref=e63] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e64]
+              - text: Overview
+            - link "Repositories 20" [ref=e67] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e68]
+              - text: Repositories
+              - generic [ref=e70]: "20"
+            - link "Projects" [ref=e71] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e72]
+              - text: Projects
+            - link "Packages" [ref=e74] [cursor=pointer]:
+              - /url: "#"
+              - img [ref=e75]
+              - text: Packages
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - heading "Popular repositories" [level=2] [ref=e79]
+              - generic [ref=e80]:
+                - generic [ref=e81]:
+                  - generic [ref=e82]:
+                    - img [ref=e83]
+                    - link "vue_js_cherry" [ref=e85] [cursor=pointer]:
+                      - /url: https://github.com/chrryctr1509/vue_js_cherry
+                    - generic [ref=e86]: Public
+                  - paragraph [ref=e87]: Personal portfolio website built with Vue.js 3 and Tailwind CSS
+                  - generic [ref=e89]: Vue
+                - generic [ref=e91]:
+                  - generic [ref=e92]:
+                    - img [ref=e93]
+                    - link "laravel-crud-api" [ref=e95] [cursor=pointer]:
+                      - /url: https://github.com/chrryctr1509/laravel-crud-api
+                    - generic [ref=e96]: Public
+                  - paragraph [ref=e97]: RESTful API with full JWT authentication & role management
+                  - generic [ref=e98]:
+                    - generic [ref=e99]: PHP
+                    - generic [ref=e101]:
+                      - img [ref=e102]
+                      - text: "12"
+                    - generic [ref=e104]:
+                      - img [ref=e105]
+                      - text: "5"
+                - generic [ref=e107]:
+                  - generic [ref=e108]:
+                    - img [ref=e109]
+                    - link "ai-customer-service" [ref=e111] [cursor=pointer]:
+                      - /url: https://github.com/chrryctr1509/ai-customer-service
+                    - generic [ref=e112]: Public
+                  - paragraph [ref=e113]: Intelligent chatbot with OpenAI integration & context memory
+                  - generic [ref=e114]:
+                    - generic [ref=e115]: JavaScript
+                    - generic [ref=e117]:
+                      - img [ref=e118]
+                      - text: "8"
+                    - generic [ref=e120]:
+                      - img [ref=e121]
+                      - text: "2"
+                - generic [ref=e123]:
+                  - generic [ref=e124]:
+                    - img [ref=e125]
+                    - link "react-lms" [ref=e127] [cursor=pointer]:
+                      - /url: https://github.com/chrryctr1509/react-lms
+                    - generic [ref=e128]: Public
+                  - paragraph [ref=e129]: Full-featured Learning Management System with progress tracking
+                  - generic [ref=e130]:
+                    - generic [ref=e131]: JavaScript
+                    - generic [ref=e133]:
+                      - img [ref=e134]
+                      - text: "15"
+                    - generic [ref=e136]:
+                      - img [ref=e137]
+                      - text: "7"
+                - generic [ref=e139]:
+                  - generic [ref=e140]:
+                    - img [ref=e141]
+                    - link "api-lsp" [ref=e143] [cursor=pointer]:
+                      - /url: https://github.com/chrryctr1509/api-lsp
+                    - generic [ref=e144]: Public
+                  - paragraph [ref=e145]: Certification & competency management platform
+                  - generic [ref=e146]:
+                    - generic [ref=e147]: PHP
+                    - generic [ref=e149]:
+                      - img [ref=e150]
+                      - text: "6"
+                    - generic [ref=e152]:
+                      - img [ref=e153]
+                      - text: "3"
+                - generic [ref=e155]:
+                  - generic [ref=e156]:
+                    - img [ref=e157]
+                    - link "automation-scripts" [ref=e159] [cursor=pointer]:
+                      - /url: https://github.com/chrryctr1509/automation-scripts
+                    - generic [ref=e160]: Public
+                  - paragraph [ref=e161]: Developer productivity tools & workflow automation
+                  - generic [ref=e162]:
+                    - generic [ref=e163]: Python
+                    - generic [ref=e165]:
+                      - img [ref=e166]
+                      - text: "4"
+                    - generic [ref=e168]:
+                      - img [ref=e169]
+                      - text: "1"
+            - generic [ref=e171]:
+              - heading "Contribution activity" [level=2] [ref=e172]
+              - generic [ref=e173]:
+                - img "Contribution Graph" [ref=e174]
+                - img "GitHub Streak" [ref=e175]
+                - img "Trophies" [ref=e176]

@@ -1,0 +1,273 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - img [ref=e7]
+      - generic [ref=e9]: chrryctr1509
+  - generic [ref=e10]:
+    - complementary [ref=e11]:
+      - img "Cherry Citra Cahyaning" [ref=e13]
+      - generic [ref=e14]:
+        - heading "Cherry Citra Cahyaning" [level=1] [ref=e15]
+        - paragraph [ref=e16]: chrryctr1509 he/him
+      - paragraph [ref=e17]: Fullstack Developer & AI Engineer — Building scalable web apps & intelligent systems. Laravel · React · Node.js · OpenAI · Open for freelance collaboration.
+      - button "Edit profile" [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - img [ref=e21]
+          - generic [ref=e23]: Indonesia
+        - generic [ref=e24]:
+          - img [ref=e25]
+          - link "github.com/chrryctr1509" [ref=e27] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+    - main [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - heading "Cherry Citra Cahyaning" [level=1] [ref=e31]
+          - paragraph [ref=e32]: Fullstack Developer • AI Engineer • Software Architect
+        - generic [ref=e33]: Building Intelligent Systems 🤖
+        - generic [ref=e35]:
+          - img "views" [ref=e36]
+          - img "followers" [ref=e37]
+          - img "status" [ref=e38]
+          - img "location" [ref=e39]
+        - generic [ref=e40]:
+          - link "📧 Gmail" [ref=e41] [cursor=pointer]:
+            - /url: mailto:chrryctr1509@gmail.com
+          - link "⭐ GitHub" [ref=e42] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - heading "👋 About Me" [level=2] [ref=e47]
+          - paragraph [ref=e48]:
+            - text: I'm a
+            - strong [ref=e49]: Fullstack Developer
+            - text: and
+            - strong [ref=e50]: AI Engineer
+            - text: based in Indonesia, passionate about building scalable systems and intelligent applications. I specialize in end-to-end product development — from architecting backends to deploying production AI pipelines.
+          - blockquote [ref=e51]: "\"I don't just write code — I engineer solutions that scale.\""
+          - table [ref=e52]:
+            - rowgroup [ref=e53]:
+              - row "🌐 Web Fullstack Development (React, Next.js, Laravel, Node.js)" [ref=e54]:
+                - cell "🌐 Web" [ref=e55]:
+                  - text: 🌐
+                  - strong [ref=e56]: Web
+                - cell "Fullstack Development (React, Next.js, Laravel, Node.js)" [ref=e57]
+              - row "🤖 AI/ML LLM Integration, AI Agents, Prompt Engineering" [ref=e58]:
+                - cell "🤖 AI/ML" [ref=e59]:
+                  - text: 🤖
+                  - strong [ref=e60]: AI/ML
+                - cell "LLM Integration, AI Agents, Prompt Engineering" [ref=e61]
+              - row "☁️ Cloud Docker, Linux, Nginx, CI/CD Pipelines" [ref=e62]:
+                - cell "☁️ Cloud" [ref=e63]:
+                  - text: ☁️
+                  - strong [ref=e64]: Cloud
+                - cell "Docker, Linux, Nginx, CI/CD Pipelines" [ref=e65]
+              - row "🔒 Security Auth systems, API security, best practices" [ref=e66]:
+                - cell "🔒 Security" [ref=e67]:
+                  - text: 🔒
+                  - strong [ref=e68]: Security
+                - cell "Auth systems, API security, best practices" [ref=e69]
+              - row "🗄️ Databases MySQL, PostgreSQL, MongoDB, Redis" [ref=e70]:
+                - cell "🗄️ Databases" [ref=e71]:
+                  - text: 🗄️
+                  - strong [ref=e72]: Databases
+                - cell "MySQL, PostgreSQL, MongoDB, Redis" [ref=e73]
+        - img "Developer animation" [ref=e75]
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - heading "🛠️ Tech Stack" [level=2] [ref=e79]
+          - paragraph [ref=e80]: Technologies I work with daily
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - heading "🖥️ Languages" [level=3] [ref=e83]:
+              - generic [ref=e84]: 🖥️
+              - generic [ref=e85]: Languages
+            - generic [ref=e86]:
+              - generic "JavaScript" [ref=e87] [cursor=pointer]:
+                - img "JavaScript" [ref=e88]
+                - generic: JavaScript
+              - generic "TypeScript" [ref=e89] [cursor=pointer]:
+                - img "TypeScript" [ref=e90]
+                - generic: TypeScript
+              - generic "Python" [ref=e91] [cursor=pointer]:
+                - img "Python" [ref=e92]
+                - generic: Python
+              - generic "PHP" [ref=e93] [cursor=pointer]:
+                - img "PHP" [ref=e94]
+                - generic: PHP
+              - generic "Go" [ref=e95] [cursor=pointer]:
+                - img "Go" [ref=e96]
+                - generic: Go
+              - generic "HTML5" [ref=e97] [cursor=pointer]:
+                - img "HTML5" [ref=e98]
+                - generic: HTML5
+              - generic "CSS3" [ref=e99] [cursor=pointer]:
+                - img "CSS3" [ref=e100]
+                - generic: CSS3
+          - generic [ref=e101]:
+            - heading "🎨 Frontend" [level=3] [ref=e102]:
+              - generic [ref=e103]: 🎨
+              - generic [ref=e104]: Frontend
+            - generic [ref=e105]:
+              - generic "React" [ref=e106] [cursor=pointer]:
+                - img "React" [ref=e107]
+                - generic: React
+              - generic "Next.js" [ref=e108] [cursor=pointer]:
+                - img "Next.js" [ref=e109]
+                - generic: Next.js
+              - generic "Vue.js" [ref=e110] [cursor=pointer]:
+                - img "Vue.js" [ref=e111]
+                - generic: Vue.js
+              - generic "Tailwind CSS" [ref=e112] [cursor=pointer]:
+                - img "Tailwind CSS" [ref=e113]
+                - generic: Tailwind CSS
+              - generic "Bootstrap" [ref=e114] [cursor=pointer]:
+                - img "Bootstrap" [ref=e115]
+                - generic: Bootstrap
+          - generic [ref=e116]:
+            - heading "⚙️ Backend" [level=3] [ref=e117]:
+              - generic [ref=e118]: ⚙️
+              - generic [ref=e119]: Backend
+            - generic [ref=e120]:
+              - generic "Node.js" [ref=e121] [cursor=pointer]:
+                - img "Node.js" [ref=e122]
+                - generic: Node.js
+              - generic "Express.js" [ref=e123] [cursor=pointer]:
+                - img "Express.js" [ref=e124]
+                - generic: Express.js
+              - generic "Laravel" [ref=e125] [cursor=pointer]:
+                - img "Laravel" [ref=e126]
+                - generic: Laravel
+              - generic "Fastify" [ref=e127] [cursor=pointer]:
+                - img "Fastify" [ref=e128]
+                - generic: Fastify
+              - generic "Go Fiber" [ref=e129] [cursor=pointer]:
+                - img "Go Fiber" [ref=e130]
+                - generic: Go Fiber
+          - generic [ref=e131]:
+            - heading "🗄️ Databases" [level=3] [ref=e132]:
+              - generic [ref=e133]: 🗄️
+              - generic [ref=e134]: Databases
+            - generic [ref=e135]:
+              - generic "MySQL" [ref=e136] [cursor=pointer]:
+                - img "MySQL" [ref=e137]
+                - generic: MySQL
+              - generic "PostgreSQL" [ref=e138] [cursor=pointer]:
+                - img "PostgreSQL" [ref=e139]
+                - generic: PostgreSQL
+              - generic "MongoDB" [ref=e140] [cursor=pointer]:
+                - img "MongoDB" [ref=e141]
+                - generic: MongoDB
+              - generic "Redis" [ref=e142] [cursor=pointer]:
+                - img "Redis" [ref=e143]
+                - generic: Redis
+          - generic [ref=e144]:
+            - heading "🛠️ DevOps & Tools" [level=3] [ref=e145]:
+              - generic [ref=e146]: 🛠️
+              - generic [ref=e147]: DevOps & Tools
+            - generic [ref=e148]:
+              - generic "Docker" [ref=e149] [cursor=pointer]:
+                - img "Docker" [ref=e150]
+                - generic: Docker
+              - generic "Linux" [ref=e151] [cursor=pointer]:
+                - img "Linux" [ref=e152]
+                - generic: Linux
+              - generic "Nginx" [ref=e153] [cursor=pointer]:
+                - img "Nginx" [ref=e154]
+                - generic: Nginx
+              - generic "Git" [ref=e155] [cursor=pointer]:
+                - img "Git" [ref=e156]
+                - generic: Git
+              - generic "GitHub" [ref=e157] [cursor=pointer]:
+                - img "GitHub" [ref=e158]
+                - generic: GitHub
+              - generic "Postman" [ref=e159] [cursor=pointer]:
+                - img "Postman" [ref=e160]
+                - generic: Postman
+              - generic "VS Code" [ref=e161] [cursor=pointer]:
+                - img "VS Code" [ref=e162]
+                - generic: VS Code
+          - generic [ref=e163]:
+            - heading "🤖 AI / ML Stack" [level=3] [ref=e164]:
+              - generic [ref=e165]: 🤖
+              - generic [ref=e166]: AI / ML Stack
+            - generic [ref=e167]:
+              - generic [ref=e168]: OpenAI API
+              - generic [ref=e169]: Llama Models
+              - generic [ref=e170]: Prompt Engineering
+              - generic [ref=e171]: AI Agents
+              - generic [ref=e172]: Workflow Automation
+      - generic [ref=e173]:
+        - generic [ref=e174]:
+          - heading "🚀 Portfolio" [level=2] [ref=e175]
+          - paragraph [ref=e176]: Selected projects showcasing problem-solving, performance, and user experience.
+        - generic [ref=e178] [cursor=pointer]:
+          - generic [ref=e179]: 🚀 Featured Projects
+          - generic [ref=e180]: — click to expand
+          - generic [ref=e181]: ▶
+        - generic [ref=e182]:
+          - button "All" [ref=e183] [cursor=pointer]
+          - button "CodeIgniter" [ref=e184] [cursor=pointer]
+          - button "Node.js" [ref=e185] [cursor=pointer]
+          - button "Laravel" [ref=e186] [cursor=pointer]
+        - generic [ref=e187]:
+          - generic [ref=e188] [cursor=pointer]:
+            - generic [ref=e189]:
+              - img "Nasi Goreng Web App" [ref=e192]
+              - generic [ref=e194]: Lihat Detail
+              - generic [ref=e195]: CodeIgniter
+            - generic [ref=e196]:
+              - heading "Nasi Goreng Web App" [level=3] [ref=e197]
+              - paragraph [ref=e198]: Aplikasi pemesanan Nasi Goreng dengan manajemen menu, pesanan, dan kasir.
+              - generic [ref=e199]:
+                - generic [ref=e200]: CodeIgniter 3
+                - generic [ref=e201]: MySQL
+          - generic [ref=e202] [cursor=pointer]:
+            - generic [ref=e203]:
+              - img "WhatsApp Service API" [ref=e206]
+              - generic [ref=e208]: Lihat Detail
+              - generic [ref=e209]: Node.js
+            - generic [ref=e210]:
+              - heading "WhatsApp Service API" [level=3] [ref=e211]
+              - paragraph [ref=e212]: Layanan REST API berbasis Express untuk integrasi WhatsApp (send/receive).
+              - generic [ref=e213]:
+                - generic [ref=e214]: Node.js
+                - generic [ref=e215]: Express
+                - generic [ref=e216]: SQL
+          - generic [ref=e217] [cursor=pointer]:
+            - generic [ref=e218]:
+              - img "Absensi Perusahaan" [ref=e221]
+              - generic [ref=e223]: Lihat Detail
+              - generic [ref=e224]: Laravel
+            - generic [ref=e225]:
+              - heading "Absensi Perusahaan" [level=3] [ref=e226]
+              - paragraph [ref=e227]: "Sistem absensi karyawan: clock-in/out, rekap harian, dan laporan HR."
+              - generic [ref=e228]:
+                - generic [ref=e229]: Laravel
+                - generic [ref=e230]: MySQL
+          - generic [ref=e231] [cursor=pointer]:
+            - generic [ref=e232]:
+              - img "E-commerce Maxi Custom" [ref=e235]
+              - generic [ref=e237]: Lihat Detail
+              - generic [ref=e238]: Laravel
+            - generic [ref=e239]:
+              - heading "E-commerce Maxi Custom" [level=3] [ref=e240]
+              - paragraph [ref=e241]: Platform toko online dengan katalog, cart, checkout, dan manajemen pesanan.
+              - generic [ref=e242]:
+                - generic [ref=e243]: Laravel 8
+                - generic [ref=e244]: MySQL
+      - generic [ref=e248]:
+        - heading "🤝 Let's Build Something Together" [level=2] [ref=e249]
+        - paragraph [ref=e250]: Open for freelance collaborations, full-time opportunities, and interesting projects. Reach out and let's create something great.
+        - generic [ref=e251]:
+          - link "💬 Chat WhatsApp" [ref=e252] [cursor=pointer]:
+            - /url: https://wa.me/6287761882915?text=Halo%20Cherry%2C%20saya%20tertarik%20untuk%20terhubung%20dengan%20Anda
+          - link "📧 Email Me" [ref=e253] [cursor=pointer]:
+            - /url: mailto:chrryctr1509@gmail.com
+        - generic [ref=e254]:
+          - link "GitHub" [ref=e255] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+          - link "Facebook" [ref=e256] [cursor=pointer]:
+            - /url: https://www.facebook.com/cherryctr
+          - link "Instagram" [ref=e257] [cursor=pointer]:
+            - /url: https://www.instagram.com/mascherr30
