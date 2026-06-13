@@ -283,11 +283,15 @@ const profile = {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  background: #0d1117;
+  background:
+    linear-gradient(180deg, rgba(88,166,255,0.06), rgba(88,166,255,0) 60%),
+    #0d1117;
   border: 1px solid #30363d;
-  border-radius: 6px;
+  border-left: 3px solid #58a6ff;
+  border-radius: 8px;
   padding: 16px;
   margin-bottom: 24px;
+  box-shadow: 0 1px 0 rgba(1,4,9,0.6);
 }
 .gh-notice-icon { color: #58a6ff; display: flex; padding-top: 1px; flex-shrink: 0; }
 .gh-notice-body { flex: 1; min-width: 0; }
@@ -326,8 +330,27 @@ const profile = {
   overflow: hidden;
   background: radial-gradient(circle at 50% 35%, #c0392b 0%, #a02d22 100%);
   border: 1px solid #30363d;
+  padding: 4px;
+  box-shadow:
+    0 0 0 1px rgba(240,246,252,0.08),
+    0 8px 24px rgba(1,4,9,0.6);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
-.gh-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.gh-avatar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 2px;
+  background: conic-gradient(from 210deg, #58a6ff, #bc8cff, #3fb950, #58a6ff);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: .55;
+  pointer-events: none;
+}
+.gh-avatar-wrap:hover .gh-avatar { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(88,166,255,0.25), 0 12px 32px rgba(1,4,9,0.7); }
+.gh-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 50%; }
 .gh-status-emoji {
   position: absolute;
   right: 18px;
@@ -336,34 +359,39 @@ const profile = {
   height: 40px;
   display: grid;
   place-items: center;
-  background: #161b22;
+  background: #21262d;
   border: 2px solid #f0883e;
   border-radius: 50%;
   font-size: 18px;
+  box-shadow: 0 2px 8px rgba(1,4,9,0.6);
 }
 
 .gh-identity { margin-top: 16px; }
-.gh-name { font-size: 24px; font-weight: 600; line-height: 1.25; color: #e6edf3; }
-.gh-username { font-size: 20px; font-weight: 300; color: #8b949e; margin-top: 0; }
+.gh-name { font-size: 26px; font-weight: 600; line-height: 1.25; color: #e6edf3; letter-spacing: -0.01em; }
+.gh-username { font-size: 20px; font-weight: 300; color: #8b949e; margin-top: 2px; }
 
 .gh-bio { font-size: 16px; color: #e6edf3; margin-top: 16px; line-height: 1.5; }
 
 .gh-btn-follow {
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
   width: 100%;
   margin-top: 16px;
-  padding: 6px 16px;
+  padding: 8px 16px;
   font-size: 14px;
   font-weight: 600;
-  color: #e6edf3;
-  background: #21262d;
-  border: 1px solid #30363d;
-  border-radius: 6px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #2ea043, #238636);
+  border: 1px solid rgba(240,246,252,0.1);
+  border-radius: 8px;
   text-decoration: none;
-  transition: background .15s ease, border-color .15s ease;
+  box-shadow: 0 1px 0 rgba(1,4,9,0.3);
+  transition: filter .15s ease, transform .12s ease, box-shadow .15s ease;
 }
-.gh-btn-follow:hover { background: #30363d; border-color: #8b949e; }
+.gh-btn-follow:hover { filter: brightness(1.08); box-shadow: 0 4px 14px rgba(35,134,54,0.35); }
+.gh-btn-follow:active { transform: translateY(1px); }
 
 .gh-follow-stats { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 14px; }
 .gh-follow-item { display: inline-flex; align-items: center; gap: 4px; color: #8b949e; text-decoration: none; }
@@ -379,30 +407,39 @@ const profile = {
 .gh-meta a:hover { color: #58a6ff; }
 
 .gh-achievements { margin-top: 24px; padding-top: 24px; border-top: 1px solid #21262d; }
-.gh-sidebar-heading { font-size: 14px; font-weight: 600; color: #e6edf3; margin-bottom: 8px; }
-.gh-achievement-row { display: flex; gap: 4px; }
+.gh-sidebar-heading { font-size: 14px; font-weight: 600; color: #e6edf3; margin-bottom: 10px; }
+.gh-achievement-row { display: flex; gap: 6px; }
 .gh-badge-circle {
   width: 44px; height: 44px;
   display: grid; place-items: center;
-  background: #161b22;
+  background: radial-gradient(circle at 50% 30%, #21262d, #161b22);
   border: 1px solid #30363d;
   border-radius: 50%;
   font-size: 20px;
+  cursor: default;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.gh-badge-circle:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: #bc8cff;
+  box-shadow: 0 6px 16px rgba(188,140,255,0.25);
 }
 
 /* ============ MAIN ============ */
 .gh-readme {
   border: 1px solid #30363d;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #0d1117;
   overflow: hidden;
+  box-shadow: 0 1px 0 rgba(1,4,9,0.4), 0 8px 24px rgba(1,4,9,0.25);
 }
 .gh-readme-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 16px;
+  padding: 10px 16px;
   border-bottom: 1px solid #30363d;
+  background: linear-gradient(180deg, #161b22, #0d1117);
   font-size: 14px;
 }
 .gh-readme-path { color: #8b949e; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
