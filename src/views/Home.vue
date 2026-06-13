@@ -5,7 +5,7 @@ const profile = {
   username: 'chrryctr1509',
   pronouns: 'he/him',
   avatar: '/images/cherry.png',
-  bio: 'Fullstack Developer & AI Engineer • Building scalable web apps & intelligent systems • Laravel · React · Node.js · OpenAI • Open for freelance collaboration',
+  bio: 'Fullstack Developer & AI Engineer specializing in scalable web applications and intelligent systems. Experienced across Laravel, React, Node.js, and OpenAI — turning complex requirements into production-grade products. Open to freelance and collaborative opportunities.',
   location: 'Indonesia',
   githubUrl: 'https://github.com/chrryctr1509',
   email: 'chrryctr1509@gmail.com',
@@ -47,21 +47,6 @@ const profile = {
           </div>
 
           <p class="gh-bio">{{ profile.bio }}</p>
-
-          <a :href="profile.githubUrl" target="_blank" rel="noopener" class="gh-btn-follow">
-            Follow
-          </a>
-
-          <div class="gh-follow-stats">
-            <a :href="profile.githubUrl" target="_blank" rel="noopener" class="gh-follow-item">
-              <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"/></svg>
-              <strong>{{ profile.followers }}</strong> followers
-            </a>
-            <span class="gh-dot">·</span>
-            <a :href="profile.githubUrl" target="_blank" rel="noopener" class="gh-follow-item">
-              <strong>{{ profile.following }}</strong> following
-            </a>
-          </div>
 
           <ul class="gh-meta">
             <li>
@@ -370,37 +355,15 @@ const profile = {
 .gh-name { font-size: 26px; font-weight: 600; line-height: 1.25; color: #e6edf3; letter-spacing: -0.01em; }
 .gh-username { font-size: 20px; font-weight: 300; color: #8b949e; margin-top: 2px; }
 
-.gh-bio { font-size: 16px; color: #e6edf3; margin-top: 16px; line-height: 1.5; }
-
-.gh-btn-follow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  width: 100%;
+.gh-bio {
+  font-size: 15px;
+  color: #c9d1d9;
   margin-top: 16px;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(180deg, #2ea043, #238636);
-  border: 1px solid rgba(240,246,252,0.1);
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 1px 0 rgba(1,4,9,0.3);
-  transition: filter .15s ease, transform .12s ease, box-shadow .15s ease;
+  line-height: 1.65;
+  letter-spacing: 0.1px;
 }
-.gh-btn-follow:hover { filter: brightness(1.08); box-shadow: 0 4px 14px rgba(35,134,54,0.35); }
-.gh-btn-follow:active { transform: translateY(1px); }
 
-.gh-follow-stats { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 14px; }
-.gh-follow-item { display: inline-flex; align-items: center; gap: 4px; color: #8b949e; text-decoration: none; }
-.gh-follow-item:hover { color: #58a6ff; }
-.gh-follow-item strong { color: #e6edf3; font-weight: 600; }
-.gh-follow-item:hover strong { color: #58a6ff; }
-.gh-dot { color: #8b949e; }
-
-.gh-meta { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.gh-meta { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 8px; padding: 0; }
 .gh-meta li { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #e6edf3; }
 .gh-meta svg { color: #8b949e; flex-shrink: 0; }
 .gh-meta a { color: #e6edf3; text-decoration: none; }
