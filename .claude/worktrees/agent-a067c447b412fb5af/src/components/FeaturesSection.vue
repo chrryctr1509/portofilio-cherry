@@ -1,0 +1,126 @@
+<script setup>
+const features = [
+  { 
+    title: 'Frontend Development', 
+    desc: 'React, Vue, Next.js, Tailwind CSS. Accessible, responsive, and component‑driven UIs.',
+    icon: 'code',
+    color: 'from-blue-500 to-indigo-500'
+  },
+  { 
+    title: 'Backend Development', 
+    desc: 'Node.js, Go, RESTful APIs, authentication, caching, and database design.',
+    icon: 'design',
+    color: 'from-purple-500 to-pink-500'
+  },
+  { 
+    title: 'Architecture & Design', 
+    desc: 'Clean architecture, modular patterns, and pragmatic design for maintainable systems.',
+    icon: 'marketing',
+    color: 'from-orange-500 to-red-500'
+  },
+  { 
+    title: 'Mobile Apps', 
+    desc: 'React Native and Flutter for cross‑platform experiences with native performance.',
+    icon: 'mobile',
+    color: 'from-green-500 to-emerald-500'
+  },
+  { 
+    title: 'DevOps & Cloud', 
+    desc: 'Docker, CI/CD, monitoring, and cloud deployments for reliable delivery.',
+    icon: 'cloud',
+    color: 'from-teal-500 to-cyan-500'
+  },
+  { 
+    title: 'Testing & Quality', 
+    desc: 'Unit, integration, and e2e testing. Performance profiling and optimization.',
+    icon: 'brand',
+    color: 'from-violet-500 to-purple-500'
+  },
+]
+
+const getIcon = (type) => {
+  const icons = {
+    code: 'M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4',
+    design: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01',
+    marketing: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+    mobile: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
+    brand: 'M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01',
+    cloud: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z'
+  }
+  return icons[type] || icons.code
+}
+</script>
+
+<template>
+  <section class="py-20 lg:py-28 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-900" id="skills">
+    <div class="mx-auto container px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <!-- Header -->
+      <header class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full bg-brand-100 dark:bg-brand-900/30 px-4 py-2 text-sm font-semibold text-brand-700 dark:text-brand-300 mb-4">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          Keahlian & Expertise
+        </div>
+        <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-4">
+          Yang Saya Kuasai
+        </h2>
+        <p class="text-lg text-slate-600 dark:text-slate-300">
+          Keterampilan inti yang saya gunakan untuk merancang, membangun, dan mengirimkan produk
+        </p>
+      </header>
+
+      <!-- Features Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article 
+          v-for="(f, idx) in features" 
+          :key="f.title" 
+          class="group relative rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 hover:border-brand-300 dark:hover:border-emerald-500 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+        >
+          <!-- Gradient Background on Hover -->
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity" :class="f.color"></div>
+          
+          <!-- Icon -->
+          <div class="relative mb-6">
+            <div 
+              class="inline-flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br text-white shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all" 
+              :class="f.color"
+            >
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="getIcon(f.icon)" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-brand-600 dark:group-hover:text-emerald-400 transition-colors">
+            {{ f.title }}
+          </h3>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+            {{ f.desc }}
+          </p>
+
+          <!-- Arrow Link -->
+          <div class="flex items-center gap-2 text-brand-600 font-semibold group-hover:gap-4 transition-all">
+            <span>Selengkapnya</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </div>
+
+          <!-- Number Badge -->
+          <div class="absolute top-6 right-6 text-6xl font-black text-slate-100 group-hover:text-brand-100 transition-colors">
+            0{{ idx + 1 }}
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA Bottom -->
+     
+    </div>
+  </section>
+</template>
+
+<style scoped>
+</style>
+

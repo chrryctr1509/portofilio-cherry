@@ -1,0 +1,400 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - link "Cherry Citra" [ref=e7] [cursor=pointer]:
+        - /url: "#about"
+        - img [ref=e9]
+        - generic [ref=e11]: Cherry Citra
+      - navigation [ref=e12]:
+        - link "About" [ref=e13] [cursor=pointer]:
+          - /url: "#about"
+        - link "Skills" [ref=e14] [cursor=pointer]:
+          - /url: "#skills"
+        - link "Portfolio" [ref=e15] [cursor=pointer]:
+          - /url: "#portfolio"
+        - link "Contact" [ref=e16] [cursor=pointer]:
+          - /url: "#contact"
+      - button "Switch to dark mode" [ref=e18]:
+        - img [ref=e19]
+  - main [ref=e21]:
+    - generic [ref=e23]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e32]: Available for work
+          - generic [ref=e33]:
+            - paragraph [ref=e34]: Hello, I'm
+            - heading "Cherry Citra" [level=1] [ref=e35]:
+              - text: Cherry
+              - text: Citra
+          - generic [ref=e36]: Fu
+          - paragraph [ref=e38]: Membangun aplikasi web dan mobile yang performan, merancang backend yang kuat, dan memberikan pengalaman pengguna yang menyenangkan.
+          - generic [ref=e39]:
+            - link "Hubungi Saya" [ref=e40] [cursor=pointer]:
+              - /url: "#contact"
+              - text: Hubungi Saya
+              - img [ref=e41]
+            - link "Lihat Portofolio" [ref=e43] [cursor=pointer]:
+              - /url: "#portfolio"
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - paragraph [ref=e46]: 3+
+              - paragraph [ref=e47]: Years Experience
+            - generic [ref=e48]:
+              - paragraph [ref=e49]: 10+
+              - paragraph [ref=e50]: Projects Built
+            - generic [ref=e51]:
+              - paragraph [ref=e52]: 5+
+              - paragraph [ref=e53]: Happy Clients
+        - generic [ref=e55]:
+          - generic [ref=e56]: Open to work
+          - generic [ref=e58]:
+            - img "Cherry Citra — Full-Stack Developer" [ref=e60]
+            - generic [ref=e62]:
+              - generic [ref=e63]:
+                - paragraph [ref=e64]: Cherry Citra
+                - paragraph [ref=e65]: Full-Stack Developer
+              - generic [ref=e66]:
+                - link "Facebook" [ref=e67] [cursor=pointer]:
+                  - /url: https://www.facebook.com/cherryctr
+                  - img [ref=e68]
+                - link "Instagram" [ref=e70] [cursor=pointer]:
+                  - /url: https://www.instagram.com/mascherr30
+                  - img [ref=e71]
+                - link "GitHub" [ref=e73] [cursor=pointer]:
+                  - /url: https://github.com/chrryctr1509
+                  - img [ref=e74]
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - img [ref=e80]
+            - text: Expertise
+          - heading "Yang Saya Kuasai" [level=2] [ref=e82]
+          - paragraph [ref=e83]: Keterampilan inti yang saya gunakan untuk merancang, membangun, dan mengirimkan produk digital
+        - generic [ref=e85] [cursor=pointer]:
+          - generic [ref=e86]: ▶
+          - text: 🎯 Professional Values —
+          - generic [ref=e87]: click to expand
+        - generic [ref=e88]:
+          - article [ref=e89]:
+            - img [ref=e93]
+            - generic [ref=e95]: "01"
+            - heading "Frontend Development" [level=3] [ref=e96]
+            - paragraph [ref=e97]: React, Vue, Next.js, Tailwind CSS. Accessible, responsive, and component‑driven UIs.
+            - generic [ref=e98]:
+              - generic [ref=e99]: Selengkapnya
+              - img [ref=e100]
+          - article [ref=e102]:
+            - img [ref=e106]
+            - generic [ref=e108]: "02"
+            - heading "Backend Development" [level=3] [ref=e109]
+            - paragraph [ref=e110]: Node.js, Go, RESTful APIs, authentication, caching, and database design.
+            - generic [ref=e111]:
+              - generic [ref=e112]: Selengkapnya
+              - img [ref=e113]
+          - article [ref=e115]:
+            - img [ref=e119]
+            - generic [ref=e121]: "03"
+            - heading "Architecture & Design" [level=3] [ref=e122]
+            - paragraph [ref=e123]: Clean architecture, modular patterns, and pragmatic design for maintainable systems.
+            - generic [ref=e124]:
+              - generic [ref=e125]: Selengkapnya
+              - img [ref=e126]
+          - article [ref=e128]:
+            - img [ref=e132]
+            - generic [ref=e134]: "04"
+            - heading "Mobile Apps" [level=3] [ref=e135]
+            - paragraph [ref=e136]: React Native and Flutter for cross‑platform experiences with native performance.
+            - generic [ref=e137]:
+              - generic [ref=e138]: Selengkapnya
+              - img [ref=e139]
+          - article [ref=e141]:
+            - img [ref=e145]
+            - generic [ref=e147]: "05"
+            - heading "DevOps & Cloud" [level=3] [ref=e148]
+            - paragraph [ref=e149]: Docker, CI/CD, monitoring, and cloud deployments for reliable delivery.
+            - generic [ref=e150]:
+              - generic [ref=e151]: Selengkapnya
+              - img [ref=e152]
+          - article [ref=e154]:
+            - img [ref=e158]
+            - generic [ref=e160]: "06"
+            - heading "Testing & Quality" [level=3] [ref=e161]
+            - paragraph [ref=e162]: Unit, integration, and e2e testing. Performance profiling and optimization.
+            - generic [ref=e163]:
+              - generic [ref=e164]: Selengkapnya
+              - img [ref=e165]
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - img [ref=e171]
+            - text: Tech Stack
+          - heading "Stack yang Saya Kuasai" [level=2] [ref=e173]
+          - paragraph [ref=e174]: Tools dan teknologi yang saya gunakan sehari-hari untuk membangun produk digital.
+        - generic [ref=e175]:
+          - generic [ref=e176]:
+            - generic [ref=e178]: Frontend
+            - generic [ref=e180]:
+              - generic [ref=e181]:
+                - img "JavaScript & TypeScript logo" [ref=e183]
+                - generic [ref=e184]:
+                  - paragraph [ref=e185]: JavaScript & TypeScript
+                  - paragraph [ref=e186]: App Logic & Interaction
+              - generic [ref=e187]:
+                - img "Vue.js logo" [ref=e189]
+                - generic [ref=e190]:
+                  - paragraph [ref=e191]: Vue.js
+                  - paragraph [ref=e192]: SPA Framework
+              - generic [ref=e193]:
+                - img "React.js logo" [ref=e195]
+                - generic [ref=e196]:
+                  - paragraph [ref=e197]: React.js
+                  - paragraph [ref=e198]: Component UI
+              - generic [ref=e199]:
+                - img "Tailwind CSS logo" [ref=e201]
+                - generic [ref=e202]:
+                  - paragraph [ref=e203]: Tailwind CSS
+                  - paragraph [ref=e204]: Utility‑first Styling
+          - generic [ref=e205]:
+            - generic [ref=e207]: Backend
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - img "Node.js logo" [ref=e212]
+                - generic [ref=e213]:
+                  - paragraph [ref=e214]: Node.js
+                  - paragraph [ref=e215]: Runtime & APIs
+              - generic [ref=e216]:
+                - img "Express.js logo" [ref=e218]
+                - generic [ref=e219]:
+                  - paragraph [ref=e220]: Express.js
+                  - paragraph [ref=e221]: REST Services
+              - generic [ref=e222]:
+                - img "Laravel logo" [ref=e224]
+                - generic [ref=e225]:
+                  - paragraph [ref=e226]: Laravel
+                  - paragraph [ref=e227]: Backend Framework
+              - generic [ref=e228]:
+                - img "CodeIgniter 3 logo" [ref=e230]
+                - generic [ref=e231]:
+                  - paragraph [ref=e232]: CodeIgniter 3
+                  - paragraph [ref=e233]: Lightweight MVC
+          - generic [ref=e234]:
+            - generic [ref=e236]: Database
+            - generic [ref=e238]:
+              - generic [ref=e239]:
+                - img "PostgreSQL logo" [ref=e241]
+                - generic [ref=e242]:
+                  - paragraph [ref=e243]: PostgreSQL
+                  - paragraph [ref=e244]: Relational Database
+              - generic [ref=e245]:
+                - img "MySQL logo" [ref=e247]
+                - generic [ref=e248]:
+                  - paragraph [ref=e249]: MySQL
+                  - paragraph [ref=e250]: Relational Database
+      - generic [ref=e252]:
+        - generic [ref=e253]:
+          - generic [ref=e254]:
+            - img [ref=e255]
+            - text: Portfolio
+          - heading "Karya Pilihan" [level=2] [ref=e257]
+          - paragraph [ref=e258]: Beberapa proyek yang pernah saya kerjakan.
+        - generic [ref=e259]:
+          - button "All" [ref=e260]
+          - button "CodeIgniter" [ref=e261]
+          - button "Node.js" [ref=e262]
+          - button "Laravel" [ref=e263]
+        - generic [ref=e265] [cursor=pointer]:
+          - generic [ref=e266]: ▶
+          - text: 🚀 Featured Projects —
+          - generic [ref=e267]: click to expand
+        - generic [ref=e268]:
+          - generic [ref=e269] [cursor=pointer]:
+            - generic [ref=e270]:
+              - img "Nasi Goreng Web App" [ref=e271]
+              - img [ref=e274]
+            - generic [ref=e277]:
+              - generic [ref=e279]: CodeIgniter
+              - heading "Nasi Goreng Web App" [level=3] [ref=e280]
+              - paragraph [ref=e281]: Aplikasi pemesanan Nasi Goreng dengan manajemen menu, pesanan, dan kasir.
+              - generic [ref=e282]:
+                - generic [ref=e283]: CodeIgniter 3
+                - generic [ref=e284]: MySQL
+          - generic [ref=e285] [cursor=pointer]:
+            - generic [ref=e286]:
+              - img "WhatsApp Service API" [ref=e287]
+              - img [ref=e290]
+            - generic [ref=e293]:
+              - generic [ref=e295]: Node.js
+              - heading "WhatsApp Service API" [level=3] [ref=e296]
+              - paragraph [ref=e297]: Layanan REST API berbasis Express untuk integrasi WhatsApp.
+              - generic [ref=e298]:
+                - generic [ref=e299]: Node.js
+                - generic [ref=e300]: Express
+                - generic [ref=e301]: SQL
+          - generic [ref=e302] [cursor=pointer]:
+            - generic [ref=e303]:
+              - img "Absensi Perusahaan" [ref=e304]
+              - img [ref=e307]
+            - generic [ref=e310]:
+              - generic [ref=e312]: Laravel
+              - heading "Absensi Perusahaan" [level=3] [ref=e313]
+              - paragraph [ref=e314]: "Sistem absensi karyawan: clock-in/out, rekap harian, dan laporan HR."
+              - generic [ref=e315]:
+                - generic [ref=e316]: Laravel
+                - generic [ref=e317]: MySQL
+          - generic [ref=e318] [cursor=pointer]:
+            - generic [ref=e319]:
+              - img "E-commerce Maxi Custom" [ref=e320]
+              - img [ref=e323]
+            - generic [ref=e326]:
+              - generic [ref=e328]: Laravel
+              - heading "E-commerce Maxi Custom" [level=3] [ref=e329]
+              - paragraph [ref=e330]: Platform toko online dengan katalog, cart, checkout, dan manajemen pesanan.
+              - generic [ref=e331]:
+                - generic [ref=e332]: Laravel 8
+                - generic [ref=e333]: MySQL
+      - generic [ref=e335]:
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - img [ref=e338]
+            - text: About Me
+          - heading "Building Products That Make An Impact" [level=2] [ref=e340]
+          - paragraph [ref=e341]: I'm a software engineer focused on crafting scalable systems and intuitive interfaces. Over the years I've worked across the stack, leading projects from idea to production.
+        - generic [ref=e342]:
+          - generic [ref=e348]:
+            - img [ref=e350]
+            - generic [ref=e352]: 10+
+            - generic [ref=e353]: Years of Excellence
+          - generic [ref=e354]:
+            - heading "A Bit About My Background" [level=3] [ref=e355]
+            - paragraph [ref=e356]: I value clean code, clear communication, and pragmatic solutions. My work blends product thinking, design sense, and engineering rigor.
+            - paragraph [ref=e357]: I've collaborated with startups and enterprises to deliver products that are reliable, maintainable, and user-centric.
+            - generic [ref=e358]:
+              - generic [ref=e359]:
+                - generic [ref=e360]: 10+
+                - generic [ref=e361]: Years Experience
+              - generic [ref=e362]:
+                - generic [ref=e363]: 500+
+                - generic [ref=e364]: Projects Completed
+              - generic [ref=e365]:
+                - generic [ref=e366]: 200+
+                - generic [ref=e367]: Happy Clients
+              - generic [ref=e368]:
+                - generic [ref=e369]: 50+
+                - generic [ref=e370]: Team Members
+        - generic [ref=e371]:
+          - heading "Principles I Work By" [level=3] [ref=e372]
+          - generic [ref=e373]:
+            - generic [ref=e374]:
+              - generic [ref=e375]: "01"
+              - generic [ref=e376]:
+                - heading "Infrastructure as Code" [level=4] [ref=e377]
+                - paragraph [ref=e378]: Automate infrastructure provisioning and management through code, ensuring consistency, reproducibility, and version control across all environments.
+            - generic [ref=e379]:
+              - generic [ref=e380]: "02"
+              - generic [ref=e381]:
+                - heading "Performance-First" [level=4] [ref=e382]
+                - paragraph [ref=e383]: Optimize every layer of the stack — from database queries to rendering pipelines — so applications respond instantly under any load.
+            - generic [ref=e384]:
+              - generic [ref=e385]: "03"
+              - generic [ref=e386]:
+                - heading "Clean & Maintainable" [level=4] [ref=e387]
+                - paragraph [ref=e388]: Write code that the next developer — or future you — can understand, extend, and debug without a treasure map.
+            - generic [ref=e389]:
+              - generic [ref=e390]: "04"
+              - generic [ref=e391]:
+                - heading "Security by Design" [level=4] [ref=e392]
+                - paragraph [ref=e393]: Embed security controls from day one — not as an afterthought. Threat modeling, least privilege, and defense in depth at every layer.
+        - generic [ref=e394]:
+          - heading "Ready to Start Your Project?" [level=3] [ref=e395]
+          - paragraph [ref=e396]: Let's discuss how we can help transform your digital presence and achieve your business goals.
+          - generic [ref=e397]:
+            - link "Get Started Today" [ref=e398] [cursor=pointer]:
+              - /url: "#contact"
+              - text: Get Started Today
+              - img [ref=e399]
+            - link "View Our Work" [ref=e401] [cursor=pointer]:
+              - /url: "#portfolio"
+      - generic [ref=e403]:
+        - generic [ref=e404]:
+          - generic [ref=e405]:
+            - img [ref=e406]
+            - text: Mari Terhubung
+          - heading "Hubungi Saya" [level=2] [ref=e408]
+          - paragraph [ref=e409]: Terbuka untuk kesempatan profesional, kolaborasi, atau diskusi seputar teknologi.
+        - generic [ref=e410]:
+          - textbox "Nama kamu" [ref=e411]
+          - textbox "Email aktif" [ref=e412]
+          - textbox "Pesan atau pertanyaan kamu..." [ref=e413]
+          - button "Kirim Pesan" [ref=e414] [cursor=pointer]
+        - generic [ref=e415]:
+          - link "GitHub" [ref=e416] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+            - img [ref=e417]
+          - link "LinkedIn" [ref=e419] [cursor=pointer]:
+            - /url: https://linkedin.com/in/cherrycitra
+            - img [ref=e420]
+          - link "WhatsApp" [ref=e422] [cursor=pointer]:
+            - /url: https://wa.me/6287761882915
+            - img [ref=e423]
+        - generic [ref=e425]:
+          - link "0877 6188 2915" [ref=e426] [cursor=pointer]:
+            - /url: tel:+6287761882915
+            - img [ref=e427]
+            - generic [ref=e429]: 0877 6188 2915
+          - link "chrryctr1509@gmail.com" [ref=e430] [cursor=pointer]:
+            - /url: mailto:chrryctr1509@gmail.com
+            - img [ref=e431]
+            - generic [ref=e433]: chrryctr1509@gmail.com
+          - generic [ref=e434]:
+            - img [ref=e435]
+            - generic [ref=e437]: Jakarta Barat, Indonesia
+  - contentinfo [ref=e438]:
+    - generic [ref=e439]:
+      - generic [ref=e440]:
+        - generic [ref=e441]:
+          - generic [ref=e442]:
+            - img [ref=e444]
+            - generic [ref=e446]: Cherry Citra
+          - paragraph [ref=e447]: Full-Stack Developer. Membangun aplikasi web dan mobile yang performan dengan pengalaman pengguna yang menyenangkan.
+          - generic [ref=e448]:
+            - link "GitHub" [ref=e449] [cursor=pointer]:
+              - /url: https://github.com/chrryctr1509
+              - img [ref=e450]
+            - link "LinkedIn" [ref=e452] [cursor=pointer]:
+              - /url: https://linkedin.com/in/cherrycitra
+              - img [ref=e453]
+        - generic [ref=e455]:
+          - paragraph [ref=e456]: Navigasi
+          - list [ref=e457]:
+            - listitem [ref=e458]:
+              - link "About" [ref=e459] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e460]:
+              - link "Skills" [ref=e461] [cursor=pointer]:
+                - /url: "#skills"
+            - listitem [ref=e462]:
+              - link "Portfolio" [ref=e463] [cursor=pointer]:
+                - /url: "#portfolio"
+            - listitem [ref=e464]:
+              - link "Contact" [ref=e465] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e466]:
+          - paragraph [ref=e467]: Kontak
+          - list [ref=e468]:
+            - listitem [ref=e469]:
+              - img [ref=e470]
+              - generic [ref=e472]:
+                - paragraph [ref=e473]: Jl. Pedongkelan Belakang Rt 07/016. 102
+                - paragraph [ref=e474]: Kecamatan Cengkareng, Jakarta Barat
+                - paragraph [ref=e475]: DKI Jakarta 11720
+            - listitem [ref=e476]:
+              - img [ref=e477]
+              - paragraph [ref=e480]: +62 877-6188-2915
+            - listitem [ref=e481]:
+              - img [ref=e482]
+              - paragraph [ref=e485]: chrryctr1509@gmail.com
+      - generic [ref=e486]:
+        - paragraph [ref=e487]: © 2026 Cherry Citra. All rights reserved.
+        - generic [ref=e488]:
+          - generic [ref=e489]: //
+          - generic [ref=e490]: ◆

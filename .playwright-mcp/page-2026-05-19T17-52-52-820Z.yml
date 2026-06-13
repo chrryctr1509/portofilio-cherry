@@ -1,0 +1,117 @@
+- main [ref=e4]:
+  - generic [ref=e6]:
+    - complementary [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e10]:
+          - img "Cherry Citra Cahyaning" [ref=e12]
+          - button "😊" [ref=e13] [cursor=pointer]:
+            - generic [ref=e14]: 😊
+        - generic [ref=e15]:
+          - heading "Cherry Citra Cahyaning" [level=1] [ref=e16]
+          - paragraph [ref=e17]: chrryctr1509 · he/him
+        - paragraph [ref=e19]: Building scalable web apps & intelligent systems • Laravel • React • Node.js • OpenAI • Open for freelance collaboration
+        - button "Edit profile" [ref=e20]
+        - generic [ref=e21]:
+          - link "8 followers" [ref=e22] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e23]: "8"
+            - text: followers
+          - generic [ref=e24]: ·
+          - link "8 following" [ref=e25] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e26]: "8"
+            - text: following
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - generic [ref=e30]: Indonesia
+        - generic [ref=e31]:
+          - img [ref=e32]
+          - link "github.com/chrryctr1509" [ref=e34] [cursor=pointer]:
+            - /url: https://github.com/chrryctr1509
+        - generic [ref=e35]:
+          - heading "Achievements" [level=3] [ref=e36]
+          - generic [ref=e37]:
+            - generic "Quickdraw" [ref=e38] [cursor=pointer]: 🌱
+            - generic "Pull Shark" [ref=e39] [cursor=pointer]: 🎯
+            - generic "YOLO" [ref=e40] [cursor=pointer]: 🎨
+            - generic "Arctic Code Vault" [ref=e41] [cursor=pointer]: 🐵
+        - generic [ref=e42]:
+          - heading "Organizations" [level=3] [ref=e43]
+          - generic "My Org" [ref=e45] [cursor=pointer]: 🏢
+    - main [ref=e46]:
+      - generic [ref=e47]:
+        - generic:
+          - img "Header Banner"
+        - generic [ref=e48]:
+          - generic [ref=e50]: Building Intelligent Systems 🤖
+          - generic [ref=e51]:
+            - img "Profile Views"
+            - img "Followers"
+            - img "Status" [ref=e52]
+            - img "Location" [ref=e53]
+          - generic [ref=e54]:
+            - link "Gmail":
+              - /url: mailto:chrryctr1509@gmail.com
+              - img "Gmail"
+            - link "GitHub":
+              - /url: https://github.com/chrryctr1509
+              - img "GitHub"
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - heading "👋 About Me" [level=2] [ref=e59]:
+                - generic [ref=e60]: 👋
+                - text: About Me
+              - generic [ref=e61]:
+                - paragraph [ref=e62]:
+                  - text: I'm a
+                  - strong [ref=e63]: Fullstack Developer
+                  - text: and
+                  - strong [ref=e64]: AI Engineer
+                  - text: based in Indonesia, passionate about building scalable systems and intelligent applications. I specialize in end-to-end product development — from architecting backends to deploying production AI pipelines.
+                - blockquote [ref=e65]: "\"I don't just write code — I engineer solutions that scale.\""
+                - table [ref=e67]:
+                  - rowgroup [ref=e68]:
+                    - row "🌐 Web Fullstack Development" [ref=e69]:
+                      - cell "🌐 Web" [ref=e70]
+                      - cell "Fullstack Development" [ref=e71]
+                    - row "🤖 AI/ML LLM Integration, AI Agents, Prompt Engineering" [ref=e72]:
+                      - cell "🤖 AI/ML" [ref=e73]
+                      - cell "LLM Integration, AI Agents, Prompt Engineering" [ref=e74]
+                    - row "☁️ Cloud Docker, Linux, Nginx, CI/CD Pipelines" [ref=e75]:
+                      - cell "☁️ Cloud" [ref=e76]
+                      - cell "Docker, Linux, Nginx, CI/CD Pipelines" [ref=e77]
+                    - row "🔒 Security Auth systems, API security, best practices" [ref=e78]:
+                      - cell "🔒 Security" [ref=e79]
+                      - cell "Auth systems, API security, best practices" [ref=e80]
+                    - row "🗄️ Databases MySQL, PostgreSQL, MongoDB, Redis" [ref=e81]:
+                      - cell "🗄️ Databases" [ref=e82]
+                      - cell "MySQL, PostgreSQL, MongoDB, Redis" [ref=e83]
+            - img "Developer coding animation" [ref=e85]
+          - generic [ref=e87]:
+            - button "🛠️ Tech Stack — click to expand" [ref=e89]:
+              - heading "🛠️ Tech Stack — click to expand" [level=3] [ref=e91]
+              - img [ref=e92]
+            - button "🚀 Featured Projects — click to expand" [ref=e95]:
+              - heading "🚀 Featured Projects — click to expand" [level=3] [ref=e97]
+              - img [ref=e98]
+            - button "📊 GitHub Statistics — click to expand" [ref=e101]:
+              - heading "📊 GitHub Statistics — click to expand" [level=3] [ref=e103]
+              - img [ref=e104]
+            - button "🏆 GitHub Achievements — click to expand" [ref=e107]:
+              - heading "🏆 GitHub Achievements — click to expand" [level=3] [ref=e109]
+              - img [ref=e110]
+            - button "🎯 Professional Values — click to expand" [ref=e113]:
+              - heading "🎯 Professional Values — click to expand" [level=3] [ref=e115]
+              - img [ref=e116]
+        - generic [ref=e120]:
+          - heading "📬 Let's Build Something Together" [level=3] [ref=e121]
+          - generic:
+            - link "Send Email":
+              - /url: mailto:chrryctr1509@gmail.com
+              - img "Send Email"
+            - link "View GitHub":
+              - /url: https://github.com/chrryctr1509
+              - img "View GitHub"
+          - paragraph [ref=e122]: Available for freelance projects and technical collaborations.
+        - generic:
+          - img "Footer Wave"

@@ -1,0 +1,44 @@
+<script setup>
+const brands = [
+  'Google', 'Microsoft', 'Amazon', 'Shopify', 'Netflix', 
+  'Stripe', 'Airbnb', 'Spotify', 'Adobe', 'Salesforce'
+]
+</script>
+
+<template>
+  <section class="py-16 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+    <div class="mx-auto container px-4 sm:px-6 lg:px-8  max-w-7xl" >
+      <div class="text-center mb-10">
+        <p class="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Tools & Platforms I Use</p>
+      </div>
+      
+      <!-- Marquee Effect -->
+      <div class="relative overflow-hidden">
+        <div class="flex animate-marquee space-x-12 lg:space-x-16">
+          <div v-for="(b, idx) in [...brands, ...brands]" :key="`${b}-${idx}`" 
+               class="flex-shrink-0 grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300">
+            <div class="flex items-center justify-center h-16 px-8 text-2xl font-bold text-slate-700 dark:text-slate-300">
+              {{ b }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+</style>
+

@@ -1,0 +1,117 @@
+{
+    "nav": {
+        "about": "About",
+        "skills": "Skills",
+        "portfolio": "Portfolio",
+        "contact": "Contact Me"
+    },
+    "hero": {
+        "badge": "Professional Resume",
+        "title": "Hello, I'm Cherry Citra",
+        "subtitle": "Creative & Innovative Web Developer",
+        "description": "I build performant web and mobile applications, design robust backends, and deliver delightful user experiences. Passionate about solving problems and shipping high‑quality products.",
+        "contact_me": "Contact Me",
+        "view_portfolio": "View Portfolio",
+        "available": "Ready for Work",
+        "download_cv": "Download CV",
+        "roles": [
+            "Full‑Stack Developer",
+            "Backend Developer",
+            "Frontend Engineer",
+            "Software Engineer",
+            "DevOps Enthusiast"
+        ]
+    },
+    "features": {
+        "badge": "Skills & Expertise",
+        "title": "What I Do Best",
+        "subtitle": "A selection of core skills I use to design, build, and ship products",
+        "learn_more": "Learn More",
+        "cta_text": "Interested in my skills?",
+        "cta_btn": "Get In Touch",
+        "items": {
+            "frontend": {
+                "title": "Frontend Development",
+                "desc": "React, Vue, Next.js, Tailwind CSS. Accessible, responsive, and component‑driven UIs."
+            },
+            "backend": {
+                "title": "Backend Development",
+                "desc": "Node.js, Go, RESTful APIs, authentication, caching, and database design."
+            },
+            "architecture": {
+                "title": "Architecture & Design",
+                "desc": "Clean architecture, modular patterns, and pragmatic design for maintainable systems."
+            },
+            "mobile": {
+                "title": "Mobile Apps",
+                "desc": "React Native and Flutter for cross‑platform experiences with native performance."
+            },
+            "devops": {
+                "title": "DevOps & Cloud",
+                "desc": "Docker, CI/CD, monitoring, and cloud deployments for reliable delivery."
+            },
+            "testing": {
+                "title": "Testing & Quality",
+                "desc": "Unit, integration, and e2e testing. Performance profiling and optimization."
+            }
+        }
+    },
+    "skills_section": {
+        "badge": "Web Dev Stack",
+        "title": "Expertise as Front-End & Backend Web Developer",
+        "subtitle": "Technical foundations I use to build modern UIs, scalable APIs, and reliable database systems.",
+        "proficiency": "Proficiency"
+    },
+    "portfolio": {
+        "badge": "Portfolio",
+        "title": "Featured Work",
+        "subtitle": "A snapshot of work highlighting problem‑solving, performance, and user experience",
+        "view_detail": "View Detail",
+        "view_more": "View More",
+        "all_categories": "All"
+    },
+    "contact_section": {
+        "badge": "Let's Connect",
+        "title": "Get In Touch",
+        "subtitle": "I'm open to professional opportunities, collaborations, or just a chat about technology. Feel free to reach out.",
+        "whatsapp_title": "Chat via WhatsApp",
+        "whatsapp_desc": "Click the button below to chat with me directly via WhatsApp. Fast and easy response!",
+        "whatsapp_btn": "Chat on WhatsApp",
+        "quick": {
+            "call": "Call",
+            "email": "Email",
+            "location": "Location"
+        }
+    },
+    "footer": {
+        "description": "A dedicated developer creating innovative digital solutions. Experienced in web and mobile development with a focus on quality and user experience.",
+        "services_title": "Expertise",
+        "contact_title": "Contact",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "services": {
+            "web": "Web Development",
+            "mobile": "Mobile App Development",
+            "custom": "Custom Software",
+            "portfolio": "Portfolio"
+        }
+    },
+    "work": {
+        "p1": {
+            "title": "Nasi Goreng Web App",
+            "desc": "Nasi Goreng ordering application with menu management, orders, and cashier."
+        },
+        "p2": {
+            "title": "WhatsApp Service API",
+            "desc": "Express-based REST API service for WhatsApp integration (send/receive)."
+        },
+        "p3": {
+            "title": "Company Attendance",
+            "desc": "Employee attendance system: clock-in/out, daily recap, and HR reports."
+        },
+        "p4": {
+            "title": "E-commerce",
+            "desc": "Online store platform with catalog, cart, checkout, and order management."
+        }
+    }
+}
