@@ -5,7 +5,7 @@ const profile = {
   username: 'chrryctr1509',
   pronouns: 'he/him',
   avatar: '/images/cherry.png',
-  bio: 'Fullstack Developer & AI Engineer • Building scalable web apps & intelligent systems • Laravel · React · Node.js · OpenAI • Open for freelance collaboration',
+  bio: 'Fullstack Developer & AI Engineer specializing in scalable web applications and intelligent systems. Experienced across Laravel, React, Node.js, and OpenAI — turning complex requirements into production-grade products. Open to freelance and collaborative opportunities.',
   location: 'Indonesia',
   githubUrl: 'https://github.com/chrryctr1509',
   email: 'chrryctr1509@gmail.com',
@@ -48,21 +48,6 @@ const profile = {
 
           <p class="gh-bio">{{ profile.bio }}</p>
 
-          <a :href="profile.githubUrl" target="_blank" rel="noopener" class="gh-btn-follow">
-            Follow
-          </a>
-
-          <div class="gh-follow-stats">
-            <a :href="profile.githubUrl" target="_blank" rel="noopener" class="gh-follow-item">
-              <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"/></svg>
-              <strong>{{ profile.followers }}</strong> followers
-            </a>
-            <span class="gh-dot">·</span>
-            <a :href="profile.githubUrl" target="_blank" rel="noopener" class="gh-follow-item">
-              <strong>{{ profile.following }}</strong> following
-            </a>
-          </div>
-
           <ul class="gh-meta">
             <li>
               <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="m12.596 11.596-3.535 3.536a1.5 1.5 0 0 1-2.122 0l-3.535-3.536a6.5 6.5 0 1 1 9.192-9.193 6.5 6.5 0 0 1 0 9.193Zm-1.06-8.132a5 5 0 1 0-7.072 7.072L8 14.07l3.536-3.534a5 5 0 0 0 0-7.072ZM8 9a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 9Z"/></svg>
@@ -73,16 +58,6 @@ const profile = {
               <a :href="profile.githubUrl" target="_blank" rel="noopener">github.com/{{ profile.username }}</a>
             </li>
           </ul>
-
-          <div class="gh-achievements">
-            <h2 class="gh-sidebar-heading">Achievements</h2>
-            <div class="gh-achievement-row">
-              <span class="gh-badge-circle" title="Pull Shark">🦈</span>
-              <span class="gh-badge-circle" title="YOLO">🎯</span>
-              <span class="gh-badge-circle" title="Quickdraw">⚡</span>
-              <span class="gh-badge-circle" title="Starstruck">⭐</span>
-            </div>
-          </div>
         </aside>
 
         <!-- ===================== RIGHT CONTENT ===================== -->
@@ -198,41 +173,23 @@ const profile = {
 
               <hr class="gh-divider" />
 
-              <!-- ===== GITHUB STATISTICS ===== -->
-              <details class="md-details">
-                <summary><b>📊&nbsp; GitHub Statistics — click to expand</b></summary>
-                <div class="md-details-body md-center">
-                  <img class="md-img" src="https://streak-stats.demolab.com?user=chrryctr1509&theme=midnight-purple&hide_border=true&date_format=j%20M%5B%20Y%5D" alt="GitHub streak" />
-                  <img class="md-img" src="https://github-readme-activity-graph.vercel.app/graph?username=chrryctr1509&theme=tokyo-night&hide_border=true&area=true&color=A78BFA&line=7C3AED&point=ffffff" alt="Activity graph" />
-                </div>
-              </details>
-
-              <hr class="gh-divider" />
-
-              <!-- ===== ACHIEVEMENTS ===== -->
-              <details class="md-details">
-                <summary><b>🏆&nbsp; GitHub Achievements — click to expand</b></summary>
-                <div class="md-details-body md-center">
-                  <img class="md-img" src="https://github-profile-trophy.vercel.app/?username=chrryctr1509&theme=algolia&no-frame=true&no-bg=true&margin-w=12&row=1&column=7" alt="Trophies" />
-                </div>
-              </details>
-
-              <hr class="gh-divider" />
-
               <!-- ===== PROFESSIONAL VALUES ===== -->
               <details class="md-details">
                 <summary><b>🎯&nbsp; Professional Values — click to expand</b></summary>
                 <div class="md-details-body">
-                  <pre class="md-code">┌─────────────────────────────────────────────────────────────────────┐
-│                        HOW I BUILD SOFTWARE                         │
-├────────────────────────────┬────────────────────────────────────────┤
-│  🧹 Clean Code             │  Readable, documented, maintainable    │
-│  🏗️ Scalable Architecture  │  Systems that grow without breaking    │
-│  ⚡ Performance First      │  Fast, efficient, resource-conscious   │
-│  🔒 Security by Design     │  Defense-in-depth from day one         │
-│  📚 Continuous Learning    │  Always current with best practices    │
-│  🤝 Team Collaboration     │  Clear communication, shared ownership │
-└────────────────────────────┴────────────────────────────────────────┘</pre>
+                  <table class="md-table md-values-table">
+                    <thead>
+                      <tr><th colspan="2">HOW I BUILD SOFTWARE</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>🧹 <strong>Clean Code</strong></td><td>Readable, documented, maintainable</td></tr>
+                      <tr><td>🏗️ <strong>Scalable Architecture</strong></td><td>Systems that grow without breaking</td></tr>
+                      <tr><td>⚡ <strong>Performance First</strong></td><td>Fast, efficient, resource-conscious</td></tr>
+                      <tr><td>🔒 <strong>Security by Design</strong></td><td>Defense-in-depth from day one</td></tr>
+                      <tr><td>📚 <strong>Continuous Learning</strong></td><td>Always current with best practices</td></tr>
+                      <tr><td>🤝 <strong>Team Collaboration</strong></td><td>Clear communication, shared ownership</td></tr>
+                    </tbody>
+                  </table>
                 </div>
               </details>
 
@@ -350,7 +307,7 @@ const profile = {
   pointer-events: none;
 }
 .gh-avatar-wrap:hover .gh-avatar { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(88,166,255,0.25), 0 12px 32px rgba(1,4,9,0.7); }
-.gh-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top center; border-radius: 50%; }
+.gh-avatar img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; border-radius: 50%; }
 .gh-status-emoji {
   position: absolute;
   right: 18px;
@@ -370,60 +327,19 @@ const profile = {
 .gh-name { font-size: 26px; font-weight: 600; line-height: 1.25; color: #e6edf3; letter-spacing: -0.01em; }
 .gh-username { font-size: 20px; font-weight: 300; color: #8b949e; margin-top: 2px; }
 
-.gh-bio { font-size: 16px; color: #e6edf3; margin-top: 16px; line-height: 1.5; }
-
-.gh-btn-follow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  width: 100%;
+.gh-bio {
+  font-size: 15px;
+  color: #c9d1d9;
   margin-top: 16px;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(180deg, #2ea043, #238636);
-  border: 1px solid rgba(240,246,252,0.1);
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 1px 0 rgba(1,4,9,0.3);
-  transition: filter .15s ease, transform .12s ease, box-shadow .15s ease;
+  line-height: 1.65;
+  letter-spacing: 0.1px;
 }
-.gh-btn-follow:hover { filter: brightness(1.08); box-shadow: 0 4px 14px rgba(35,134,54,0.35); }
-.gh-btn-follow:active { transform: translateY(1px); }
 
-.gh-follow-stats { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 14px; }
-.gh-follow-item { display: inline-flex; align-items: center; gap: 4px; color: #8b949e; text-decoration: none; }
-.gh-follow-item:hover { color: #58a6ff; }
-.gh-follow-item strong { color: #e6edf3; font-weight: 600; }
-.gh-follow-item:hover strong { color: #58a6ff; }
-.gh-dot { color: #8b949e; }
-
-.gh-meta { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 8px; padding: 0; }
+.gh-meta { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 8px; padding: 0; }
 .gh-meta li { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #e6edf3; }
 .gh-meta svg { color: #8b949e; flex-shrink: 0; }
 .gh-meta a { color: #e6edf3; text-decoration: none; }
 .gh-meta a:hover { color: #58a6ff; }
-
-.gh-achievements { margin-top: 24px; padding-top: 24px; border-top: 1px solid #21262d; }
-.gh-sidebar-heading { font-size: 14px; font-weight: 600; color: #e6edf3; margin-bottom: 10px; }
-.gh-achievement-row { display: flex; gap: 6px; }
-.gh-badge-circle {
-  width: 44px; height: 44px;
-  display: grid; place-items: center;
-  background: radial-gradient(circle at 50% 30%, #21262d, #161b22);
-  border: 1px solid #30363d;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: default;
-  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
-}
-.gh-badge-circle:hover {
-  transform: translateY(-3px) scale(1.05);
-  border-color: #bc8cff;
-  box-shadow: 0 6px 16px rgba(188,140,255,0.25);
-}
 
 /* ============ MAIN ============ */
 .gh-readme {
@@ -498,6 +414,17 @@ const profile = {
   padding: 2px 6px; border-radius: 4px;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
 }
+
+/* Professional values table */
+.md-values-table th {
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 13px;
+  background: linear-gradient(180deg, #1c2230, #161b22);
+  color: #bc8cff;
+}
+.md-values-table td:first-child { width: 42%; white-space: nowrap; }
 
 /* Details / collapsibles */
 .md-details {
